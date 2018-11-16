@@ -5,9 +5,9 @@
   <subtitle>reading, writing, thinking</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://jiaomawhu.github.io/"/>
   <updated>2018-11-16T02:49:31.349Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://jiaomawhu.github.io/</id>
   
   <author>
     <name>Jinxin Ma</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>article title</title>
-    <link href="http://yoursite.com/2018/11/16/article-title/"/>
-    <id>http://yoursite.com/2018/11/16/article-title/</id>
+    <link href="https://jiaomawhu.github.io/2018/11/16/article-title/"/>
+    <id>https://jiaomawhu.github.io/2018/11/16/article-title/</id>
     <published>2018-11-16T02:49:31.000Z</published>
     <updated>2018-11-16T02:49:31.349Z</updated>
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/11/16/hello-world/"/>
-    <id>http://yoursite.com/2018/11/16/hello-world/</id>
+    <link href="https://jiaomawhu.github.io/2018/11/16/hello-world/"/>
+    <id>https://jiaomawhu.github.io/2018/11/16/hello-world/</id>
     <published>2018-11-16T02:16:59.702Z</published>
     <updated>2018-11-16T02:16:59.703Z</updated>
     

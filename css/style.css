@@ -17,7 +17,7 @@ html {
 body {
   padding: 50px 0;
   margin: 0;
-  font: 14px/1.5 "Droid Serif", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 14px/1.5 "Source Sans Pro";
   color: #555;
   font-weight: 300;
 }
@@ -82,7 +82,7 @@ strong {
 }
 #header .nav {
   float: right;
-  font-family: "Droid Serif", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Cardo;
   line-height: 2.5em;
 }
 #header .nav ul {
@@ -96,7 +96,8 @@ strong {
   margin: 0;
   padding: 0;
   font-size: 2em;
-  font-weight: normal;
+  font-weight: 700;
+  font-family: Cardo;
   line-height: 1.2;
   color: #069;
   text-shadow: rgba(255,255,255,0.9) 0 1px 0;
@@ -108,8 +109,10 @@ strong {
   margin: 0;
   color: #61778b;
   width: 300px;
-  font-size: 0.9em;
+  font-size: 1.2em;
+  font-family: Cardo;
   font-style: italic;
+  font-weight: 400;
 }
 article {
   padding: 15px 30px;
@@ -257,7 +260,7 @@ article header .icon:before {
   text-align: center;
 }
 article header time {
-  font: 0.9em "Droid Serif", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 0.9em "Source Sans Pro";
   margin-bottom: 5px;
   display: block;
   line-height: 1;
@@ -492,7 +495,7 @@ article footer .tags:before {
 #pagination a {
   display: block;
   padding: 5px 10px;
-  font-family: "Droid Serif", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro";
   background: #069;
   color: #fff;
   text-decoration: none;
