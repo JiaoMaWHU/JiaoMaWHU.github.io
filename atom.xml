@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2018-11-16T02:49:31.349Z</updated>
+  <updated>2018-11-16T16:11:50.823Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,25 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article title</title>
-    <link href="https://jiaomawhu.github.io/2018/11/16/article-title/"/>
-    <id>https://jiaomawhu.github.io/2018/11/16/article-title/</id>
-    <published>2018-11-16T02:49:31.000Z</published>
-    <updated>2018-11-16T02:49:31.349Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://jiaomawhu.github.io/2018/11/16/hello-world/"/>
-    <id>https://jiaomawhu.github.io/2018/11/16/hello-world/</id>
-    <published>2018-11-16T02:16:59.702Z</published>
-    <updated>2018-11-16T02:16:59.703Z</updated>
+    <title>Hexo Markdown 语法总结</title>
+    <link href="https://jiaomawhu.github.io/2018/11/16/testforpost/"/>
+    <id>https://jiaomawhu.github.io/2018/11/16/testforpost/</id>
+    <published>2018-11-16T12:00:10.000Z</published>
+    <updated>2018-11-16T16:11:50.823Z</updated>
     
     <summary type="html">
     
@@ -43,12 +29,16 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h4 id=&quot;1-front-matter-格式&quot;&gt;&lt;a href=&quot;#1-front-matter-格式&quot; class=&quot;headerlink&quot; title=&quot;1.front-matter
         
       
     
     </summary>
     
+      <category term="Tutorial" scheme="https://jiaomawhu.github.io/categories/Tutorial/"/>
+    
+    
+      <category term="Markdown" scheme="https://jiaomawhu.github.io/tags/Markdown/"/>
     
   </entry>
   

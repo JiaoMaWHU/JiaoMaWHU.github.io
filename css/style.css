@@ -369,13 +369,16 @@ article .entry .caption:before {
 }
 article .entry code,
 article .entry pre {
-  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-family: Monaco, monospace, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color: #333;
-  font-size: 0.8em;
+  font-size: 0.1em;
   overflow-x: auto;
 }
 article .entry code {
-  font-size: 1em;
+  font-size: 0.1em;
+  background: #cfd2d5;
+  margin: 1px 3px 1px 3px;
+  padding: 1px 3px 1px 3px;
 }
 article .entry pre {
   padding: 10px 30px;
