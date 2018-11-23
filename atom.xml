@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2018-11-23T03:47:28.704Z</updated>
+  <updated>2018-11-23T10:17:47.688Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>写PS/SOP的注意事项</title>
+    <title>写文书的注意事项</title>
     <link href="https://jiaomawhu.github.io/2018/11/23/tips-for-ps-sop/"/>
     <id>https://jiaomawhu.github.io/2018/11/23/tips-for-ps-sop/</id>
     <published>2018-11-23T02:13:33.000Z</published>
-    <updated>2018-11-23T03:47:28.704Z</updated>
+    <updated>2018-11-23T10:17:47.688Z</updated>
     
     <summary type="html">
     
@@ -29,16 +29,16 @@
       
         
         
-          &lt;p&gt;title: 写PS/SOP的注意事项&lt;br&gt;date: 2018-11-23 10:13:33&lt;br&gt;tags: SOP/PS&lt;br&gt;categories: Tutorial&lt;br&gt;toc:
+          &lt;p&gt;写文书的时候，深感英文写作水平的匮乏。好在文书不全看写作水平，因此多方寻找经验贴阅读，在此记录下其中关键的tips，以便写作时查询。以下大部分信息来自用户&lt;code&gt;YiranCdr&lt;/code
         
       
     
     </summary>
     
-      <category term="Tutorial" scheme="https://jiaomawhu.github.io/categories/Tutorial/"/>
+      <category term="Experience" scheme="https://jiaomawhu.github.io/categories/Experience/"/>
     
     
-      <category term="SOP/PS" scheme="https://jiaomawhu.github.io/tags/SOP-PS/"/>
+      <category term="申请文书" scheme="https://jiaomawhu.github.io/tags/%E7%94%B3%E8%AF%B7%E6%96%87%E4%B9%A6/"/>
     
   </entry>
   
@@ -47,17 +47,14 @@
     <link href="https://jiaomawhu.github.io/2018/11/16/testforpost/"/>
     <id>https://jiaomawhu.github.io/2018/11/16/testforpost/</id>
     <published>2018-11-16T12:00:10.000Z</published>
-    <updated>2018-11-23T03:47:45.441Z</updated>
+    <updated>2018-11-23T07:35:28.319Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h4 id=&quot;1-front-matter-格式&quot;&gt;&lt;a href=&quot;#1-front-matter-格式&quot; class=&quot;headerlink&quot; title=&quot;1.front-matter
-        
-      
+      &lt;h4 id=&quot;1-front-matter-格式&quot;&gt;&lt;a href=&quot;#1-front-matter-格式&quot; class=&quot;headerlink&quot; title=&quot;1.front-matter 格式:&quot;&gt;&lt;/a&gt;1.front-matter 格式:&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;layout: &amp;apos;[post]&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;title: Hexo Markdown 语法总结&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;date: 2018-11-16 20:00:10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tags: Markdown&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;categories: Tutorial&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;toc: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mathjax: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;2-斜体-斜体-粗体：-粗体&quot;&gt;&lt;a href=&quot;#2-斜体-斜体-粗体：-粗体&quot; class=&quot;headerlink&quot; title=&quot;2.斜体: *斜体* 粗体：**粗体**&quot;&gt;&lt;/a&gt;2.&lt;em&gt;斜体&lt;/em&gt;: &lt;code&gt;*斜体*&lt;/code&gt; &lt;strong&gt;粗体&lt;/strong&gt;：&lt;code&gt;**粗体**&lt;/code&gt;&lt;/h4&gt;&lt;h4 id=&quot;3-分级标题：&quot;&gt;&lt;a href=&quot;#3-分级标题：&quot; class=&quot;headerlink&quot; title=&quot;3.分级标题：&quot;&gt;&lt;/a&gt;3.分级标题：&lt;/h4&gt;&lt;h5 id=&quot;使用下划线&quot;&gt;&lt;a href=&quot;#使用下划线&quot; class=&quot;headerlink&quot; title=&quot;使用下划线&quot;&gt;&lt;/a&gt;使用下划线&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;一级&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=========&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;二级&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### 三级&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;使用-标识&quot;&gt;&lt;a href=&quot;#使用-标识&quot; class=&quot;headerlink&quot; title=&quot;使用#标识&quot;&gt;&lt;/a&gt;使用#标识&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# H1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## H2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;###### H6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;4-分割线：在单独一行使用&quot;&gt;&lt;a href=&quot;#4-分割线：在单独一行使用&quot; class=&quot;headerlink&quot; title=&quot;4.分割线：在单独一行使用 -------&quot;&gt;&lt;/a&gt;4.分割线：在单独一行使用 &lt;code&gt;-------&lt;/code&gt;&lt;/h4&gt;&lt;h4 id=&quot;5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt&quot;&gt;&lt;a href=&quot;#5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt&quot; class=&quot;headerlink&quot; title=&quot;5.删除线: 使用~~删除线~~  下划线:&amp;lt;u&amp;gt;balabala&amp;lt;/u&amp;gt;&quot;&gt;&lt;/a&gt;5.&lt;del&gt;删除线&lt;/del&gt;: 使用&lt;code&gt;~~删除线~~&lt;/code&gt;  &lt;u&gt;下划线&lt;/u&gt;:&lt;code&gt;&amp;lt;u&amp;gt;balabala&amp;lt;/u&amp;gt;&lt;/code&gt;&lt;/h4&gt;
     
     </summary>
     
