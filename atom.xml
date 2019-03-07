@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-03-07T07:36:15.843Z</updated>
+  <updated>2019-03-07T14:23:31.041Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>集成学习总结：Boosting</title>
+    <link href="https://jiaomawhu.github.io/2019/01/07/boosting/"/>
+    <id>https://jiaomawhu.github.io/2019/01/07/boosting/</id>
+    <published>2019-01-07T07:49:09.000Z</published>
+    <updated>2019-03-07T14:23:31.041Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近了解了集成学习中的Boosting，以及衍生算法AdaBoost。在此对他们进行总结。
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="https://jiaomawhu.github.io/categories/Machine-Learning/"/>
+    
+    
+      <category term="Boosting" scheme="https://jiaomawhu.github.io/tags/Boosting/"/>
+    
+  </entry>
   
   <entry>
     <title>0/1 Knapsack Problem</title>
