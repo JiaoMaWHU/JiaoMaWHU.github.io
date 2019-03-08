@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-03-08T09:48:28.910Z</updated>
+  <updated>2019-03-08T11:50:46.481Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -21,18 +21,11 @@
     <link href="https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/"/>
     <id>https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/</id>
     <published>2019-01-12T01:39:56.000Z</published>
-    <updated>2019-03-08T09:48:28.910Z</updated>
+    <updated>2019-03-08T11:50:46.481Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。&lt;/p&gt;
-&lt;h2
-        
-      
+      &lt;p&gt;OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。
     
     </summary>
     

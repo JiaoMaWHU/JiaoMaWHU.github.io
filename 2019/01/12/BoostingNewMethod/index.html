@@ -119,20 +119,20 @@
 
 
 
-<meta name="description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。 GBDTGBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回">
+<meta name="description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。">
 <meta name="keywords" content="集成学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集成学习总结：GBDT, xgboost方法">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。 GBDTGBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回">
+<meta property="og:description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/gbdt_per.jpg">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/gbdt_loss.jpg">
-<meta property="og:updated_time" content="2019-03-08T09:48:28.910Z">
+<meta property="og:updated_time" content="2019-03-08T11:50:46.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集成学习总结：GBDT, xgboost方法">
-<meta name="twitter:description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。 GBDTGBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回">
+<meta name="twitter:description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。">
 <meta name="twitter:image" content="https://jiaomawhu.github.io/images/gbdt_per.jpg">
 
 
@@ -385,7 +385,7 @@
       
 
       
-        <p>OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。</p>
+        <p>OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。<a id="more"></a></p>
 <h2 id="GBDT"><a href="#GBDT" class="headerlink" title="GBDT"></a>GBDT</h2><p>GBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回归树模型，而且迭代思路和AdaBoost也不同。接下来，我们从损失函数选取的角度来讨论下，GBDT和AdaBoost的不同。</p>
 <p>在Boosting的迭代中，我们在第$m-1$轮后得到了学习器$[f_1 \cdots f_{m-1}]$，我们希望下一轮的学习器$f_m$能够纠正存在的错误，即</p>
 <script type="math/tex; mode=display">f_m(x)=\mathop{\arg\min}_{f}L(f_{m-1}+f|D)</script><p>其中$L$是损失函数，$D$是训练集。AdaBoost选择了指数损失函数，然后用泰勒公式展开后发现：让$D_m$服从某一分布，即可使得损失函数达到最小 （具体证明可参照西瓜书），这也是为啥AdaBoost要去改变权值分布。而GBDT则不一样，其希望$f_m$能够使损失函数在第$m$轮，走向$m-1$轮中<strong>损失函数下降最快的方向</strong>。</p>
