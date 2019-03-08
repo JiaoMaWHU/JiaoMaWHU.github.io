@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="Boosting,">
+  <meta name="keywords" content="集成学习,">
 
 
 
@@ -120,7 +120,7 @@
 
 
 <meta name="description" content="最近了解了集成学习中的Boosting，以及衍生算法AdaBoost。在此对他们进行总结。">
-<meta name="keywords" content="Boosting">
+<meta name="keywords" content="集成学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集成学习总结：Boosting">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/01/07/boosting/index.html">
@@ -128,7 +128,7 @@
 <meta property="og:description" content="最近了解了集成学习中的Boosting，以及衍生算法AdaBoost。在此对他们进行总结。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/adaboost.png">
-<meta property="og:updated_time" content="2019-03-07T14:23:31.041Z">
+<meta property="og:updated_time" content="2019-03-08T06:27:33.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集成学习总结：Boosting">
 <meta name="twitter:description" content="最近了解了集成学习中的Boosting，以及衍生算法AdaBoost。在此对他们进行总结。">
@@ -399,7 +399,7 @@
 <p>具体来说，Boosting增大对预测错误的数据的关注，赋予他们更大的权重，然后通过更新的数据，序列化生成新学习器，在达到设定值后，对所有学习器做加权结合。</p>
 <p>AdaBoost(adaptive boosting)是Boosting族中具有代表性的算法，接下来我们具体研究下。</p>
 <h3 id="AdaBoost"><a href="#AdaBoost" class="headerlink" title="AdaBoost"></a>AdaBoost</h3><p>简单来说，AdaBoost做了两件事情: 一是像我们上面说的，在增大对预测错误的数据的关注；二是增大预测效果好的学习器的权重。具体算法流程如下下图所示：<br><img src="/images/adaboost.png" alt="">其中$D_t(x)$是在第$t$轮数据集的权值分布，$h_t$就是在第$t$轮中最优学习器预测的结果。</p>
-<p>在第6步中，我们首先根据误差得到一个正参数$\alpha_t$。在第7步中，数据集中预测正确的数据都要和$-\alpha_t$的指数相乘，而预测正确的数据则和$\alpha_t$的指数相乘，这样预测错误的数据就得到了更大的权值，最后每个权值除以权值之和$Z_t$，就得到了下一轮的权值分布。在迭代结束，或者误差率超过阈值的时候，开始最后的输出。我们观察到，$h_t$的预测误差越低，$\alpha_t$越大，它在最后输出中占的比重就越大，这就实现了上面所说的增大预测效果好的学习器的权重。</p>
+<p>在第6步中，我们首先根据误差得到一个正参数$\alpha_t$。在第7步中，数据集中预测正确的数据都要和$-\alpha_t$的指数相乘，而预测正确的数据则和$\alpha_t$的指数相乘，这样预测错误的数据就得到了更大的权值，最后每个权值除以权值之和$Z_t$，就得到了下一轮的权值分布。在迭代结束，或者误差率超过阈值的时候，开始最后的输出。我们观察到，$h_t$的预测误差越低，$\alpha_t$越大，它在最后输出中占的比重就越大，这就实现了上面所说的增大预测效果好的学习器的权重。我们把这种得到$H(x)$的方法叫做线性加法模型。</p>
 <p>OK，这样设置是很有道理，但设计者是咋想出来这种方法的呢？实际上，$\alpha_t$和权值分布$D_t$的更新都可以通过推导得到，由于过程过于繁琐，请参考西瓜书具体章节。</p>
 <h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>好啦，下面我们来看个具体的例子。<br>假设我们有一个这样的数据集</p>
 <div class="table-container">
@@ -459,7 +459,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Boosting/" rel="tag"># Boosting</a>
+            <a href="/tags/集成学习/" rel="tag"># 集成学习</a>
           
         </div>
       
@@ -481,6 +481,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/08/bagging/" rel="prev" title="集成学习总结：Bagging">
+                集成学习总结：Bagging <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -567,7 +571,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

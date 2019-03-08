@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-03-07T14:23:31.041Z</updated>
+  <updated>2019-03-08T09:48:28.910Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,11 +17,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>集成学习总结：GBDT, xgboost方法</title>
+    <link href="https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/"/>
+    <id>https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/</id>
+    <published>2019-01-12T01:39:56.000Z</published>
+    <updated>2019-03-08T09:48:28.910Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="https://jiaomawhu.github.io/categories/Machine-Learning/"/>
+    
+    
+      <category term="集成学习" scheme="https://jiaomawhu.github.io/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集成学习总结：Bagging</title>
+    <link href="https://jiaomawhu.github.io/2019/01/08/bagging/"/>
+    <id>https://jiaomawhu.github.io/2019/01/08/bagging/</id>
+    <published>2019-01-08T01:39:56.000Z</published>
+    <updated>2019-03-08T06:18:49.730Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在这篇文章中总结bagging的概念与意义，并以随机森林为例，进行详细讨论。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="https://jiaomawhu.github.io/categories/Machine-Learning/"/>
+    
+    
+      <category term="集成学习" scheme="https://jiaomawhu.github.io/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>集成学习总结：Boosting</title>
     <link href="https://jiaomawhu.github.io/2019/01/07/boosting/"/>
     <id>https://jiaomawhu.github.io/2019/01/07/boosting/</id>
     <published>2019-01-07T07:49:09.000Z</published>
-    <updated>2019-03-07T14:23:31.041Z</updated>
+    <updated>2019-03-08T06:27:33.627Z</updated>
     
     <summary type="html">
     
@@ -32,7 +79,7 @@
       <category term="Machine Learning" scheme="https://jiaomawhu.github.io/categories/Machine-Learning/"/>
     
     
-      <category term="Boosting" scheme="https://jiaomawhu.github.io/tags/Boosting/"/>
+      <category term="集成学习" scheme="https://jiaomawhu.github.io/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/</loc>
+    
+    <lastmod>2019-03-08T09:48:28.910Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jiaomawhu.github.io/2019/01/07/boosting/</loc>
     
-    <lastmod>2019-03-07T14:23:31.041Z</lastmod>
+    <lastmod>2019-03-08T06:27:33.627Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jiaomawhu.github.io/2019/01/08/bagging/</loc>
+    
+    <lastmod>2019-03-08T06:18:49.730Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jiaomawhu.github.io/about/index.html</loc>
+    
+    <lastmod>2019-03-08T02:09:35.848Z</lastmod>
     
   </url>
   
@@ -54,13 +75,6 @@
     <loc>https://jiaomawhu.github.io/baidu_verify_CWqfzckaab.html</loc>
     
     <lastmod>2018-11-23T11:58:20.978Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/about/index.html</loc>
-    
-    <lastmod>2018-11-23T11:31:45.669Z</lastmod>
     
   </url>
   

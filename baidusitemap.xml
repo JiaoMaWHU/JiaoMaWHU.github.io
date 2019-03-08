@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/</loc>
+    <lastmod>2019-03-08T09:48:28.910Z</lastmod>
+  </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/01/07/boosting/</loc>
-    <lastmod>2019-03-07T14:23:31.041Z</lastmod>
+    <lastmod>2019-03-08T06:27:33.627Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2019/01/08/bagging/</loc>
+    <lastmod>2019-03-08T06:18:49.730Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/</loc>
     <lastmod>2019-03-07T07:36:15.843Z</lastmod>

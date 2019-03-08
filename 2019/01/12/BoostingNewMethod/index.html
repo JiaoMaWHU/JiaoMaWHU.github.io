@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="集成学习,">
 
 
 
@@ -119,17 +119,21 @@
 
 
 
-<meta name="description" content="Blog of my experiences and codes">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://jiaomawhu.github.io/categories/index.html">
+<meta name="description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。 GBDTGBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回">
+<meta name="keywords" content="集成学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="集成学习总结：GBDT, xgboost方法">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="Blog of my experiences and codes">
+<meta property="og:description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。 GBDTGBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-07T07:06:17.750Z">
+<meta property="og:image" content="https://jiaomawhu.github.io/images/gbdt_per.jpg">
+<meta property="og:image" content="https://jiaomawhu.github.io/images/gbdt_loss.jpg">
+<meta property="og:updated_time" content="2019-03-08T09:48:28.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="Blog of my experiences and codes">
+<meta name="twitter:title" content="集成学习总结：GBDT, xgboost方法">
+<meta name="twitter:description" content="OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。 GBDTGBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回">
+<meta name="twitter:image" content="https://jiaomawhu.github.io/images/gbdt_per.jpg">
 
 
 
@@ -159,13 +163,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/categories/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/">
 
 
 
 
 
-  <title>categories | Jinshin's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>集成学习总结：GBDT, xgboost方法 | Jinshin's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -270,40 +274,185 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jinshin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinshin's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                4 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Experience/">Experience</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">集成学习总结：GBDT, xgboost方法</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-12T09:39:56+08:00">
+                2019-01-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/12/BoostingNewMethod/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/12/BoostingNewMethod/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>OK, 我们在前文中已经讨论过了Boosting的一个算法：AdaBoost，在本文中，我们来看看Boosting族中其他两个重要算法：GBDT和xgboost。</p>
+<h2 id="GBDT"><a href="#GBDT" class="headerlink" title="GBDT"></a>GBDT</h2><p>GBDT (Gradiennt Boosting Decision Tree) 梯度提升树（以决策树为基函数的提升方法称为提升树）采用的是和AdaBoost一样的线性模型，并通过迭代不断更新权值分布。然而其限定只能使用CART回归树模型，而且迭代思路和AdaBoost也不同。接下来，我们从损失函数选取的角度来讨论下，GBDT和AdaBoost的不同。</p>
+<p>在Boosting的迭代中，我们在第$m-1$轮后得到了学习器$[f_1 \cdots f_{m-1}]$，我们希望下一轮的学习器$f_m$能够纠正存在的错误，即</p>
+<script type="math/tex; mode=display">f_m(x)=\mathop{\arg\min}_{f}L(f_{m-1}+f|D)</script><p>其中$L$是损失函数，$D$是训练集。AdaBoost选择了指数损失函数，然后用泰勒公式展开后发现：让$D_m$服从某一分布，即可使得损失函数达到最小 （具体证明可参照西瓜书），这也是为啥AdaBoost要去改变权值分布。而GBDT则不一样，其希望$f_m$能够使损失函数在第$m$轮，走向$m-1$轮中<strong>损失函数下降最快的方向</strong>。</p>
+<p>具体看下GBDT的流程。假设有个回归问题，我们使用决策树作为基学习器。决策树的预测为</p>
+<script type="math/tex; mode=display">T(x;\theta)=\sum^J_{j=1}\gamma_jI(x\in R_j)</script><p>其中$R_j$是区域，$\gamma$是返回值，$I$条件成立情况下为1，否则为0，其中的参数$J$可以大概看做树的深度的一个表示，这是一个待调的参数。那么GBDT解决这个问题的具体流程如下图:<br><img src="/images/gbdt_per.jpg" alt=""></p>
+<p>这里等待复习完决策树再进行总结。</p>
+<p>Boosting算法也可以用使用的损失函数来归类，如下图：<br><img src="/images/gbdt_loss.jpg" alt="">可以看到AdaBoost选取的是指数损失函数，而GBDT选取的是绝对值损失函数。</p>
+<h2 id="xgboost"><a href="#xgboost" class="headerlink" title="xgboost"></a>xgboost</h2><p>xgboost 的全称是eXtreme Gradient Boosting，由华盛顿大学的陈天奇博士提出，在Kaggle的希格斯子信号识别竞赛中使用，因其出众的效率与较高的预测准确度而引起了广泛的关注。</p>
+<p>与Adboost的区别：GBDT算法只利用了一阶的导数信息，xgboost对损失函数做了二阶的泰勒展开，并在目标函数之外加入了正则项对整体求最优解，用以权衡目标函数的下降和模型的复杂程度，避免过拟合。所以不考虑细节方面，两者最大的不同就是目标函数的定义。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/集成学习/" rel="tag"># 集成学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/08/bagging/" rel="next" title="集成学习总结：Bagging">
+                <i class="fa fa-chevron-left"></i> 集成学习总结：Bagging
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -346,8 +495,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -414,6 +572,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GBDT"><span class="nav-number">1.</span> <span class="nav-text">GBDT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xgboost"><span class="nav-number">2.</span> <span class="nav-text">xgboost</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -578,9 +752,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/categories/index.html';
-          this.page.identifier = 'categories/index.html';
-          this.page.title = 'categories';
+          this.page.url = 'https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/';
+          this.page.identifier = '2019/01/12/BoostingNewMethod/';
+          this.page.title = '集成学习总结：GBDT, xgboost方法';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
