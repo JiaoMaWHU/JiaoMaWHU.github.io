@@ -41,11 +41,11 @@
     <link href="https://jiaomawhu.github.io/2019/02/11/svm/"/>
     <id>https://jiaomawhu.github.io/2019/02/11/svm/</id>
     <published>2019-02-11T12:04:19.000Z</published>
-    <updated>2019-03-13T11:23:28.879Z</updated>
+    <updated>2019-03-13T16:01:29.773Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。
+      &lt;p&gt;今天来总结下硬间隔支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。
     
     </summary>
     

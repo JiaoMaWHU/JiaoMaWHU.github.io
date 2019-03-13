@@ -78,7 +78,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Source Sans Pro:300,300italic,400,400italic,700,700italic|Cardo:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Tahoma:300,300italic,400,400italic,700,700italic|Cardo:300,300italic,400,400italic,700,700italic|Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -119,19 +119,20 @@
 
 
 
-<meta name="description" content="今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
+<meta name="description" content="今天来总结下硬间隔支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
 <meta name="keywords" content="SVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="支持向量机SVM总结">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/02/11/svm/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
+<meta property="og:description" content="今天来总结下硬间隔支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/svm_location.png">
-<meta property="og:updated_time" content="2019-03-13T11:23:28.879Z">
+<meta property="og:image" content="https://jiaomawhu.github.io/images/svm_location.png">
+<meta property="og:updated_time" content="2019-03-13T16:01:29.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="支持向量机SVM总结">
-<meta name="twitter:description" content="今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
+<meta name="twitter:description" content="今天来总结下硬间隔支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
 <meta name="twitter:image" content="https://jiaomawhu.github.io/images/svm_location.png">
 
 
@@ -403,8 +404,8 @@
       
 
       
-        <p>今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。<a id="more"></a></p>
-<h2 id="SVM分类"><a href="#SVM分类" class="headerlink" title="SVM分类"></a>SVM分类</h2><p>现在有一些训练样本，我们想通过在样本空间寻找一些超平面来把他们划分开来。此外，我们还要求该超平面对样本局部扰动的容忍性较好，也就说我们不仅要考虑已有样本，对那些可预见的样本分布，我们也要尽量把他们分离开。<br><img src="/images/svm_location.png" alt=""><br>也就是说，我们要尽量选取像图中红色那样的划分区间。</p>
+        <p>今天来总结下硬间隔支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。<a id="more"></a></p>
+<p>现在有一些训练样本，我们想通过在样本空间寻找一些超平面来把他们划分开来。此外，我们还要求该超平面对样本局部扰动的容忍性较好，也就说我们不仅要考虑已有样本，对那些可预见的样本分布，我们也要尽量把他们分离开。<br><img src="/images/svm_location.png" alt=""><br>也就是说，我们要尽量选取像图中红色那样的划分区间。</p>
 <p>我们一般用$\omega^Tx+b$来描述这一超平面，空间中任意点到超平面$(\omega,b)$的距离可以写成</p>
 <script type="math/tex; mode=display">r=\frac{|\omega^T\textbf{x}+b|}{||\omega||}</script><p>并可以用向量知识证明。对于一组超平面，如果其能使对于任意$(\textbf{x}_i,y_i)\in D$，有</p>
 <script type="math/tex; mode=display">\left \{\begin{aligned}
@@ -413,8 +414,18 @@
 \end{aligned} \right.</script><p>我们就称它就能够将训练样本正确分类。实际上，{+1,-1}这个取值并不重要，因为一旦能满足上式，其他的值也都能满足。能使上式等号成立的点被我们成为支持向量。然后，我们把优化问题归纳成：</p>
 <script type="math/tex; mode=display">\max_{\omega,b}\frac{2}{||\omega||}\\
 \mbox{s.t.}\ \ y_i(\omega^T\textbf{x}+b)\geq 1, i=1,2,\cdots,m</script><p>其中$\frac{2}{||\omega||}$指的是两个异类支持向量到划分平面的距离之和。为了简化计算，我们又可以把上式重写成：</p>
-<script type="math/tex; mode=display">\max_{\omega,b}\frac{||\omega||^2}{2}\\
-\mbox{s.t.}\ \ y_i(\omega^T\textbf{x}+b)\geq 1, i=1,2,\cdots,m</script>
+<script type="math/tex; mode=display">\min_{\omega,b}\frac{||\omega||^2}{2}\\
+\mbox{s.t.}\ \ y_i(\omega^T\textbf{x}+b)\geq 1, i=1,2,\cdots,m</script><p>经过拉格朗日的对偶问题转换，上述问题可转化为：</p>
+<script type="math/tex; mode=display">
+\max_{\alpha}\sum^m_{i=1}\alpha_i-\frac{1}{2}\sum^m_{i=1}\sum^m_{j=1}\alpha_i\alpha_jy_iy_j{\textbf{x}_i}^T\textbf{x}_j\\
+\mbox{s.t.}\ \sum^m_{i=1}\alpha_iy_i=0\\
+\alpha_i\geq0, i=1,2,\cdots,m.</script><p>省略一堆证明，原理是通过拉格朗日极大极小规约，来推导出上述问题的解相当于其对偶问题的解。但在这里要补充：在对偶问题的转化中，需要满足KKT条件。这种限定，使得模型训练仅受那些最大分割边界上的那些样本的影响，这也就是为什么称他们为支持向量。</p>
+<p>假如我们能求出$\mathbf{\alpha}$,我们就可以得到划分超平面的公式:</p>
+<script type="math/tex; mode=display">f(x)=\omega^T\textbf{x}+b\\
+=\sum^m_{i=1}\alpha_iy_i{\textbf{x}_i}^T\textbf{x}_i+b</script><p>为啥嘞？因为在省去的对偶问题推导中，有式$\omega=\sum^m_{i=1}\alpha_iy_i\textbf{x}_i$。OK，那咋求$\alpha$呢？周老师云，二次规划算法易解之，（好吧，不懂）。但他又说用SMO求更高效。SMO算法指的是固定一对$\alpha_i,\alpha_j$然后求极值，然后一直迭代到底。具体实现中，SMO先选取一个违背KKT条件最大的值，再选取一个下一个变量，它的样本与上值对应的样本间隔最大。</p>
+<p>实际上，划分远远没有这么简单，因为有时候在样本维度，根本不存在这样一个划分空间。很直观的一个想法就是把数据升维。假设，我们找到了合适的维度，这个维度存在对样本$\textbf{x}\Rightarrow\phi(\textbf{x})$的划分空间，可惜的是，高维向量$\phi(x)$的转置和乘积一般都是很很困难的。为了解决这个问题，引入了核函数。我们令核函数为$\kappa(\textbf{x}_i,\textbf{x}_j)={\phi(\textbf{x}_i)}^T\phi(\textbf{x}_j)$。只要一个对称函数所对应的核矩阵半正定，它就能作为核函数使用。我们一般常使用的核函数如下图：<br><img src="/images/svm_location.png" alt=""><br>当我们选择一个核函数来作为两样本的高纬度内积后，就有式：</p>
+<script type="math/tex; mode=display">f(x)=\omega^T\textbf{x}+b\\
+=\sum^m_{i=1}\alpha_iy_i\kappa(\textbf{x}_i,\textbf{x}_j)+b</script>
       
     </div>
     
@@ -518,17 +529,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -595,22 +597,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SVM分类"><span class="nav-number">1.</span> <span class="nav-text">SVM分类</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -847,7 +833,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
