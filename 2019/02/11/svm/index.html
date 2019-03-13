@@ -2,8 +2,10 @@
 
 
 
+  
 
-<html class="theme-next pisces" lang="en">
+
+<html class="theme-next pisces use-motion" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +40,7 @@
 
   
   
-  <link href="/libss/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -84,7 +86,7 @@
 
 
 
-<link href="/libss/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
@@ -120,15 +122,15 @@
 <meta name="description" content="今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
 <meta name="keywords" content="SVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="svm">
+<meta property="og:title" content="支持向量机SVM总结">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/02/11/svm/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/svm_location.png">
-<meta property="og:updated_time" content="2019-03-11T13:27:17.879Z">
+<meta property="og:updated_time" content="2019-03-13T11:17:26.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="svm">
+<meta name="twitter:title" content="支持向量机SVM总结">
 <meta name="twitter:description" content="今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。">
 <meta name="twitter:image" content="https://jiaomawhu.github.io/images/svm_location.png">
 
@@ -143,7 +145,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: 'Author'
@@ -166,7 +168,7 @@
 
 
 
-  <title>svm | Jinshin's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>支持向量机SVM总结 | Jinshin's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -300,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">svm</h1>
+          <h1 class="post-title" itemprop="name headline">支持向量机SVM总结</h1>
         
 
         <div class="post-meta">
@@ -384,7 +386,16 @@
       
         <p>今天来总结下支持向量机 (Support Vector Machine)，由于支持向量机中的对偶问题包含大量的推导，完全用公式码出来太浪费时间，所以我就以总结写提纲的方式来写本文。<a id="more"></a></p>
 <h2 id="SVM分类"><a href="#SVM分类" class="headerlink" title="SVM分类"></a>SVM分类</h2><p>现在有一些训练样本，我们想通过在样本空间寻找一些超平面来把他们划分开来。此外，我们还要求该超平面对样本局部扰动的容忍性较好，也就说我们不仅要考虑已有样本，对那些可预见的样本分布，我们也要尽量把他们分离开。<br><img src="/images/svm_location.png" alt=""><br>也就是说，我们要尽量选取像图中红色那样的划分区间。</p>
-
+<p>我们一般用$\omega^Tx+b$来描述这一超平面，空间中任意点到超平面$(\omega,b)$的距离可以写成</p>
+<script type="math/tex; mode=display">r=\frac{|\omega^T\textbf{x}+b|}{||\omega||}</script><p>并可以用向量知识证明。对于一组超平面，如果其能使对于任意$(\textbf{x}_i,y_i)\in D$，有</p>
+<script type="math/tex; mode=display">\left \{\begin{aligned}
+\omega^T\textbf{x}_i+b \geq +1, y_i = +1\\
+\omega^T\textbf{x}_i+b \leq -1, y_i = -1
+\end{aligned} \right.</script><p>我们就称它就能够将训练样本正确分类。实际上，{+1,-1}这个取值并不重要，因为一旦能满足上式，其他的值也都能满足。能使上式等号成立的点被我们成为支持向量。然后，我们把优化问题归纳成：</p>
+<script type="math/tex; mode=display">\max_{\omega,b}\frac{2}{||\omega||}\\
+\mbox{s.t.}\ \ y_i(\omega^T\textbf{x}+b)\geq 1, i=1,2,\cdots,m</script><p>其中$\frac{2}{||\omega||}$指的是两个异类支持向量到划分平面的距离之和。为了简化计算，我们又可以把上式重写成：</p>
+<script type="math/tex; mode=display">\max_{\omega,b}\frac{||\omega||^2}{2}\\
+\mbox{s.t.}\ \ y_i(\omega^T\textbf{x}+b)\geq 1, i=1,2,\cdots,m</script>
       
     </div>
     
@@ -672,32 +683,32 @@
 
   
   
-    <script type="text/javascript" src="/libss/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/libss/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/libss/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/libss/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/libss/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/libss/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
@@ -747,7 +758,7 @@
         var disqus_config = function () {
           this.page.url = 'https://jiaomawhu.github.io/2019/02/11/svm/';
           this.page.identifier = '2019/02/11/svm/';
-          this.page.title = 'svm';
+          this.page.title = '支持向量机SVM总结';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
