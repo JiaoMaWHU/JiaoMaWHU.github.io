@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="剑指offer刷题的记录与总结">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-10T12:40:36.706Z">
+<meta property="og:updated_time" content="2019-03-21T13:45:15.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指offer">
 <meta name="twitter:description" content="剑指offer刷题的记录与总结">
@@ -402,13 +402,26 @@
 
       
         <p>剑指offer刷题的记录与总结<a id="more"></a></p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>要求算法能在时间复杂度O(n)，空间复杂度O(1)的情况下，输出一个数组中的重复数字。我们很容易想到一个时间复杂度O(n)，空间复杂度O(n)的做法。如何完成空间复杂度为O(1)? </p>
+<h1 id="面试题三-数组中的重复数字"><a href="#面试题三-数组中的重复数字" class="headerlink" title="面试题三 数组中的重复数字"></a>面试题三 数组中的重复数字</h1><h2 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h2><p>要求算法能在时间复杂度O(n)，空间复杂度O(1)的情况下，输出一个数组中的重复数字。我们很容易想到一个时间复杂度O(n)，空间复杂度O(n)的做法。如何完成空间复杂度为O(1)? </p>
 <p>题解：</p>
 <ol>
 <li>顺序遍历数组，如果下标i和值m相同，说明这个位置没有重复，继续向后。</li>
 <li>如果遇到了，下标i和值m不同，那么比较m和下标为m的值是否相等，如果相等，说明m这个值重复。</li>
 <li>如果不相等，就把m和下标为m的值交换，这样在后面如果又遇到这个值，就可以进行第2步，从而判断是否重复。</li>
 </ol>
+<h2 id="题目二"><a href="#题目二" class="headerlink" title="题目二"></a>题目二</h2><p>一个长度为n+1的数组，其中数字的范围为1-n，故肯定会有重复。请找出任意一个重复值，但不得改变数组。<br>很显然，有一个时间复杂度O(n)，空间复杂度O(n)的解法。但，如果要求空间复杂度为O(1)呢？</p>
+<p>题解：<br>使用二分查找的思路，对每一半$\phi$的上标1-m，遍历总数组一遍，判断数组中的数属于1-m的总数，是否大于m，若大于，下次从这里开始二分，否则从另一半开始二分。</p>
+<p>此方法，空间复杂度O(1)，但空间复杂度O(nlog(n))，所以属于牺牲时间换空间。还有另外一种解，归并排序，然后再遍历一遍，判断下一个是否与上一个重复，空间时间复杂度均与上面的方法相同。</p>
+<h1 id="面试题四-二维数组中的查找"><a href="#面试题四-二维数组中的查找" class="headerlink" title="面试题四 二维数组中的查找"></a>面试题四 二维数组中的查找</h1><p>在二维数组中，每一行都按照从左到右递增的顺序，每一列按照从上到下递增的顺序。查找是否存在，一个数n。</p>
+<p>题解：很显然，应该从数组第一行的最后一个数字开始考虑，如果此数字就已经大于n，它所在的列是不可能包含n的。若大于n，则考虑这一列前面的列。若小于n，向这一列下方考虑：若遇见n，则结束；若遇到了x个比n小的数后，发现一个比n大的数，则在接下来的遍历中，不需要考虑，x行及之前行中的数了。若没有遇到比n大的数，则此数组没有n。</p>
+<h1 id="面试题五-替换空格"><a href="#面试题五-替换空格" class="headerlink" title="面试题五 替换空格"></a>面试题五 替换空格</h1><p>前提知识：用同样的内容初始化数组和指针，会得到不同的数组和相同的指针指向，因为指针是由常量字符串初始化得到的。</p>
+<p>将字符串中的空格换为3个其他字符。</p>
+<p>题解：显然可以新建一个字符串。如果要求在原字符串上修改，则应该先扫描一遍，然后根据对应的移动数，进行字符的移动。同样在遇到，合并两个数组到其中一个这样的题目上时，我们也应该采用从后向前的方法，来减少移动次数。</p>
+<h1 id="面试题六-打印链表"><a href="#面试题六-打印链表" class="headerlink" title="面试题六 打印链表"></a>面试题六 打印链表</h1><p>反向输出链表，没啥好讲的。</p>
+<h1 id="面试题七-重建二叉树"><a href="#面试题七-重建二叉树" class="headerlink" title="面试题七 重建二叉树"></a>面试题七 重建二叉树</h1><p>根据前序和中序序列构建二叉树。</p>
+<p>题解：可按照递归的方法，每次通过限定index范围来构建左子树和右子树。</p>
+<p>这里比较容易错的地方是：1.递归结束的条件：当前前序序列中无其他节点；2.构建左子树要满足：此根节点左侧还有点；3.构建右子树要满足：此根节点右侧还有点。</p>
+<h1 id="面试题八-二叉树的下一个节点"><a href="#面试题八-二叉树的下一个节点" class="headerlink" title="面试题八 二叉树的下一个节点"></a>面试题八 二叉树的下一个节点</h1><p>给定一个二叉树和一个节点，找到中序序列中其下一个节点。简单分为三种情况分析，没啥好说的。</p>
 
       
     </div>
@@ -524,7 +537,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Jinshin</p>
-              <p class="site-description motion-element" itemprop="description">Blog of my experiences and codes</p>
+              <p class="site-description motion-element" itemprop="description">Blog of my experiences and code</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -596,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">1.</span> <span class="nav-text">3</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题三-数组中的重复数字"><span class="nav-number">1.</span> <span class="nav-text">面试题三 数组中的重复数字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目一"><span class="nav-number">1.1.</span> <span class="nav-text">题目一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目二"><span class="nav-number">1.2.</span> <span class="nav-text">题目二</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题四-二维数组中的查找"><span class="nav-number">2.</span> <span class="nav-text">面试题四 二维数组中的查找</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题五-替换空格"><span class="nav-number">3.</span> <span class="nav-text">面试题五 替换空格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题六-打印链表"><span class="nav-number">4.</span> <span class="nav-text">面试题六 打印链表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题七-重建二叉树"><span class="nav-number">5.</span> <span class="nav-text">面试题七 重建二叉树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题八-二叉树的下一个节点"><span class="nav-number">6.</span> <span class="nav-text">面试题八 二叉树的下一个节点</span></a></li></ol></div>
             
 
           </div>
