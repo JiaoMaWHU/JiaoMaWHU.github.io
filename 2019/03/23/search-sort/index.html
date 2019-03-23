@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="Knapsack Problem,">
+  <meta name="keywords" content="剑指offer,">
 
 
 
@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="DefinitionGiven N items and a knapsack with C weight. For each item i that has the value s[i] and the weight v[i], decide whether to include it (1) or not (0) to attain the largest total value.">
-<meta name="keywords" content="Knapsack Problem">
+<meta name="description" content="在本文中简单整理下常用的查找与排序算法。">
+<meta name="keywords" content="剑指offer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0&#x2F;1 Knapsack Problem">
-<meta property="og:url" content="https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/index.html">
+<meta property="og:title" content="查找与排序">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/03/23/search-sort/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="DefinitionGiven N items and a knapsack with C weight. For each item i that has the value s[i] and the weight v[i], decide whether to include it (1) or not (0) to attain the largest total value.">
+<meta property="og:description" content="在本文中简单整理下常用的查找与排序算法。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-07T07:36:15.843Z">
+<meta property="og:updated_time" content="2019-03-23T11:24:58.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0&#x2F;1 Knapsack Problem">
-<meta name="twitter:description" content="DefinitionGiven N items and a knapsack with C weight. For each item i that has the value s[i] and the weight v[i], decide whether to include it (1) or not (0) to attain the largest total value.">
+<meta name="twitter:title" content="查找与排序">
+<meta name="twitter:description" content="在本文中简单整理下常用的查找与排序算法。">
 
 
 
@@ -160,13 +160,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/03/23/search-sort/">
 
 
 
 
 
-  <title>0/1 Knapsack Problem | Jinshin's Blog</title>
+  <title>查找与排序 | Jinshin's Blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/03/23/search-sort/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">0/1 Knapsack Problem</h1>
+          <h1 class="post-title" itemprop="name headline">查找与排序</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-18T17:51:22+08:00">
-                2018-12-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-23T16:28:35+08:00">
+                2019-03-23
               </time>
             
 
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/18/01knapsack-problem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/18/01knapsack-problem/" itemprop="commentCount"></span>
+                <a href="/2019/03/23/search-sort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/23/search-sort/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,10 +401,10 @@
       
 
       
-        <h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><p>Given N items and a knapsack with C weight. For each item i that has the value s[i] and the weight v[i], decide whether to include it (1) or not (0) to attain the largest total value.<br><a id="more"></a></p>
-<h3 id="Basic-Solution"><a href="#Basic-Solution" class="headerlink" title="Basic Solution"></a>Basic Solution</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>$A_{a,b}$</p>
-
+        <p>在本文中简单整理下常用的查找与排序算法。<a id="more"></a></p>
+<h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>在这里补充下二分查找的两种写法。循环写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给定一个有序的数组，查找 value 是否在数组中，不存在返回 - 1。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left=<span class="number">0</span>, right = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">        midde=left+((right-left)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">        	right=middle<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">        	left=middle+<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">return</span> middle;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>关于更多的二分查找的变种可以参考<a href="https://subetter.com/algorithm/binary-search.html" target="_blank" rel="noopener">这里</a>。递归写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&gt;y)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">int</span> middle = x + ((y-x)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(x,middle<span class="number">-1</span>,value);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(middle+<span class="number">1</span>,y,value);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=s, j=e, tmp;</span><br><span class="line">    <span class="keyword">if</span>(s&gt;=e) <span class="keyword">return</span>;</span><br><span class="line">    tmp = a[s];</span><br><span class="line">    <span class="keyword">while</span>(i!=j)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&gt;i &amp;&amp; tmp &lt;= a[j]) j--;</span><br><span class="line">        a[i]=a[j];</span><br><span class="line">        <span class="keyword">while</span>(i&lt;j &amp;&amp; tmp &gt;= a[i]) i++;</span><br><span class="line">        a[j]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    a[i]=tmp;</span><br><span class="line">    quicksort(s,i<span class="number">-1</span>);</span><br><span class="line">    quicksort(i+<span class="number">1</span>,e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -421,7 +421,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Knapsack-Problem/" rel="tag"># Knapsack Problem</a>
+            <a href="/tags/剑指offer/" rel="tag"># 剑指offer</a>
           
         </div>
       
@@ -434,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/23/tips-for-ps-sop/" rel="next" title="写文书的注意事项">
-                <i class="fa fa-chevron-left"></i> 写文书的注意事项
+              <a href="/2019/03/10/jzoffer/" rel="next" title="剑指offer">
+                <i class="fa fa-chevron-left"></i> 剑指offer
               </a>
             
           </div>
@@ -443,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/07/boosting/" rel="prev" title="集成学习总结：Boosting">
-                集成学习总结：Boosting <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -595,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-number">1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Solution"><span class="nav-number">2.</span> <span class="nav-text">Basic Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查找"><span class="nav-number">1.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分查找"><span class="nav-number">1.1.</span> <span class="nav-text">二分查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-number">2.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.1.</span> <span class="nav-text">快速排序</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -765,9 +761,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/';
-          this.page.identifier = '2018/12/18/01knapsack-problem/';
-          this.page.title = '0/1 Knapsack Problem';
+          this.page.url = 'https://jiaomawhu.github.io/2019/03/23/search-sort/';
+          this.page.identifier = '2019/03/23/search-sort/';
+          this.page.title = '查找与排序';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
