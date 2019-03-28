@@ -106,10 +106,12 @@
 
 
 
-  <meta name="keywords" content="剑指offer,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="Jinshin's Blog" type="application/atom+xml">
@@ -119,18 +121,17 @@
 
 
 
-<meta name="description" content="在本文中简单整理下常用的查找与排序算法。">
-<meta name="keywords" content="剑指offer">
+<meta name="description" content="本文参照这里简单整理了常用的数据结构，搜索和排序算法。然后按照分类整理了一些经典的面试题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="查找与排序">
+<meta property="og:title" content="常用数据结构与算法整理">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/03/23/search-sort/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="在本文中简单整理下常用的查找与排序算法。">
+<meta property="og:description" content="本文参照这里简单整理了常用的数据结构，搜索和排序算法。然后按照分类整理了一些经典的面试题。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-23T11:24:58.045Z">
+<meta property="og:updated_time" content="2019-03-28T12:22:32.419Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="查找与排序">
-<meta name="twitter:description" content="在本文中简单整理下常用的查找与排序算法。">
+<meta name="twitter:title" content="常用数据结构与算法整理">
+<meta name="twitter:description" content="本文参照这里简单整理了常用的数据结构，搜索和排序算法。然后按照分类整理了一些经典的面试题。">
 
 
 
@@ -166,7 +167,7 @@
 
 
 
-  <title>查找与排序 | Jinshin's Blog</title>
+  <title>常用数据结构与算法整理 | Jinshin's Blog</title>
   
 
 
@@ -319,7 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">查找与排序</h1>
+          <h1 class="post-title" itemprop="name headline">常用数据结构与算法整理</h1>
         
 
         <div class="post-meta">
@@ -401,10 +402,22 @@
       
 
       
-        <p>在本文中简单整理下常用的查找与排序算法。<a id="more"></a></p>
-<h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>在这里补充下二分查找的两种写法。循环写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给定一个有序的数组，查找 value 是否在数组中，不存在返回 - 1。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left=<span class="number">0</span>, right = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">        midde=left+((right-left)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">        	right=middle<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">        	left=middle+<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">return</span> middle;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>本文参照<a href="https://github.com/kdn251/interviews/blob/master/README-zh-cn.md#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" target="_blank" rel="noopener">这里</a>简单整理了常用的数据结构，搜索和排序算法。然后按照分类整理了一些经典的面试题。<a id="more"></a></p>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="链表（Linked-List）"><a href="#链表（Linked-List）" class="headerlink" title="链表（Linked List）"></a>链表（Linked List）</h2><p>首先是<strong>单向链表</strong>，一般定义如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) :</span><br><span class="line">            val(x), next(<span class="literal">nullptr</span>) &#123;</span><br><span class="line">    &#125;<span class="comment">//列表初始化</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>一般会用到的操作有：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新建</span></span><br><span class="line">ListNode *node = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">ListNode *node = oldNode;</span><br><span class="line"><span class="comment">//删除</span></span><br><span class="line"><span class="keyword">delete</span> node;</span><br><span class="line"><span class="comment">//指向下个链表</span></span><br><span class="line">node=node-&gt;next;</span><br><span class="line"><span class="comment">//头插法</span></span><br><span class="line">ListNode *node = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">node-&gt;next=headNode-&gt;next;</span><br><span class="line">headNode-&gt;next=node;</span><br><span class="line"><span class="comment">//尾插法</span></span><br><span class="line">ListNode *node = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">lastNode-&gt;next=node;</span><br><span class="line">lastNode=node;</span><br></pre></td></tr></table></figure></p>
+<p>然后是<strong>双向链表</strong>，由于双向链表基本操作与单向链表相似，故不列出：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode *front;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) :</span><br><span class="line">            val(x), next(<span class="literal">nullptr</span>), front(<span class="literal">nullptr</span>) &#123;</span><br><span class="line">    &#125;<span class="comment">//列表初始化</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>关于链表的经典问题总结在了这里： <a href="/2019/03/28/linkedlist/" title="链表经典题目总结">链表经典题目总结</a>。</p>
+</blockquote>
+<h2 id="栈与队列（Stack-amp-Queue）"><a href="#栈与队列（Stack-amp-Queue）" class="headerlink" title="栈与队列（Stack &amp; Queue）"></a>栈与队列（Stack &amp; Queue）</h2><p>这两种数据结构一般都是用STL的，定义如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br></pre></td></tr></table></figure></p>
+<p>常用操作如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">s.empty()<span class="comment">//如果栈为空返回true，否则返回false  </span></span><br><span class="line">s.size()<span class="comment">//返回栈中元素的个数  </span></span><br><span class="line">s.pop()<span class="comment">//删除栈顶元素但不返回其值  </span></span><br><span class="line">s.top()<span class="comment">//返回栈顶的元素，但不删除该元素  </span></span><br><span class="line">s.push(X)<span class="comment">//在栈顶压入新元素 ，参数X为要压入的元素</span></span><br><span class="line"></span><br><span class="line">q.empty()<span class="comment">// 如果队列为空返回true，否则返回false  </span></span><br><span class="line">q.size() <span class="comment">// 返回队列中元素的个数  </span></span><br><span class="line">q.pop()  <span class="comment">//删除队列首元素但不返回其值  </span></span><br><span class="line">q.front()  <span class="comment">// 返回队首元素的值，但不删除该元素  </span></span><br><span class="line">q.push(X) <span class="comment">//在队尾压入新元素 ，X为要压入的元素</span></span><br><span class="line">q.back() <span class="comment">//返回队列尾元素的值，但不删除该元素</span></span><br></pre></td></tr></table></figure></p>
+<p>同时也整理下pair&lt;,&gt;这种用法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stack</span>&lt;pair&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line">s.push(make_pair(string1,<span class="number">1</span>));</span><br><span class="line">pair&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt; p = s.top();</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;p.first&lt;&lt;p.second;</span><br></pre></td></tr></table></figure></p>
+<h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><p><strong>二叉树</strong>的存储结构：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.数组存储,n节点的左右子树为2n,2n+1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Tree[MaxSize];</span><br><span class="line"><span class="comment">//2.链表存储</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode* left;</span><br><span class="line">    TreeNode* right;</span><br><span class="line">    TreeNode(<span class="keyword">int</span> x):val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>)&#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>二叉树有很多常用的操作，比如前、中、后序遍历，层次遍历，求深度，子节点的公共祖先，由于篇幅过长，在<a href="">这里</a>进行了专门的总结。<br>二叉搜索树<br>二叉平衡树<br>字典树<br>Binary Indexed Tree<br>线段树<br>红黑树</p>
+<h2 id="堆（并查集）"><a href="#堆（并查集）" class="headerlink" title="堆（并查集）"></a>堆（并查集）</h2><h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>在这里补充下二分查找的两种写法。循环写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给定一个有序的数组，查找 value 是否在数组中，不存在返回 - 1。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left=<span class="number">0</span>, right = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">        midde=left+((right-left)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">        	right=middle<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">        	left=middle+<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">return</span> middle;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>关于更多的二分查找的变种可以参考<a href="https://subetter.com/algorithm/binary-search.html" target="_blank" rel="noopener">这里</a>。递归写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&gt;y)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">int</span> middle = x + ((y-x)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(x,middle<span class="number">-1</span>,value);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(middle+<span class="number">1</span>,y,value);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=s, j=e, tmp;</span><br><span class="line">    <span class="keyword">if</span>(s&gt;=e) <span class="keyword">return</span>;</span><br><span class="line">    tmp = a[s];</span><br><span class="line">    <span class="keyword">while</span>(i!=j)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&gt;i &amp;&amp; tmp &lt;= a[j]) j--;</span><br><span class="line">        a[i]=a[j];</span><br><span class="line">        <span class="keyword">while</span>(i&lt;j &amp;&amp; tmp &gt;= a[i]) i++;</span><br><span class="line">        a[j]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    a[i]=tmp;</span><br><span class="line">    quicksort(s,i<span class="number">-1</span>);</span><br><span class="line">    quicksort(i+<span class="number">1</span>,e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><h2 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h2><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h1 id="图算法"><a href="#图算法" class="headerlink" title="图算法"></a>图算法</h1><h2 id="深度与广度优先算法"><a href="#深度与广度优先算法" class="headerlink" title="深度与广度优先算法"></a>深度与广度优先算法</h2><h2 id="Dijkstra-amp-Bellman-Ford-amp-Floyd-算法"><a href="#Dijkstra-amp-Bellman-Ford-amp-Floyd-算法" class="headerlink" title="Dijkstra &amp; Bellman-Ford &amp; Floyd 算法"></a>Dijkstra &amp; Bellman-Ford &amp; Floyd 算法</h2><h2 id="Prim-amp-Kruskal-算法"><a href="#Prim-amp-Kruskal-算法" class="headerlink" title="Prim &amp; Kruskal 算法"></a>Prim &amp; Kruskal 算法</h2>
       
     </div>
     
@@ -418,12 +431,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/剑指offer/" rel="tag"># 剑指offer</a>
-          
-        </div>
       
 
       
@@ -443,6 +450,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/28/linkedlist/" rel="prev" title="链表经典题目总结">
+                链表经典题目总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -529,7 +540,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -591,7 +602,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查找"><span class="nav-number">1.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分查找"><span class="nav-number">1.1.</span> <span class="nav-text">二分查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-number">2.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.1.</span> <span class="nav-text">快速排序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#链表（Linked-List）"><span class="nav-number">1.1.</span> <span class="nav-text">链表（Linked List）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈与队列（Stack-amp-Queue）"><span class="nav-number">1.2.</span> <span class="nav-text">栈与队列（Stack &amp; Queue）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树"><span class="nav-number">1.3.</span> <span class="nav-text">树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆（并查集）"><span class="nav-number">1.4.</span> <span class="nav-text">堆（并查集）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哈希表"><span class="nav-number">1.5.</span> <span class="nav-text">哈希表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图"><span class="nav-number">1.6.</span> <span class="nav-text">图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找"><span class="nav-number">2.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分查找"><span class="nav-number">2.1.</span> <span class="nav-text">二分查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-number">3.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">3.1.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">3.2.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">3.3.</span> <span class="nav-text">堆排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基数排序"><span class="nav-number">3.4.</span> <span class="nav-text">基数排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">3.5.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">3.6.</span> <span class="nav-text">插入排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图算法"><span class="nav-number">4.</span> <span class="nav-text">图算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#深度与广度优先算法"><span class="nav-number">4.1.</span> <span class="nav-text">深度与广度优先算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-amp-Bellman-Ford-amp-Floyd-算法"><span class="nav-number">4.2.</span> <span class="nav-text">Dijkstra &amp; Bellman-Ford &amp; Floyd 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prim-amp-Kruskal-算法"><span class="nav-number">4.3.</span> <span class="nav-text">Prim &amp; Kruskal 算法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -763,7 +774,7 @@
         var disqus_config = function () {
           this.page.url = 'https://jiaomawhu.github.io/2019/03/23/search-sort/';
           this.page.identifier = '2019/03/23/search-sort/';
-          this.page.title = '查找与排序';
+          this.page.title = '常用数据结构与算法整理';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

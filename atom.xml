@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-03-23T11:24:58.045Z</updated>
+  <updated>2019-03-28T12:39:01.299Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,22 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>查找与排序</title>
-    <link href="https://jiaomawhu.github.io/2019/03/23/search-sort/"/>
-    <id>https://jiaomawhu.github.io/2019/03/23/search-sort/</id>
-    <published>2019-03-23T08:28:35.000Z</published>
-    <updated>2019-03-23T11:24:58.045Z</updated>
+    <title>链表经典题目总结</title>
+    <link href="https://jiaomawhu.github.io/2019/03/28/linkedlist/"/>
+    <id>https://jiaomawhu.github.io/2019/03/28/linkedlist/</id>
+    <published>2019-03-28T12:11:35.000Z</published>
+    <updated>2019-03-28T12:39:01.299Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;在本文中简单整理下常用的查找与排序算法。
+      &lt;p&gt;本文总结了关于链表的基础操作与经典题目。
     
     </summary>
     
       <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
     
     
-      <category term="剑指offer" scheme="https://jiaomawhu.github.io/tags/%E5%89%91%E6%8C%87offer/"/>
+  </entry>
+  
+  <entry>
+    <title>常用数据结构与算法整理</title>
+    <link href="https://jiaomawhu.github.io/2019/03/23/search-sort/"/>
+    <id>https://jiaomawhu.github.io/2019/03/23/search-sort/</id>
+    <published>2019-03-23T08:28:35.000Z</published>
+    <updated>2019-03-28T12:22:32.419Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文参照&lt;a href=&quot;https://github.com/kdn251/interviews/blob/master/README-zh-cn.md#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;简单整理了常用的数据结构，搜索和排序算法。然后按照分类整理了一些经典的面试题。
+    
+    </summary>
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
+    
     
   </entry>
   
@@ -41,7 +57,7 @@
     <link href="https://jiaomawhu.github.io/2019/03/10/jzoffer/"/>
     <id>https://jiaomawhu.github.io/2019/03/10/jzoffer/</id>
     <published>2019-03-10T12:27:18.000Z</published>
-    <updated>2019-03-27T14:01:06.084Z</updated>
+    <updated>2019-03-28T14:08:35.029Z</updated>
     
     <summary type="html">
     
