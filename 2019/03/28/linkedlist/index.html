@@ -119,17 +119,17 @@
 
 
 
-<meta name="description" content="本文总结了关于链表的基础操作与经典题目。">
+<meta name="description" content="本文总结了关于链表的经典题目。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表经典题目总结">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/03/28/linkedlist/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="本文总结了关于链表的基础操作与经典题目。">
+<meta property="og:description" content="本文总结了关于链表的经典题目。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-28T12:39:01.299Z">
+<meta property="og:updated_time" content="2019-03-29T07:57:24.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链表经典题目总结">
-<meta name="twitter:description" content="本文总结了关于链表的基础操作与经典题目。">
+<meta name="twitter:description" content="本文总结了关于链表的经典题目。">
 
 
 
@@ -400,9 +400,19 @@
       
 
       
-        <p>本文总结了关于链表的基础操作与经典题目。<a id="more"></a></p>
-<h1 id="在O-1-的时间里删除链表节点"><a href="#在O-1-的时间里删除链表节点" class="headerlink" title="在O(1)的时间里删除链表节点"></a>在O(1)的时间里删除链表节点</h1><p>这题参考剑指offer第18题的题目一，思路与代码见<a href="/2019/03/10/jzoffer/" title="剑指offer">剑指offer</a>。</p>
-<h1 id="删除链表中的重复节点"><a href="#删除链表中的重复节点" class="headerlink" title="删除链表中的重复节点"></a>删除链表中的重复节点</h1><p>这题参考剑指offer第18题的题目二，思路与代码见<a href="/2019/03/10/jzoffer/" title="剑指offer">剑指offer</a>。</p>
+        <p>本文总结了关于链表的经典题目。<a id="more"></a></p>
+<h1 id="首先是中总结的题目"><a href="#首先是中总结的题目" class="headerlink" title="首先是中总结的题目"></a>首先是<a href="/2019/03/10/jzoffer/" title="剑指offer">剑指offer</a>中总结的题目</h1><ol>
+<li><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/6.cpp" target="_blank" rel="noopener">逆序打印链表</a></li>
+<li><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/18-1.cpp" target="_blank" rel="noopener">在O(1)的时间里删除链表节点</a></li>
+<li><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/18-2.cpp" target="_blank" rel="noopener">删除链表中的重复节点</a></li>
+<li><p><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/22.cpp" target="_blank" rel="noopener">链表中倒数第k个节点</a><br><strong>求链表的中间节点</strong>，就是上题的衍生。用同样的思路：用一个走两步的快指针和一个走一步的慢指针，这样，当快指针走到头过后，慢指针也就走到了中间节点。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">ReturnMiddleNode</span><span class="params">(ListNode* pHead)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(pHead==<span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        ListNode* f=pHead;</span><br><span class="line">        <span class="keyword">while</span>(f!=<span class="literal">nullptr</span>&amp;&amp;f-&gt;next!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            f=f-&gt;next-&gt;next;</span><br><span class="line">            pHead=pHead-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/23.cpp" target="_blank" rel="noopener">链表中环的入口节点</a></p>
+</li>
+<li><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/24.cpp" target="_blank" rel="noopener">反转链表</a></li>
+<li><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/25.cpp" target="_blank" rel="noopener">合并两个排序的链表</a></li>
+</ol>
 
       
     </div>
@@ -584,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在O-1-的时间里删除链表节点"><span class="nav-number">1.</span> <span class="nav-text">在O(1)的时间里删除链表节点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除链表中的重复节点"><span class="nav-number">2.</span> <span class="nav-text">删除链表中的重复节点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#首先是中总结的题目"><span class="nav-number">1.</span> <span class="nav-text">首先是剑指offer中总结的题目</span></a></li></ol></div>
             
 
           </div>
