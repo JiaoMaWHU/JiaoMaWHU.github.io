@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaomawhu.github.io/2019/03/23/search-sort/</loc>
+    <lastmod>2019-04-02T05:30:45.070Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2019/04/01/tree/</loc>
+    <lastmod>2019-04-01T13:39:30.521Z</lastmod>
+  </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/03/10/jzoffer/</loc>
-    <lastmod>2019-03-29T09:45:37.859Z</lastmod>
+    <lastmod>2019-04-01T11:55:09.162Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/03/28/linkedlist/</loc>
-    <lastmod>2019-03-29T07:57:24.831Z</lastmod>
-  </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/23/search-sort/</loc>
-    <lastmod>2019-03-28T12:22:32.419Z</lastmod>
+    <lastmod>2019-03-29T11:47:47.520Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/02/11/svm/</loc>
     <lastmod>2019-03-15T07:37:03.794Z</lastmod>
