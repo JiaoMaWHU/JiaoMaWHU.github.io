@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-08-08T15:12:15.264Z</updated>
+  <updated>2019-08-09T14:41:32.692Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,22 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Leetcode Summary - Array</title>
+    <title>Leetcode Summary - Hash Table</title>
     <link href="https://jiaomawhu.github.io/2019/08/03/my-leetcode/"/>
     <id>https://jiaomawhu.github.io/2019/08/03/my-leetcode/</id>
     <published>2019-08-02T16:54:26.000Z</published>
-    <updated>2019-08-08T15:12:15.264Z</updated>
+    <updated>2019-08-09T14:41:32.692Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post records my leetcode solutions of the array tag.
+      &lt;p&gt;This post records my leetcode solutions of the &lt;strong&gt;Hash Table&lt;/strong&gt; tag.
     
     </summary>
     
       <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
     
     
-      <category term="Array, DP" scheme="https://jiaomawhu.github.io/tags/Array-DP/"/>
+      <category term="Hash Table" scheme="https://jiaomawhu.github.io/tags/Hash-Table/"/>
     
   </entry>
   

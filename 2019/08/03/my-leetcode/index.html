@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="Array, DP,">
+  <meta name="keywords" content="Hash Table,">
 
 
 
@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="This post records my leetcode solutions of the array tag.">
-<meta name="keywords" content="Array, DP">
+<meta name="description" content="This post records my leetcode solutions of the Hash Table tag.">
+<meta name="keywords" content="Hash Table">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode Summary - Array">
+<meta property="og:title" content="Leetcode Summary - Hash Table">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/08/03/my-leetcode/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="This post records my leetcode solutions of the array tag.">
+<meta property="og:description" content="This post records my leetcode solutions of the Hash Table tag.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-08T15:12:15.264Z">
+<meta property="og:updated_time" content="2019-08-09T14:41:32.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode Summary - Array">
-<meta name="twitter:description" content="This post records my leetcode solutions of the array tag.">
+<meta name="twitter:title" content="Leetcode Summary - Hash Table">
+<meta name="twitter:description" content="This post records my leetcode solutions of the Hash Table tag.">
 
 
 
@@ -166,7 +166,7 @@
 
 
 
-  <title>Leetcode Summary - Array | Jinshin's Blog</title>
+  <title>Leetcode Summary - Hash Table | Jinshin's Blog</title>
   
 
 
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Leetcode Summary - Array</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - Hash Table</h1>
         
 
         <div class="post-meta">
@@ -401,20 +401,50 @@
       
 
       
-        <p>This post records my leetcode solutions of the array tag. <a id="more"></a></p>
-<h1 id="Sum"><a href="#Sum" class="headerlink" title="Sum"></a>Sum</h1><h3 id="167-Two-Sum-II-Input-array-is-sorted-two-pointers"><a href="#167-Two-Sum-II-Input-array-is-sorted-two-pointers" class="headerlink" title="167. Two Sum II - Input array is sorted (two pointers)"></a>167. Two Sum II - Input array is sorted (two pointers)</h3><h1 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h1><h3 id="162-Find-Peak-Element"><a href="#162-Find-Peak-Element" class="headerlink" title="162. Find Peak Element"></a>162. Find Peak Element</h3><h1 id="Rotated-Sorted-Array"><a href="#Rotated-Sorted-Array" class="headerlink" title="Rotated Sorted Array"></a>Rotated Sorted Array</h1><h3 id="153"><a href="#153" class="headerlink" title="153."></a>153.</h3><h3 id="154"><a href="#154" class="headerlink" title="154."></a>154.</h3><h1 id="Construct-Binary-Tree"><a href="#Construct-Binary-Tree" class="headerlink" title="Construct Binary Tree"></a>Construct Binary Tree</h1><h1 id="Buy-stock"><a href="#Buy-stock" class="headerlink" title="Buy stock"></a>Buy stock</h1><h1 id="Subarray"><a href="#Subarray" class="headerlink" title="Subarray"></a>Subarray</h1><h3 id="152-Maximum-Product-Subarray"><a href="#152-Maximum-Product-Subarray" class="headerlink" title="152. Maximum Product Subarray"></a>152. Maximum Product Subarray</h3><p>Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.</p>
-<p>dp</p>
-<ul>
-<li>max(k) = max( max(k-1) <em> A[k], A[k], min(k-1) </em> A[k] )</li>
-<li>min(k) = min( min(k-1) <em> A[k], A[k], max(k-1) </em> A[k] )</li>
-</ul>
-<h1 id="STL-amp-Data-Structure"><a href="#STL-amp-Data-Structure" class="headerlink" title="STL &amp; Data Structure"></a>STL &amp; Data Structure</h1><h3 id="128-Longest-Consecutive-Sequence"><a href="#128-Longest-Consecutive-Sequence" class="headerlink" title="128. Longest Consecutive Sequence"></a>128. Longest Consecutive Sequence</h3><p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence. Your algorithm should run in O(n) complexity.</p>
-<ul>
-<li>Can’t use a set, whose insert function is O(logn) complexity. </li>
-<li>Unordered_set is ok. But you need to erase element in case of redundant compare. </li>
-<li>Unordered_map is also ok. But the [ ] operator of Unordered_map will creates a new element, so do not mix it up with the count function.</li>
-<li>Bitset is ok, which is another version of unordered_set using less memory.</li>
-</ul>
+        <p>This post records my leetcode solutions of the <strong>Hash Table</strong> tag. <a id="more"></a></p>
+<h4 id="1-Two-Sum"><a href="#1-Two-Sum" class="headerlink" title="1. Two Sum"></a>1. Two Sum</h4><h4 id="3-Longest-Substring-Without-Repeating-Characters"><a href="#3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="3. Longest Substring Without Repeating Characters"></a>3. Longest Substring Without Repeating Characters</h4><h4 id="18-4Sum"><a href="#18-4Sum" class="headerlink" title="18. 4Sum"></a>18. 4Sum</h4><h4 id="30-Substring-with-Concatenation-of-All-Words"><a href="#30-Substring-with-Concatenation-of-All-Words" class="headerlink" title="30. Substring with Concatenation of All Words"></a>30. Substring with Concatenation of All Words</h4><!--
+### 167. Two Sum II - Input array is sorted (two pointers)
+
+# Binary Search
+
+### 162. Find Peak Element
+
+# Rotated Sorted Array
+
+### 153. 
+### 154.
+### 189. Rotate Array
+Given an array, rotate the array to the right by k steps, where k is non-negative. Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem. Could you do it in-place with O(1) extra space?
+
++ Apparently, we can switch k numbers to the front ( O(kn) complexity ), however this method may exceed time limit.
++ Reverse is a very smart solution.
++ reverse(begin,end), reverse(begin, begin+k), reverse(begin+k, end)
+
+# Construct Binary Tree
+
+# Buy stock
+
+# Subarray
+### 152. Maximum Product Subarray
+Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+
+dp
++ max(k) = max( max(k-1) * A[k], A[k], min(k-1) * A[k] )
++ min(k) = min( min(k-1) * A[k], A[k], max(k-1) * A[k] )
+
+# STL & Data Structure & Other
+### 128. Longest Consecutive Sequence
+Given an unsorted array of integers, find the length of the longest consecutive elements sequence. Your algorithm should run in O(n) complexity.
+
++ Can't use a set, whose insert function is O(logn) complexity. 
++ Unordered_set is ok. But you need to erase element in case of redundant compare. 
++ Unordered_map is also ok. But the [ ] operator of Unordered_map will creates a new element, so do not mix it up with the count function.
++ Bitset is ok, which is another version of unordered_set using less memory.
+
+### 169. Majority Element
+Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊n/2⌋ times. You may assume that the array is non-empty and the majority element always exist in the array.
+
+-->
 
       
     </div>
@@ -432,7 +462,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Array-DP/" rel="tag"># Array, DP</a>
+            <a href="/tags/Hash-Table/" rel="tag"># Hash Table</a>
           
         </div>
       
@@ -562,7 +592,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -602,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sum"><span class="nav-number">1.</span> <span class="nav-text">Sum</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#167-Two-Sum-II-Input-array-is-sorted-two-pointers"><span class="nav-number">1.0.1.</span> <span class="nav-text">167. Two Sum II - Input array is sorted (two pointers)</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Binary-Search"><span class="nav-number">2.</span> <span class="nav-text">Binary Search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#162-Find-Peak-Element"><span class="nav-number">2.0.1.</span> <span class="nav-text">162. Find Peak Element</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Rotated-Sorted-Array"><span class="nav-number">3.</span> <span class="nav-text">Rotated Sorted Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#153"><span class="nav-number">3.0.1.</span> <span class="nav-text">153.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#154"><span class="nav-number">3.0.2.</span> <span class="nav-text">154.</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Construct-Binary-Tree"><span class="nav-number">4.</span> <span class="nav-text">Construct Binary Tree</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Buy-stock"><span class="nav-number">5.</span> <span class="nav-text">Buy stock</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Subarray"><span class="nav-number">6.</span> <span class="nav-text">Subarray</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#152-Maximum-Product-Subarray"><span class="nav-number">6.0.1.</span> <span class="nav-text">152. Maximum Product Subarray</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STL-amp-Data-Structure"><span class="nav-number">7.</span> <span class="nav-text">STL &amp; Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#128-Longest-Consecutive-Sequence"><span class="nav-number">7.0.1.</span> <span class="nav-text">128. Longest Consecutive Sequence</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Two-Sum"><span class="nav-number">1.</span> <span class="nav-text">1. Two Sum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Longest-Substring-Without-Repeating-Characters"><span class="nav-number">2.</span> <span class="nav-text">3. Longest Substring Without Repeating Characters</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-4Sum"><span class="nav-number">3.</span> <span class="nav-text">18. 4Sum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#30-Substring-with-Concatenation-of-All-Words"><span class="nav-number">4.</span> <span class="nav-text">30. Substring with Concatenation of All Words</span></a></li></ol></div>
             
 
           </div>
@@ -774,7 +804,7 @@
         var disqus_config = function () {
           this.page.url = 'https://jiaomawhu.github.io/2019/08/03/my-leetcode/';
           this.page.identifier = '2019/08/03/my-leetcode/';
-          this.page.title = 'Leetcode Summary - Array';
+          this.page.title = 'Leetcode Summary - Hash Table';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
