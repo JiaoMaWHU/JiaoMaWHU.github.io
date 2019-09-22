@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="Markdown,">
+  <meta name="keywords" content="Leetcode,">
 
 
 
@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
-<meta name="keywords" content="Markdown">
+<meta name="description" content="This post records my solutions of leetcode in the Hash Table tag and useful data structures in C++.">
+<meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Markdown 语法总结">
-<meta property="og:url" content="https://jiaomawhu.github.io/2018/11/16/testforpost/index.html">
+<meta property="og:title" content="Leetcode Summary - Hash Table">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/08/03/leetcode-hash/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
+<meta property="og:description" content="This post records my solutions of leetcode in the Hash Table tag and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-07T07:18:58.458Z">
+<meta property="og:updated_time" content="2019-09-22T02:50:59.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Markdown 语法总结">
-<meta name="twitter:description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
+<meta name="twitter:title" content="Leetcode Summary - Hash Table">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the Hash Table tag and useful data structures in C++.">
 
 
 
@@ -160,13 +160,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2018/11/16/testforpost/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/08/03/leetcode-hash/">
 
 
 
 
 
-  <title>Hexo Markdown 语法总结 | Jinshin's Blog</title>
+  <title>Leetcode Summary - Hash Table | Jinshin's Blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2018/11/16/testforpost/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/08/03/leetcode-hash/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo Markdown 语法总结</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - Hash Table</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-16T20:00:10-06:00">
-                2018-11-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-03T00:54:26-05:00">
+                2019-08-03
               </time>
             
 
@@ -354,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tutorial/" itemprop="url" rel="index">
-                    <span itemprop="name">Tutorial</span>
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
                   </a>
                 </span>
 
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/16/testforpost/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/16/testforpost/" itemprop="commentCount"></span>
+                <a href="/2019/08/03/leetcode-hash/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/03/leetcode-hash/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,16 +401,81 @@
       
 
       
-        <p>总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。<br><a id="more"></a></p>
-<h4 id="1-front-matter-格式"><a href="#1-front-matter-格式" class="headerlink" title="1.front-matter 格式:"></a>1.front-matter 格式:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">layout: &apos;[post]&apos;</span><br><span class="line">title: Hexo Markdown 语法总结</span><br><span class="line">date: 2018-11-16 20:00:10</span><br><span class="line">tags: Markdown</span><br><span class="line">categories: Tutorial</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
-<h4 id="2-斜体-斜体-粗体：-粗体"><a href="#2-斜体-斜体-粗体：-粗体" class="headerlink" title="2.斜体: *斜体* 粗体：**粗体**"></a>2.<em>斜体</em>: <code>*斜体*</code> <strong>粗体</strong>：<code>**粗体**</code></h4><h4 id="3-分级标题："><a href="#3-分级标题：" class="headerlink" title="3.分级标题："></a>3.分级标题：</h4><h5 id="使用下划线"><a href="#使用下划线" class="headerlink" title="使用下划线"></a>使用下划线</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一级</span><br><span class="line">=========</span><br><span class="line">二级</span><br><span class="line">---------</span><br><span class="line">### 三级</span><br></pre></td></tr></table></figure>
-<h5 id="使用-标识"><a href="#使用-标识" class="headerlink" title="使用#标识"></a>使用#标识</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># H1</span><br><span class="line">## H2</span><br><span class="line">...</span><br><span class="line">###### H6</span><br></pre></td></tr></table></figure>
-<h4 id="4-分割线：在单独一行使用"><a href="#4-分割线：在单独一行使用" class="headerlink" title="4.分割线：在单独一行使用 -------"></a>4.分割线：在单独一行使用 <code>-------</code></h4><h4 id="5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt"><a href="#5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt" class="headerlink" title="5.删除线: 使用~~删除线~~  下划线:&lt;u&gt;balabala&lt;/u&gt;"></a>5.<del>删除线</del>: 使用<code>~~删除线~~</code>  <u>下划线</u>:<code>&lt;u&gt;balabala&lt;/u&gt;</code></h4><h4 id="6-超链接："><a href="#6-超链接：" class="headerlink" title="6.超链接："></a>6.超链接：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[链接文字](地址 &quot;标题&quot;)</span><br><span class="line">![图片说明](地址 &quot;标题&quot;)</span><br></pre></td></tr></table></figure>
-<h4 id="7-注释-注释文字"><a href="#7-注释-注释文字" class="headerlink" title="7.注释: \注释文字"></a>7.注释: <code>\注释文字</code></h4><h4 id="8-引用-gt-文字引用"><a href="#8-引用-gt-文字引用" class="headerlink" title="8.引用: &gt;文字引用"></a>8.引用: <code>&gt;文字引用</code></h4><h4 id="9-脚注-BlaBlaBla-anyword-anyword-Bla-means"><a href="#9-脚注-BlaBlaBla-anyword-anyword-Bla-means" class="headerlink" title="9.脚注: BlaBlaBla [^anyword], [anyword^]: Bla means ..."></a>9.脚注: <code>BlaBlaBla [^anyword], [anyword^]: Bla means ...</code></h4><h4 id="10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2"><a href="#10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2" class="headerlink" title="10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2."></a>10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2.</h4><h4 id="11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。"><a href="#11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。" class="headerlink" title="11.表格: 绘制表格格式如下，|控制分列，-控制分行，:控制对齐方式。"></a>11.表格: 绘制表格格式如下，<code>|</code>控制分列，<code>-</code>控制分行，<code>:</code>控制对齐方式。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| Item     | Value     | Qty   |</span><br><span class="line">| :------- | --------: | :---: |</span><br><span class="line">| Computer | 1600 USD  | 5     |</span><br></pre></td></tr></table></figure>
-<h4 id="12-代码块"><a href="#12-代码块" class="headerlink" title="12.代码块"></a>12.代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">行间：`code`</span><br><span class="line">代码块：`*3 code `*3</span><br><span class="line">代码块(高亮)：`*3 python </span><br><span class="line">some python code</span><br><span class="line">`*3</span><br></pre></td></tr></table></figure>
-<h4 id="13-LaTex公式"><a href="#13-LaTex公式" class="headerlink" title="13.LaTex公式"></a>13.LaTex公式</h4><p>数学公式的默认定界符是<code>$...$</code>和<code>\\(...\\)</code>（对于行内公式），以及<code>$$ ... $$</code>和<code>\\[...\\]</code>（对于块级公式）</p>
-<script type="math/tex; mode=display">
-R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/15/Hexo-Markdown-%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C/#fn1" target="_blank" rel="noopener">[1]Hexo Markdown 简明语法手册 - Mobilicorpus</a><br><a href="http://itmyhome.com/markdown/article/syntax/blockquotes.html" target="_blank" rel="noopener">[2]Learning-Markdown (Markdown 入门参考) - LearnShare</a></p>
+        <p>This post records my solutions of leetcode in the <strong>Hash Table</strong> tag and useful data structures in C++. <a id="more"></a></p>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><ul>
+<li>2D vector does not have a empty parameters constructor as <code>vector&lt;vector&lt;string&gt;&gt; res()</code></li>
+</ul>
+<h4 id=""><a href="#" class="headerlink" title=""></a><a href="/2019/09/21/unordered_map/" title="C++ STL - Unordered_map">C++ STL - Unordered_map</a></h4><h4 id="Unordered-set"><a href="#Unordered-set" class="headerlink" title="Unordered_set"></a>Unordered_set</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="1-Two-Sum"><a href="#1-Two-Sum" class="headerlink" title="1. Two Sum"></a>1. Two Sum</h4><p>Description: <em>1. Given an array of integers, return indices of the two numbers such that they add up to a specific target. 2. You may assume that each input would have exactly one solution, and you may not use the same element twice.</em></p>
+<ul>
+<li><p>The best solution here is using a hash table. We cannot use a vector, because we do not know what the range of integers is. So we need unordered_map, where the key is integer and the value is index.</p>
+</li>
+<li><p>A trick: we can finish the initialization of map and the search in on loop, which is also solid when the two numbers are same.</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (m.count(target - nums[i])) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;i, m[target - nums[i]]&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    m[nums[i]] = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-Longest-Substring-Without-Repeating-Characters"><a href="#3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="3. Longest Substring Without Repeating Characters"></a>3. Longest Substring Without Repeating Characters</h4><p>Description: <em>Given a string, find the length of the longest substring without repeating characters.</em></p>
+<ol>
+<li>Apparently, we should use a hash table to store characters. Vector is fine, because we only have 128 characters in ASCII table. Then we can use a loop to find the substring.</li>
+<li>The trick is, when we meet a character c2 that repeats with c1 in the substring, we can jump into index(c1+1) to reduce computation.</li>
+</ol>
+<h4 id="18-4Sum"><a href="#18-4Sum" class="headerlink" title="18. 4Sum"></a>18. 4Sum</h4><p>Description: <em>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target. The solution set must not contain duplicate quadruplets.</em></p>
+<ol>
+<li>Wait for 3 sum</li>
+</ol>
+<h4 id="30-Substring-with-Concatenation-of-All-Words"><a href="#30-Substring-with-Concatenation-of-All-Words" class="headerlink" title="30. Substring with Concatenation of All Words"></a>30. Substring with Concatenation of All Words</h4><p>Description: <em>You are given a string, s, and a list of words, words, that are all of the same length. Find all starting indices of substring(s) in s that is a concatenation of each word in words exactly once and without any intervening characters.</em></p>
+<ol>
+<li>Of course we can use the same <strong>length</strong> to get results in a loop, i.e. checking all <strong>n*length</strong> substring, which is O(kn) (n-k/q)k</li>
+<li>However, there is a better solution. In fact, we only need to check <strong>num = length</strong> sequences. E.x. (0, 3, 6), (1,4,7). </li>
+<li>In every sequence, we mark the start id, then go over <strong>n*length</strong> substring using a hash table. If it’s correct, push the id into results, or we add <strong>id</strong> to <strong>id+length</strong> for the next searching, and start just from the last end position, which is only O(qn)</li>
+</ol>
+<h4 id="36-Valid-Sudoku"><a href="#36-Valid-Sudoku" class="headerlink" title="36. Valid Sudoku"></a>36. Valid Sudoku</h4><h4 id="37-Sudoku-Solver"><a href="#37-Sudoku-Solver" class="headerlink" title="37. Sudoku Solver"></a>37. Sudoku Solver</h4><h4 id="49-Group-Anagrams"><a href="#49-Group-Anagrams" class="headerlink" title="49. Group Anagrams"></a>49. Group Anagrams</h4><h4 id="76-Minimum-Window-Substring"><a href="#76-Minimum-Window-Substring" class="headerlink" title="76. Minimum Window Substring"></a>76. Minimum Window Substring</h4><h4 id="94-Binary-Tree-Inorder-Traversal"><a href="#94-Binary-Tree-Inorder-Traversal" class="headerlink" title="94. Binary Tree Inorder Traversal"></a>94. Binary Tree Inorder Traversal</h4><h4 id="136-Single-Number"><a href="#136-Single-Number" class="headerlink" title="136. Single Number"></a>136. Single Number</h4><ol>
+<li>If we take XOR of zero and some bit, it will return that bit</li>
+<li>If we take XOR of two same bits, it will return 0</li>
+<li>So we can XOR all bits together to find the unique number.</li>
+</ol>
+<h4 id="138-Copy-List-with-Random-Pointer"><a href="#138-Copy-List-with-Random-Pointer" class="headerlink" title="138. Copy List with Random Pointer"></a>138. Copy List with Random Pointer</h4><h4 id="166"><a href="#166" class="headerlink" title="166."></a>166.</h4><h4 id="187-Repeated-DNA-Sequences"><a href="#187-Repeated-DNA-Sequences" class="headerlink" title="187. Repeated DNA Sequences"></a>187. Repeated DNA Sequences</h4><!--
+### 167. Two Sum II - Input array is sorted (two pointers)
+
+# Binary Search
+
+### 162. Find Peak Element
+
+# Rotated Sorted Array
+
+### 153. 
+### 154.
+### 189. Rotate Array
+Given an array, rotate the array to the right by k steps, where k is non-negative. Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem. Could you do it in-place with O(1) extra space?
+
++ Apparently, we can switch k numbers to the front ( O(kn) complexity ), however this method may exceed time limit.
++ Reverse is a very smart solution.
++ reverse(begin,end), reverse(begin, begin+k), reverse(begin+k, end)
+
+# Construct Binary Tree
+
+# Buy stock
+
+# Subarray
+### 152. Maximum Product Subarray
+Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+
+dp
++ max(k) = max( max(k-1) * A[k], A[k], min(k-1) * A[k] )
++ min(k) = min( min(k-1) * A[k], A[k], max(k-1) * A[k] )
+
+# STL & Data Structure & Other
+### 128. Longest Consecutive Sequence
+Given an unsorted array of integers, find the length of the longest consecutive elements sequence. Your algorithm should run in O(n) complexity.
+
++ Can't use a set, whose insert function is O(logn) complexity. 
++ Unordered_set is ok. But you need to erase element in case of redundant compare. 
++ Unordered_map is also ok. But the [ ] operator of Unordered_map will creates a new element, so do not mix it up with the count function.
++ Bitset is ok, which is another version of unordered_set using less memory.
+
+### 169. Majority Element
+Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊n/2⌋ times. You may assume that the array is non-empty and the majority element always exist in the array.
+
+-->
 
       
     </div>
@@ -428,7 +493,7 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
         </div>
       
@@ -441,14 +506,18 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/01/tree/" rel="next" title="二叉树经典题目整理">
+                <i class="fa fa-chevron-left"></i> 二叉树经典题目整理
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/23/tips-for-ps-sop/" rel="prev" title="写文书的注意事项">
-                写文书的注意事项 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/21/unordered_map/" rel="prev" title="C++ STL - Unordered_map">
+                C++ STL - Unordered_map <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -598,7 +667,7 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-front-matter-格式"><span class="nav-number">1.</span> <span class="nav-text">1.front-matter 格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-斜体-斜体-粗体：-粗体"><span class="nav-number">2.</span> <span class="nav-text">2.斜体: *斜体* 粗体：**粗体**</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-分级标题："><span class="nav-number">3.</span> <span class="nav-text">3.分级标题：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用下划线"><span class="nav-number">3.1.</span> <span class="nav-text">使用下划线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用-标识"><span class="nav-number">3.2.</span> <span class="nav-text">使用#标识</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-分割线：在单独一行使用"><span class="nav-number">4.</span> <span class="nav-text">4.分割线：在单独一行使用 -------</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt"><span class="nav-number">5.</span> <span class="nav-text">5.删除线: 使用~~删除线~~  下划线:&lt;u&gt;balabala&lt;/u&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-超链接："><span class="nav-number">6.</span> <span class="nav-text">6.超链接：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-注释-注释文字"><span class="nav-number">7.</span> <span class="nav-text">7.注释: \注释文字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-引用-gt-文字引用"><span class="nav-number">8.</span> <span class="nav-text">8.引用: &gt;文字引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-脚注-BlaBlaBla-anyword-anyword-Bla-means"><span class="nav-number">9.</span> <span class="nav-text">9.脚注: BlaBlaBla [^anyword], [anyword^]: Bla means ...</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2"><span class="nav-number">10.</span> <span class="nav-text">10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。"><span class="nav-number">11.</span> <span class="nav-text">11.表格: 绘制表格格式如下，|控制分列，-控制分行，:控制对齐方式。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-代码块"><span class="nav-number">12.</span> <span class="nav-text">12.代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-LaTex公式"><span class="nav-number">13.</span> <span class="nav-text">13.LaTex公式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Vector"><span class="nav-number">1.1.</span> <span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text">C++ STL - Unordered_map</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unordered-set"><span class="nav-number">1.3.</span> <span class="nav-text">Unordered_set</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Two-Sum"><span class="nav-number">2.1.</span> <span class="nav-text">1. Two Sum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Longest-Substring-Without-Repeating-Characters"><span class="nav-number">2.2.</span> <span class="nav-text">3. Longest Substring Without Repeating Characters</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-4Sum"><span class="nav-number">2.3.</span> <span class="nav-text">18. 4Sum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#30-Substring-with-Concatenation-of-All-Words"><span class="nav-number">2.4.</span> <span class="nav-text">30. Substring with Concatenation of All Words</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#36-Valid-Sudoku"><span class="nav-number">2.5.</span> <span class="nav-text">36. Valid Sudoku</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#37-Sudoku-Solver"><span class="nav-number">2.6.</span> <span class="nav-text">37. Sudoku Solver</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#49-Group-Anagrams"><span class="nav-number">2.7.</span> <span class="nav-text">49. Group Anagrams</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#76-Minimum-Window-Substring"><span class="nav-number">2.8.</span> <span class="nav-text">76. Minimum Window Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#94-Binary-Tree-Inorder-Traversal"><span class="nav-number">2.9.</span> <span class="nav-text">94. Binary Tree Inorder Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#136-Single-Number"><span class="nav-number">2.10.</span> <span class="nav-text">136. Single Number</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#138-Copy-List-with-Random-Pointer"><span class="nav-number">2.11.</span> <span class="nav-text">138. Copy List with Random Pointer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#166"><span class="nav-number">2.12.</span> <span class="nav-text">166.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#187-Repeated-DNA-Sequences"><span class="nav-number">2.13.</span> <span class="nav-text">187. Repeated DNA Sequences</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -768,9 +837,9 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2018/11/16/testforpost/';
-          this.page.identifier = '2018/11/16/testforpost/';
-          this.page.title = 'Hexo Markdown 语法总结';
+          this.page.url = 'https://jiaomawhu.github.io/2019/08/03/leetcode-hash/';
+          this.page.identifier = '2019/08/03/leetcode-hash/';
+          this.page.title = 'Leetcode Summary - Hash Table';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

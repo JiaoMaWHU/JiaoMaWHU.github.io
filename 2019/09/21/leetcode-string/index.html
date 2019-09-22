@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="Markdown,">
+  <meta name="keywords" content="Leetcode,">
 
 
 
@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
-<meta name="keywords" content="Markdown">
+<meta name="description" content="This post records my solutions of leetcode in the String tag and useful data structures in C++.">
+<meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Markdown 语法总结">
-<meta property="og:url" content="https://jiaomawhu.github.io/2018/11/16/testforpost/index.html">
+<meta property="og:title" content="Leetcode Summary - String">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/21/leetcode-string/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
+<meta property="og:description" content="This post records my solutions of leetcode in the String tag and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-07T07:18:58.458Z">
+<meta property="og:updated_time" content="2019-09-22T02:50:58.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Markdown 语法总结">
-<meta name="twitter:description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
+<meta name="twitter:title" content="Leetcode Summary - String">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the String tag and useful data structures in C++.">
 
 
 
@@ -160,13 +160,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2018/11/16/testforpost/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/21/leetcode-string/">
 
 
 
 
 
-  <title>Hexo Markdown 语法总结 | Jinshin's Blog</title>
+  <title>Leetcode Summary - String | Jinshin's Blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2018/11/16/testforpost/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/21/leetcode-string/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo Markdown 语法总结</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - String</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-16T20:00:10-06:00">
-                2018-11-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-21T18:06:33-05:00">
+                2019-09-21
               </time>
             
 
@@ -354,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tutorial/" itemprop="url" rel="index">
-                    <span itemprop="name">Tutorial</span>
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
                   </a>
                 </span>
 
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/16/testforpost/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/16/testforpost/" itemprop="commentCount"></span>
+                <a href="/2019/09/21/leetcode-string/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/21/leetcode-string/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,16 +401,33 @@
       
 
       
-        <p>总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。<br><a id="more"></a></p>
-<h4 id="1-front-matter-格式"><a href="#1-front-matter-格式" class="headerlink" title="1.front-matter 格式:"></a>1.front-matter 格式:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">layout: &apos;[post]&apos;</span><br><span class="line">title: Hexo Markdown 语法总结</span><br><span class="line">date: 2018-11-16 20:00:10</span><br><span class="line">tags: Markdown</span><br><span class="line">categories: Tutorial</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
-<h4 id="2-斜体-斜体-粗体：-粗体"><a href="#2-斜体-斜体-粗体：-粗体" class="headerlink" title="2.斜体: *斜体* 粗体：**粗体**"></a>2.<em>斜体</em>: <code>*斜体*</code> <strong>粗体</strong>：<code>**粗体**</code></h4><h4 id="3-分级标题："><a href="#3-分级标题：" class="headerlink" title="3.分级标题："></a>3.分级标题：</h4><h5 id="使用下划线"><a href="#使用下划线" class="headerlink" title="使用下划线"></a>使用下划线</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一级</span><br><span class="line">=========</span><br><span class="line">二级</span><br><span class="line">---------</span><br><span class="line">### 三级</span><br></pre></td></tr></table></figure>
-<h5 id="使用-标识"><a href="#使用-标识" class="headerlink" title="使用#标识"></a>使用#标识</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># H1</span><br><span class="line">## H2</span><br><span class="line">...</span><br><span class="line">###### H6</span><br></pre></td></tr></table></figure>
-<h4 id="4-分割线：在单独一行使用"><a href="#4-分割线：在单独一行使用" class="headerlink" title="4.分割线：在单独一行使用 -------"></a>4.分割线：在单独一行使用 <code>-------</code></h4><h4 id="5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt"><a href="#5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt" class="headerlink" title="5.删除线: 使用~~删除线~~  下划线:&lt;u&gt;balabala&lt;/u&gt;"></a>5.<del>删除线</del>: 使用<code>~~删除线~~</code>  <u>下划线</u>:<code>&lt;u&gt;balabala&lt;/u&gt;</code></h4><h4 id="6-超链接："><a href="#6-超链接：" class="headerlink" title="6.超链接："></a>6.超链接：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[链接文字](地址 &quot;标题&quot;)</span><br><span class="line">![图片说明](地址 &quot;标题&quot;)</span><br></pre></td></tr></table></figure>
-<h4 id="7-注释-注释文字"><a href="#7-注释-注释文字" class="headerlink" title="7.注释: \注释文字"></a>7.注释: <code>\注释文字</code></h4><h4 id="8-引用-gt-文字引用"><a href="#8-引用-gt-文字引用" class="headerlink" title="8.引用: &gt;文字引用"></a>8.引用: <code>&gt;文字引用</code></h4><h4 id="9-脚注-BlaBlaBla-anyword-anyword-Bla-means"><a href="#9-脚注-BlaBlaBla-anyword-anyword-Bla-means" class="headerlink" title="9.脚注: BlaBlaBla [^anyword], [anyword^]: Bla means ..."></a>9.脚注: <code>BlaBlaBla [^anyword], [anyword^]: Bla means ...</code></h4><h4 id="10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2"><a href="#10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2" class="headerlink" title="10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2."></a>10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2.</h4><h4 id="11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。"><a href="#11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。" class="headerlink" title="11.表格: 绘制表格格式如下，|控制分列，-控制分行，:控制对齐方式。"></a>11.表格: 绘制表格格式如下，<code>|</code>控制分列，<code>-</code>控制分行，<code>:</code>控制对齐方式。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| Item     | Value     | Qty   |</span><br><span class="line">| :------- | --------: | :---: |</span><br><span class="line">| Computer | 1600 USD  | 5     |</span><br></pre></td></tr></table></figure>
-<h4 id="12-代码块"><a href="#12-代码块" class="headerlink" title="12.代码块"></a>12.代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">行间：`code`</span><br><span class="line">代码块：`*3 code `*3</span><br><span class="line">代码块(高亮)：`*3 python </span><br><span class="line">some python code</span><br><span class="line">`*3</span><br></pre></td></tr></table></figure>
-<h4 id="13-LaTex公式"><a href="#13-LaTex公式" class="headerlink" title="13.LaTex公式"></a>13.LaTex公式</h4><p>数学公式的默认定界符是<code>$...$</code>和<code>\\(...\\)</code>（对于行内公式），以及<code>$$ ... $$</code>和<code>\\[...\\]</code>（对于块级公式）</p>
-<script type="math/tex; mode=display">
-R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/15/Hexo-Markdown-%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C/#fn1" target="_blank" rel="noopener">[1]Hexo Markdown 简明语法手册 - Mobilicorpus</a><br><a href="http://itmyhome.com/markdown/article/syntax/blockquotes.html" target="_blank" rel="noopener">[2]Learning-Markdown (Markdown 入门参考) - LearnShare</a></p>
+        <p>This post records my solutions of leetcode in the <strong>String</strong> tag and useful data structures in C++. <a id="more"></a></p>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="58-Length-of-Last-Word"><a href="#58-Length-of-Last-Word" class="headerlink" title="58. Length of Last Word"></a>58. Length of Last Word</h4><p><em>Given a string s consists of upper/lower-case alphabets and empty space characters ‘ ‘, return the length of last word in the string. If the last word does not exist, return 0.</em></p>
+<p>Start from the end of the string and count the size will be.</p>
+<h4 id="71-Simplify-Path"><a href="#71-Simplify-Path" class="headerlink" title="71. Simplify Path"></a>71. Simplify Path</h4><p><em>Given an absolute path for a file (Unix-style), simplify it. Or in other words, convert it to the canonical path.</em></p>
+<p>The solution is simple, use stack to store the path.</p>
+<h4 id="91-Decode-Ways"><a href="#91-Decode-Ways" class="headerlink" title="91. Decode Ways"></a>91. Decode Ways</h4><p><em>A message containing letters from A-Z is being encoded to numbers using the following mapping: A-&gt;1 … Given a non-empty string containing only digits, determine the total number of ways to decode it.</em></p>
+<ol>
+<li><p>Well, I met this one on the apple on campus interview…. we can easily come up with a recursive method.</p>
+</li>
+<li><p>However, DP is a better solution. Use a vector to store that how many decode ways each range from the start to end index has, so that we can save lots of computation.</p>
+</li>
+<li><p>The dp function is v[i] = v[i-1] + v[i-2], v[0] is assigned to 1, v[i-1] represents that i is for a single character, and v[i-2] represents that i and i-1 combines for a character, note that there is v[i-1] + v[i-2].</p>
+</li>
+</ol>
+<h4 id="93-Restore-IP-Addresses"><a href="#93-Restore-IP-Addresses" class="headerlink" title="93. Restore IP Addresses"></a>93. Restore IP Addresses</h4><p><em>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</em></p>
+<p>In fact, we only have at most $ C^3_11 $ cases, so it will be fine to do Bruce Forte. So we need to enumerate all of the cases in four while loops, and use stoi to transfer the string into int.</p>
+<h4 id="151-Reverse-Words-in-a-String"><a href="#151-Reverse-Words-in-a-String" class="headerlink" title="151. Reverse Words in a String"></a>151. Reverse Words in a String</h4><p><em>Given an input string, reverse the string word by word.</em></p>
+<ol>
+<li>Reverse the string, and do split, push back reversed words into res.</li>
+<li>Don not insert char in the front of string, which makes it really slow.</li>
+<li><strong>Transfer the size_t into int first, because unsigned int may get out of the range.</strong> </li>
+</ol>
+<h4 id="165-Compare-Version-Numbers"><a href="#165-Compare-Version-Numbers" class="headerlink" title="165. Compare Version Numbers"></a>165. Compare Version Numbers</h4><p><em>Compare two version numbers version1 and version2.<br>If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.</em></p>
+<ol>
+<li>Detect the sub version of both v1, v2 in a loop and compare them.</li>
+<li>If one of the string end, set the version to 0, keep comparing it with the other</li>
+</ol>
 
       
     </div>
@@ -428,7 +445,7 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
         </div>
       
@@ -441,15 +458,15 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/09/21/unordered_map/" rel="next" title="C++ STL - Unordered_map">
+                <i class="fa fa-chevron-left"></i> C++ STL - Unordered_map
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/23/tips-for-ps-sop/" rel="prev" title="写文书的注意事项">
-                写文书的注意事项 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -598,7 +615,7 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-front-matter-格式"><span class="nav-number">1.</span> <span class="nav-text">1.front-matter 格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-斜体-斜体-粗体：-粗体"><span class="nav-number">2.</span> <span class="nav-text">2.斜体: *斜体* 粗体：**粗体**</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-分级标题："><span class="nav-number">3.</span> <span class="nav-text">3.分级标题：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用下划线"><span class="nav-number">3.1.</span> <span class="nav-text">使用下划线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用-标识"><span class="nav-number">3.2.</span> <span class="nav-text">使用#标识</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-分割线：在单独一行使用"><span class="nav-number">4.</span> <span class="nav-text">4.分割线：在单独一行使用 -------</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt"><span class="nav-number">5.</span> <span class="nav-text">5.删除线: 使用~~删除线~~  下划线:&lt;u&gt;balabala&lt;/u&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-超链接："><span class="nav-number">6.</span> <span class="nav-text">6.超链接：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-注释-注释文字"><span class="nav-number">7.</span> <span class="nav-text">7.注释: \注释文字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-引用-gt-文字引用"><span class="nav-number">8.</span> <span class="nav-text">8.引用: &gt;文字引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-脚注-BlaBlaBla-anyword-anyword-Bla-means"><span class="nav-number">9.</span> <span class="nav-text">9.脚注: BlaBlaBla [^anyword], [anyword^]: Bla means ...</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2"><span class="nav-number">10.</span> <span class="nav-text">10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。"><span class="nav-number">11.</span> <span class="nav-text">11.表格: 绘制表格格式如下，|控制分列，-控制分行，:控制对齐方式。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-代码块"><span class="nav-number">12.</span> <span class="nav-text">12.代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-LaTex公式"><span class="nav-number">13.</span> <span class="nav-text">13.LaTex公式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">1.1.</span> <span class="nav-text">String</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#58-Length-of-Last-Word"><span class="nav-number">2.1.</span> <span class="nav-text">58. Length of Last Word</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#71-Simplify-Path"><span class="nav-number">2.2.</span> <span class="nav-text">71. Simplify Path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#91-Decode-Ways"><span class="nav-number">2.3.</span> <span class="nav-text">91. Decode Ways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#93-Restore-IP-Addresses"><span class="nav-number">2.4.</span> <span class="nav-text">93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#151-Reverse-Words-in-a-String"><span class="nav-number">2.5.</span> <span class="nav-text">151. Reverse Words in a String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#165-Compare-Version-Numbers"><span class="nav-number">2.6.</span> <span class="nav-text">165. Compare Version Numbers</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -768,9 +785,9 @@ R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2018/11/16/testforpost/';
-          this.page.identifier = '2018/11/16/testforpost/';
-          this.page.title = 'Hexo Markdown 语法总结';
+          this.page.url = 'https://jiaomawhu.github.io/2019/09/21/leetcode-string/';
+          this.page.identifier = '2019/09/21/leetcode-string/';
+          this.page.title = 'Leetcode Summary - String';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
