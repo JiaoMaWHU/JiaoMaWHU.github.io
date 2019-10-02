@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-10-02T04:04:27.467Z</updated>
+  <updated>2019-10-02T18:00:35.998Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode_dp</title>
+    <link href="https://jiaomawhu.github.io/2019/10/02/leetcode-dp/"/>
+    <id>https://jiaomawhu.github.io/2019/10/02/leetcode-dp/</id>
+    <published>2019-10-02T17:53:00.000Z</published>
+    <updated>2019-10-02T18:00:35.998Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Dynamic Programming&lt;/strong&gt; tag.
+    
+    </summary>
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
+    
+    
+      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode_recursive_backtracking</title>
     <link href="https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/"/>
     <id>https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/</id>
     <published>2019-10-01T21:17:07.000Z</published>
-    <updated>2019-10-02T04:04:27.467Z</updated>
+    <updated>2019-10-02T17:53:20.030Z</updated>
     
     <summary type="html">
     
