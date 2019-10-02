@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="STL,">
+  <meta name="keywords" content="Leetcode,">
 
 
 
@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="Implementation details and tips of Unordered_map in C++.">
-<meta name="keywords" content="STL">
+<meta name="description" content="This post records my solutions of leetcode in the String and Array tag and useful data structures in C++.">
+<meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++ STL - Unordered_map">
-<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/21/unordered_map/index.html">
+<meta property="og:title" content="Leetcode Summary - String &amp; Array">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="Implementation details and tips of Unordered_map in C++.">
+<meta property="og:description" content="This post records my solutions of leetcode in the String and Array tag and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T21:19:23.660Z">
+<meta property="og:updated_time" content="2019-10-01T21:17:21.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++ STL - Unordered_map">
-<meta name="twitter:description" content="Implementation details and tips of Unordered_map in C++.">
+<meta name="twitter:title" content="Leetcode Summary - String &amp; Array">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the String and Array tag and useful data structures in C++.">
 
 
 
@@ -160,13 +160,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/21/unordered_map/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/">
 
 
 
 
 
-  <title>C++ STL - Unordered_map | Jinshin's Blog</title>
+  <title>Leetcode Summary - String & Array | Jinshin's Blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/21/unordered_map/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++ STL - Unordered_map</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - String & Array</h1>
         
 
         <div class="post-meta">
@@ -331,7 +331,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-21T16:10:49-05:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-21T18:06:33-05:00">
                 2019-09-21
               </time>
             
@@ -354,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tutorial/" itemprop="url" rel="index">
-                    <span itemprop="name">Tutorial</span>
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
                   </a>
                 </span>
 
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/09/21/unordered_map/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/21/unordered_map/" itemprop="commentCount"></span>
+                <a href="/2019/09/21/leetcode-string-array/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/21/leetcode-string-array/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,23 +401,45 @@
       
 
       
-        <p>Implementation details and tips of Unordered_map in C++.<a id="more"></a></p>
-<h4 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// init list</span></span><br><span class="line"><span class="function">stringmap <span class="title">second</span><span class="params">(&#123;&#123;<span class="string">"apple"</span>,<span class="string">"red"</span>&#125;,&#123;<span class="string">"lemon"</span>,<span class="string">"yellow"</span>&#125;&#125;)</span></span>;</span><br><span class="line">stringmap second = &#123;&#123;<span class="string">"apple"</span>,<span class="string">"red"</span>&#125;,&#123;<span class="string">"lemon"</span>,<span class="string">"yellow"</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
-<h4 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h4><ol>
-<li><p>Count:<br>return 1 if an element with a key equivalent to k is found, or zero otherwise. Avg O(1), Worst O(n).</p>
+        <p>This post records my solutions of leetcode in the <strong>String</strong> and <strong>Array</strong> tag and useful data structures in C++. <a id="more"></a></p>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a>5. Longest Palindromic Substring</h4><p><em>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</em></p>
+<ol>
+<li>Use 2D dp matrix to store the maxLen, dp[i][i] = 1; dp[i][i+1] = 1, if string[i] == string[i+1]; dp[i][j] =1, if string[i] == string[j] and dp[i+1][j-1]. We use two loop, first i from 0-&gt;n, second j starts from 0 and ends at i.</li>
+<li>We can also simply starts from the center towards both sides, and be care that center can be a char, or between two characters.</li>
+</ol>
+<h4 id="54-Spiral-Matrix"><a href="#54-Spiral-Matrix" class="headerlink" title="54. Spiral Matrix"></a>54. Spiral Matrix</h4><p><em>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.</em></p>
+<ol>
+<li>Iterative method is good, however it needs an extra matrix.</li>
+<li>Use recursive method, parameter i, j start pointer, n, m end row and column.</li>
+</ol>
+<h4 id="58-Length-of-Last-Word"><a href="#58-Length-of-Last-Word" class="headerlink" title="58. Length of Last Word"></a>58. Length of Last Word</h4><p><em>Given a string s consists of upper/lower-case alphabets and empty space characters ‘ ‘, return the length of last word in the string. If the last word does not exist, return 0.</em></p>
+<p>Start from the end of the string and count the size will be.</p>
+<h4 id="71-Simplify-Path"><a href="#71-Simplify-Path" class="headerlink" title="71. Simplify Path"></a>71. Simplify Path</h4><p><em>Given an absolute path for a file (Unix-style), simplify it. Or in other words, convert it to the canonical path.</em></p>
+<p>The solution is simple, use stack to store the path.</p>
+<h4 id="91-Decode-Ways"><a href="#91-Decode-Ways" class="headerlink" title="91. Decode Ways"></a>91. Decode Ways</h4><p><em>A message containing letters from A-Z is being encoded to numbers using the following mapping: A-&gt;1 … Given a non-empty string containing only digits, determine the total number of ways to decode it.</em></p>
+<ol>
+<li><p>Well, I met this one on the apple on campus interview…. we can easily come up with a recursive method.</p>
 </li>
-<li><p>Find:<br>return an iterator to the element, if the specified key value is found, or unordered_map::end if the specified key is not found in the container. Avg O(1), Worst O(n).</p>
+<li><p>However, DP is a better solution. Use a vector to store that how many decode ways each range from the start to end index has, so that we can save lots of computation.</p>
+</li>
+<li><p>The dp function is v[i] = v[i-1] + v[i-2], v[0] is assigned to 1, v[i-1] represents that i is for a single character, and v[i-2] represents that i and i-1 combines for a character, note that there is v[i-1] + v[i-2].</p>
 </li>
 </ol>
-<h4 id="Insert-Avg-O-1-Worst-O-n"><a href="#Insert-Avg-O-1-Worst-O-n" class="headerlink" title="Insert: Avg O(1), Worst O(n)"></a>Insert: Avg O(1), Worst O(n)</h4><ol>
-<li><p>Operator: [ ]</p>
-</li>
-<li><p>Insert:</p>
-</li>
-<li><p>Emplace</p>
-</li>
+<h4 id="93-Restore-IP-Addresses"><a href="#93-Restore-IP-Addresses" class="headerlink" title="93. Restore IP Addresses"></a>93. Restore IP Addresses</h4><p><em>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</em></p>
+<p>In fact, we only have at most $ C^3_11 $ cases, so it will be fine to do Bruce Forte. So we need to enumerate all of the cases in four while loops, and use stoi to transfer the string into int.</p>
+<h4 id="128-Longest-Consecutive-Sequence"><a href="#128-Longest-Consecutive-Sequence" class="headerlink" title="128. Longest Consecutive Sequence"></a>128. Longest Consecutive Sequence</h4><p><em>Given an unsorted array of integers, find the length of the longest consecutive elements sequence. Your algorithm should run in O(n) complexity.</em></p>
+<p>Use a hash map to store the length of the sequence, <strong>in the left and right end index of the sequence</strong>, smart!</p>
+<h4 id="151-Reverse-Words-in-a-String"><a href="#151-Reverse-Words-in-a-String" class="headerlink" title="151. Reverse Words in a String"></a>151. Reverse Words in a String</h4><p><em>Given an input string, reverse the string word by word.</em></p>
+<ol>
+<li>Reverse the string, and do split, push back reversed words into res.</li>
+<li>Don not insert char in the front of string, which makes it really slow.</li>
+<li><strong>Transfer the size_t into int first, because unsigned int may get out of the range.</strong> </li>
 </ol>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// move insertion</span></span><br><span class="line">myrecipe.insert (<span class="built_in">std</span>::make_pair&lt;<span class="built_in">std</span>::<span class="built_in">string</span>,<span class="keyword">double</span>&gt;(<span class="string">"eggs"</span>,<span class="number">6.0</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// initializer list insertion</span></span><br><span class="line">myrecipe.insert ( &#123;&#123;<span class="string">"sugar"</span>,<span class="number">0.8</span>&#125;,&#123;<span class="string">"salt"</span>,<span class="number">0.1</span>&#125;&#125; );</span><br><span class="line"></span><br><span class="line"><span class="comment">// emplace</span></span><br><span class="line">mymap.emplace (<span class="string">"NCC-1701"</span>, <span class="string">"J.T. Kirk"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="165-Compare-Version-Numbers"><a href="#165-Compare-Version-Numbers" class="headerlink" title="165. Compare Version Numbers"></a>165. Compare Version Numbers</h4><p><em>Compare two version numbers version1 and version2.<br>If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.</em></p>
+<ol>
+<li>Detect the sub version of both v1, v2 in a loop and compare them.</li>
+<li>If one of the string end, set the version to 0, keep comparing it with the other</li>
+</ol>
 
       
     </div>
@@ -435,7 +457,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/STL/" rel="tag"># STL</a>
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
         </div>
       
@@ -448,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/03/leetcode-hash/" rel="next" title="Leetcode Summary - Hash Table">
-                <i class="fa fa-chevron-left"></i> Leetcode Summary - Hash Table
+              <a href="/2019/09/21/unordered_map/" rel="next" title="C++ STL - Unordered_map">
+                <i class="fa fa-chevron-left"></i> C++ STL - Unordered_map
               </a>
             
           </div>
@@ -458,8 +480,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/21/leetcode-string-array/" rel="prev" title="Leetcode Summary - String & Array">
-                Leetcode Summary - String & Array <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/28/leetcode-tree/" rel="prev" title="Leetcode Summary - Tree">
+                Leetcode Summary - Tree <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -609,7 +631,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Constructor"><span class="nav-number">1.</span> <span class="nav-text">Constructor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Search"><span class="nav-number">2.</span> <span class="nav-text">Search</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Insert-Avg-O-1-Worst-O-n"><span class="nav-number">3.</span> <span class="nav-text">Insert: Avg O(1), Worst O(n)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">1.1.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vector"><span class="nav-number">1.2.</span> <span class="nav-text">Vector</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">2.1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#54-Spiral-Matrix"><span class="nav-number">2.2.</span> <span class="nav-text">54. Spiral Matrix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#58-Length-of-Last-Word"><span class="nav-number">2.3.</span> <span class="nav-text">58. Length of Last Word</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#71-Simplify-Path"><span class="nav-number">2.4.</span> <span class="nav-text">71. Simplify Path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#91-Decode-Ways"><span class="nav-number">2.5.</span> <span class="nav-text">91. Decode Ways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#93-Restore-IP-Addresses"><span class="nav-number">2.6.</span> <span class="nav-text">93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#128-Longest-Consecutive-Sequence"><span class="nav-number">2.7.</span> <span class="nav-text">128. Longest Consecutive Sequence</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#151-Reverse-Words-in-a-String"><span class="nav-number">2.8.</span> <span class="nav-text">151. Reverse Words in a String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#165-Compare-Version-Numbers"><span class="nav-number">2.9.</span> <span class="nav-text">165. Compare Version Numbers</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -779,9 +801,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2019/09/21/unordered_map/';
-          this.page.identifier = '2019/09/21/unordered_map/';
-          this.page.title = 'C++ STL - Unordered_map';
+          this.page.url = 'https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/';
+          this.page.identifier = '2019/09/21/leetcode-string-array/';
+          this.page.title = 'Leetcode Summary - String & Array';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

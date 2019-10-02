@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="STL,">
+  <meta name="keywords" content="Leetcode,">
 
 
 
@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="Implementation details and tips of Unordered_map in C++.">
-<meta name="keywords" content="STL">
+<meta name="description" content="This post records my solutions of leetcode in the Tree tag and useful data structures in C++.">
+<meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++ STL - Unordered_map">
-<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/21/unordered_map/index.html">
+<meta property="og:title" content="Leetcode Summary - Tree">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/28/leetcode-tree/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="Implementation details and tips of Unordered_map in C++.">
+<meta property="og:description" content="This post records my solutions of leetcode in the Tree tag and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T21:19:23.660Z">
+<meta property="og:updated_time" content="2019-09-30T03:13:24.721Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++ STL - Unordered_map">
-<meta name="twitter:description" content="Implementation details and tips of Unordered_map in C++.">
+<meta name="twitter:title" content="Leetcode Summary - Tree">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the Tree tag and useful data structures in C++.">
 
 
 
@@ -160,13 +160,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/21/unordered_map/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree/">
 
 
 
 
 
-  <title>C++ STL - Unordered_map | Jinshin's Blog</title>
+  <title>Leetcode Summary - Tree | Jinshin's Blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/21/unordered_map/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++ STL - Unordered_map</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - Tree</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-21T16:10:49-05:00">
-                2019-09-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-28T15:20:35-05:00">
+                2019-09-28
               </time>
             
 
@@ -354,8 +354,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tutorial/" itemprop="url" rel="index">
-                    <span itemprop="name">Tutorial</span>
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
                   </a>
                 </span>
 
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/09/21/unordered_map/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/21/unordered_map/" itemprop="commentCount"></span>
+                <a href="/2019/09/28/leetcode-tree/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/28/leetcode-tree/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,23 +401,35 @@
       
 
       
-        <p>Implementation details and tips of Unordered_map in C++.<a id="more"></a></p>
-<h4 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// init list</span></span><br><span class="line"><span class="function">stringmap <span class="title">second</span><span class="params">(&#123;&#123;<span class="string">"apple"</span>,<span class="string">"red"</span>&#125;,&#123;<span class="string">"lemon"</span>,<span class="string">"yellow"</span>&#125;&#125;)</span></span>;</span><br><span class="line">stringmap second = &#123;&#123;<span class="string">"apple"</span>,<span class="string">"red"</span>&#125;,&#123;<span class="string">"lemon"</span>,<span class="string">"yellow"</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
-<h4 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h4><ol>
-<li><p>Count:<br>return 1 if an element with a key equivalent to k is found, or zero otherwise. Avg O(1), Worst O(n).</p>
-</li>
-<li><p>Find:<br>return an iterator to the element, if the specified key value is found, or unordered_map::end if the specified key is not found in the container. Avg O(1), Worst O(n).</p>
+        <p>This post records my solutions of leetcode in the <strong>Tree</strong> tag and useful data structures in C++. <a id="more"></a></p>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="95-Unique-Binary-Search-Trees-II"><a href="#95-Unique-Binary-Search-Trees-II" class="headerlink" title="95. Unique Binary Search Trees II"></a>95. Unique Binary Search Trees II</h4><p><em>Given an integer n, generate all structurally unique BST’s (binary search trees) that store values 1 … n.</em></p>
+<p>Treat it as a sorted array, use index in recursive method to build the tree.</p>
+<h4 id="96-Unique-Binary-Search-Trees"><a href="#96-Unique-Binary-Search-Trees" class="headerlink" title="96. Unique Binary Search Trees"></a>96. Unique Binary Search Trees</h4><p><em>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?</em></p>
+<ol>
+<li>if we use the same recursive method as no.95, TLE.</li>
+<li>the clue is, the total number is actually a Catalan number.<ul>
+<li>assign dp[0]=1, if nothing can be selected, only one way; </li>
+<li>dp[1] = 1, with 1 point there is only one way; </li>
+<li>for dp[2], we can assign the first point as the root node, so as the second one, then we have dp[2] = dp[0]dp[1] + dp[1]dp[0]; </li>
+<li>dp[3] = dp[0]dp[2] + dp[1](dp[0])dp[1] + dp[2]dp[0]</li>
+<li>then we conclude \(C_{0}=1\), \(C_{n+1} = \sum_{i=0}^{n}{C_i}{C_{n-i}}\) for \(n&gt;=0\)</li>
+</ul>
 </li>
 </ol>
-<h4 id="Insert-Avg-O-1-Worst-O-n"><a href="#Insert-Avg-O-1-Worst-O-n" class="headerlink" title="Insert: Avg O(1), Worst O(n)"></a>Insert: Avg O(1), Worst O(n)</h4><ol>
-<li><p>Operator: [ ]</p>
+<h4 id="98-Validate-Binary-Search-Tree"><a href="#98-Validate-Binary-Search-Tree" class="headerlink" title="98. Validate Binary Search Tree"></a>98. Validate Binary Search Tree</h4><p><em>Given a binary tree, determine if it is a valid binary search tree (BST).</em></p>
+<p>Recursive, pass by max and min to next level. When pass to left node, change max to self value, otherwise change min for the right node.</p>
+<h4 id="102-Binary-Tree-Level-Order-Traversal"><a href="#102-Binary-Tree-Level-Order-Traversal" class="headerlink" title="102. Binary Tree Level Order Traversal"></a>102. Binary Tree Level Order Traversal</h4><p><em>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).</em></p>
+<ol>
+<li><p>We can use a new structure to store the level, as</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LvlTreeNode</span> &#123;</span></span><br><span class="line">        TreeNode * node;</span><br><span class="line">        <span class="keyword">int</span> lvl;</span><br><span class="line">        LvlTreeNode(TreeNode* n_, <span class="keyword">int</span> lvl_): node(n_), lvl(lvl_)&#123;&#125;;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Insert:</p>
-</li>
-<li><p>Emplace</p>
+<li><p>However, it is slow. We can do this using original structure. Use loop and first initial the size of queue, so we can exactly traverse one level of a tree.</p>
 </li>
 </ol>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// move insertion</span></span><br><span class="line">myrecipe.insert (<span class="built_in">std</span>::make_pair&lt;<span class="built_in">std</span>::<span class="built_in">string</span>,<span class="keyword">double</span>&gt;(<span class="string">"eggs"</span>,<span class="number">6.0</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// initializer list insertion</span></span><br><span class="line">myrecipe.insert ( &#123;&#123;<span class="string">"sugar"</span>,<span class="number">0.8</span>&#125;,&#123;<span class="string">"salt"</span>,<span class="number">0.1</span>&#125;&#125; );</span><br><span class="line"></span><br><span class="line"><span class="comment">// emplace</span></span><br><span class="line">mymap.emplace (<span class="string">"NCC-1701"</span>, <span class="string">"J.T. Kirk"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="103-Binary-Tree-Zigzag-Level-Order-Traversal"><a href="#103-Binary-Tree-Zigzag-Level-Order-Traversal" class="headerlink" title="103. Binary Tree Zigzag Level Order Traversal"></a>103. Binary Tree Zigzag Level Order Traversal</h4><p><em>Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).</em></p>
+<p>Same idea as 102.</p>
+<h4 id="107-Binary-Tree-Level-Order-Traversal-II"><a href="#107-Binary-Tree-Level-Order-Traversal-II" class="headerlink" title="107. Binary Tree Level Order Traversal II"></a>107. Binary Tree Level Order Traversal II</h4><p><em>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).</em></p>
+<p>Same idea as 102.</p>
 
       
     </div>
@@ -435,7 +447,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/STL/" rel="tag"># STL</a>
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
         </div>
       
@@ -448,8 +460,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/03/leetcode-hash/" rel="next" title="Leetcode Summary - Hash Table">
-                <i class="fa fa-chevron-left"></i> Leetcode Summary - Hash Table
+              <a href="/2019/09/21/leetcode-string-array/" rel="next" title="Leetcode Summary - String & Array">
+                <i class="fa fa-chevron-left"></i> Leetcode Summary - String & Array
               </a>
             
           </div>
@@ -458,8 +470,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/21/leetcode-string-array/" rel="prev" title="Leetcode Summary - String & Array">
-                Leetcode Summary - String & Array <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/29/leetcode-heap/" rel="prev" title="Leetcode Summary - Heap">
+                Leetcode Summary - Heap <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -609,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Constructor"><span class="nav-number">1.</span> <span class="nav-text">Constructor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Search"><span class="nav-number">2.</span> <span class="nav-text">Search</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Insert-Avg-O-1-Worst-O-n"><span class="nav-number">3.</span> <span class="nav-text">Insert: Avg O(1), Worst O(n)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Tree</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#95-Unique-Binary-Search-Trees-II"><span class="nav-number">2.1.</span> <span class="nav-text">95. Unique Binary Search Trees II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#96-Unique-Binary-Search-Trees"><span class="nav-number">2.2.</span> <span class="nav-text">96. Unique Binary Search Trees</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#98-Validate-Binary-Search-Tree"><span class="nav-number">2.3.</span> <span class="nav-text">98. Validate Binary Search Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#102-Binary-Tree-Level-Order-Traversal"><span class="nav-number">2.4.</span> <span class="nav-text">102. Binary Tree Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#103-Binary-Tree-Zigzag-Level-Order-Traversal"><span class="nav-number">2.5.</span> <span class="nav-text">103. Binary Tree Zigzag Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#107-Binary-Tree-Level-Order-Traversal-II"><span class="nav-number">2.6.</span> <span class="nav-text">107. Binary Tree Level Order Traversal II</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -779,9 +791,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2019/09/21/unordered_map/';
-          this.page.identifier = '2019/09/21/unordered_map/';
-          this.page.title = 'C++ STL - Unordered_map';
+          this.page.url = 'https://jiaomawhu.github.io/2019/09/28/leetcode-tree/';
+          this.page.identifier = '2019/09/28/leetcode-tree/';
+          this.page.title = 'Leetcode Summary - Tree';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

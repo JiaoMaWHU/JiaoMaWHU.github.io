@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-09-22T03:06:52.219Z</updated>
+  <updated>2019-10-02T02:26:14.098Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,15 +17,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Leetcode Summary - String</title>
-    <link href="https://jiaomawhu.github.io/2019/09/21/leetcode-string/"/>
-    <id>https://jiaomawhu.github.io/2019/09/21/leetcode-string/</id>
-    <published>2019-09-21T23:06:33.000Z</published>
-    <updated>2019-09-22T03:06:52.219Z</updated>
+    <title>leetcode_recursive_backtracking</title>
+    <link href="https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/"/>
+    <id>https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/</id>
+    <published>2019-10-01T21:17:07.000Z</published>
+    <updated>2019-10-02T02:26:14.098Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;String&lt;/strong&gt; tag and useful data structures in C++.
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Recursive&lt;/strong&gt; and &lt;strong&gt;Backtracking&lt;/strong&gt; tag.
+    
+    </summary>
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
+    
+    
+      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode Summary - Heap</title>
+    <link href="https://jiaomawhu.github.io/2019/09/29/leetcode-heap/"/>
+    <id>https://jiaomawhu.github.io/2019/09/29/leetcode-heap/</id>
+    <published>2019-09-30T03:19:30.000Z</published>
+    <updated>2019-09-30T21:30:30.633Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Heap&lt;/strong&gt; and &lt;strong&gt;Union-find&lt;/strong&gt; tag and useful data structures in C++.
+    
+    </summary>
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
+    
+    
+      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode Summary - Tree</title>
+    <link href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree/"/>
+    <id>https://jiaomawhu.github.io/2019/09/28/leetcode-tree/</id>
+    <published>2019-09-28T20:20:35.000Z</published>
+    <updated>2019-09-30T03:13:24.721Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Tree&lt;/strong&gt; tag and useful data structures in C++.
+    
+    </summary>
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
+    
+    
+      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode Summary - String &amp; Array</title>
+    <link href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/"/>
+    <id>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</id>
+    <published>2019-09-21T23:06:33.000Z</published>
+    <updated>2019-10-01T21:17:21.580Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;String&lt;/strong&gt; and &lt;strong&gt;Array&lt;/strong&gt; tag and useful data structures in C++.
     
     </summary>
     
@@ -61,7 +121,7 @@
     <link href="https://jiaomawhu.github.io/2019/08/03/leetcode-hash/"/>
     <id>https://jiaomawhu.github.io/2019/08/03/leetcode-hash/</id>
     <published>2019-08-03T05:54:26.000Z</published>
-    <updated>2019-09-22T02:50:59.685Z</updated>
+    <updated>2019-09-30T03:19:53.979Z</updated>
     
     <summary type="html">
     
@@ -117,11 +177,11 @@
     <link href="https://jiaomawhu.github.io/2019/03/23/search-sort/"/>
     <id>https://jiaomawhu.github.io/2019/03/23/search-sort/</id>
     <published>2019-03-23T21:28:35.000Z</published>
-    <updated>2019-04-02T05:30:45.070Z</updated>
+    <updated>2019-10-01T02:06:31.155Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本文参照&lt;a href=&quot;https://github.com/kdn251/interviews/blob/master/README-zh-cn.md#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;简单整理了常用的数据结构，搜索和排序算法。然后按照分类整理了一些经典的面试题。
+      &lt;p&gt;本文参照&lt;a href=&quot;https://github.com/kdn251/interviews&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;简单整理了常用的数据结构，搜索和排序算法。然后按照分类整理了面试题（包括lc和剑指offer）。
     
     </summary>
     
