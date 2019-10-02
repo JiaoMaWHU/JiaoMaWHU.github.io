@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Tree tag and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-30T03:13:24.721Z">
+<meta property="og:updated_time" content="2019-10-02T23:26:27.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode Summary - Tree">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Tree tag and useful data structures in C++.">
@@ -430,6 +430,12 @@
 <p>Same idea as 102.</p>
 <h4 id="107-Binary-Tree-Level-Order-Traversal-II"><a href="#107-Binary-Tree-Level-Order-Traversal-II" class="headerlink" title="107. Binary Tree Level Order Traversal II"></a>107. Binary Tree Level Order Traversal II</h4><p><em>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).</em></p>
 <p>Same idea as 102.</p>
+<h4 id="111-Minimum-Depth-of-Binary-Tree"><a href="#111-Minimum-Depth-of-Binary-Tree" class="headerlink" title="111. Minimum Depth of Binary Tree"></a>111. Minimum Depth of Binary Tree</h4><p><em>Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</em></p>
+<ol>
+<li>DFS is OK, however it has lots of extra operations, we could use a reference value for pruning.</li>
+<li>We can also use BFS, when we meet the first leaf node, return it.</li>
+<li>the same as 112. Path Sum</li>
+</ol>
 
       
     </div>
@@ -460,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/21/leetcode-string-array/" rel="next" title="Leetcode Summary - String & Array">
-                <i class="fa fa-chevron-left"></i> Leetcode Summary - String & Array
+              <a href="/2019/09/21/leetcode-string-array/" rel="next" title="Leetcode Summary - String, Array, and Other">
+                <i class="fa fa-chevron-left"></i> Leetcode Summary - String, Array, and Other
               </a>
             
           </div>
@@ -621,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Tree</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#95-Unique-Binary-Search-Trees-II"><span class="nav-number">2.1.</span> <span class="nav-text">95. Unique Binary Search Trees II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#96-Unique-Binary-Search-Trees"><span class="nav-number">2.2.</span> <span class="nav-text">96. Unique Binary Search Trees</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#98-Validate-Binary-Search-Tree"><span class="nav-number">2.3.</span> <span class="nav-text">98. Validate Binary Search Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#102-Binary-Tree-Level-Order-Traversal"><span class="nav-number">2.4.</span> <span class="nav-text">102. Binary Tree Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#103-Binary-Tree-Zigzag-Level-Order-Traversal"><span class="nav-number">2.5.</span> <span class="nav-text">103. Binary Tree Zigzag Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#107-Binary-Tree-Level-Order-Traversal-II"><span class="nav-number">2.6.</span> <span class="nav-text">107. Binary Tree Level Order Traversal II</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Tree</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#95-Unique-Binary-Search-Trees-II"><span class="nav-number">2.1.</span> <span class="nav-text">95. Unique Binary Search Trees II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#96-Unique-Binary-Search-Trees"><span class="nav-number">2.2.</span> <span class="nav-text">96. Unique Binary Search Trees</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#98-Validate-Binary-Search-Tree"><span class="nav-number">2.3.</span> <span class="nav-text">98. Validate Binary Search Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#102-Binary-Tree-Level-Order-Traversal"><span class="nav-number">2.4.</span> <span class="nav-text">102. Binary Tree Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#103-Binary-Tree-Zigzag-Level-Order-Traversal"><span class="nav-number">2.5.</span> <span class="nav-text">103. Binary Tree Zigzag Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#107-Binary-Tree-Level-Order-Traversal-II"><span class="nav-number">2.6.</span> <span class="nav-text">107. Binary Tree Level Order Traversal II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#111-Minimum-Depth-of-Binary-Tree"><span class="nav-number">2.7.</span> <span class="nav-text">111. Minimum Depth of Binary Tree</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -81,7 +81,7 @@
     <link href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree/"/>
     <id>https://jiaomawhu.github.io/2019/09/28/leetcode-tree/</id>
     <published>2019-09-28T20:20:35.000Z</published>
-    <updated>2019-09-30T03:13:24.721Z</updated>
+    <updated>2019-10-02T23:26:27.999Z</updated>
     
     <summary type="html">
     
@@ -97,15 +97,15 @@
   </entry>
   
   <entry>
-    <title>Leetcode Summary - String &amp; Array</title>
+    <title>Leetcode Summary - String, Array, and Other</title>
     <link href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/"/>
     <id>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</id>
     <published>2019-09-21T23:06:33.000Z</published>
-    <updated>2019-10-01T21:17:21.580Z</updated>
+    <updated>2019-10-02T19:20:27.874Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;String&lt;/strong&gt; and &lt;strong&gt;Array&lt;/strong&gt; tag and useful data structures in C++.
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;String&lt;/strong&gt;, &lt;strong&gt;Array&lt;/strong&gt; tag, some other tags, and useful data structures in C++.
     
     </summary>
     

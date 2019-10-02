@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiaomawhu.github.io/2019/09/28/leetcode-tree/</loc>
+    
+    <lastmod>2019-10-02T23:26:27.999Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</loc>
+    
+    <lastmod>2019-10-02T19:20:27.874Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jiaomawhu.github.io/2019/10/02/leetcode-dp/</loc>
     
     <lastmod>2019-10-02T18:00:35.998Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/</loc>
     
     <lastmod>2019-10-02T17:53:20.030Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</loc>
-    
-    <lastmod>2019-10-01T21:17:21.580Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>https://jiaomawhu.github.io/2019/08/03/leetcode-hash/</loc>
     
     <lastmod>2019-09-30T03:19:53.979Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/09/28/leetcode-tree/</loc>
-    
-    <lastmod>2019-09-30T03:13:24.721Z</lastmod>
     
   </url>
   
