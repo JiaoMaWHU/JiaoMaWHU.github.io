@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="This post records my solutions of leetcode in the String, Array tag, some other tags, and useful data structures in C++.">
+<meta name="description" content="This post records my solutions of leetcode in the Tree and Graphtag and useful data structures in C++.">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode Summary - String, Array">
-<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/index.html">
+<meta property="og:title" content="Leetcode Summary - Tree &amp; Graph">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="This post records my solutions of leetcode in the String, Array tag, some other tags, and useful data structures in C++.">
+<meta property="og:description" content="This post records my solutions of leetcode in the Tree and Graphtag and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-09T03:53:49.441Z">
+<meta property="og:updated_time" content="2019-10-09T02:32:23.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode Summary - String, Array">
-<meta name="twitter:description" content="This post records my solutions of leetcode in the String, Array tag, some other tags, and useful data structures in C++.">
+<meta name="twitter:title" content="Leetcode Summary - Tree &amp; Graph">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the Tree and Graphtag and useful data structures in C++.">
 
 
 
@@ -160,13 +160,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/">
 
 
 
 
 
-  <title>Leetcode Summary - String, Array | Jinshin's Blog</title>
+  <title>Leetcode Summary - Tree & Graph | Jinshin's Blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Leetcode Summary - String, Array</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - Tree & Graph</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-21T18:06:33-05:00">
-                2019-09-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-28T15:20:35-05:00">
+                2019-09-28
               </time>
             
 
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/09/21/leetcode-string-array/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/21/leetcode-string-array/" itemprop="commentCount"></span>
+                <a href="/2019/09/28/leetcode-tree-graph/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/28/leetcode-tree-graph/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,57 +401,63 @@
       
 
       
-        <p>This post records my solutions of leetcode in the <strong>String</strong>, <strong>Array</strong> tag, some other tags, and useful data structures in C++. <a id="more"></a></p>
-<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a>5. Longest Palindromic Substring</h4><p><em>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</em></p>
+        <p>This post records my solutions of leetcode in the <strong>Tree</strong> and <strong>Graph</strong>tag and useful data structures in C++. <a id="more"></a></p>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="95-Unique-Binary-Search-Trees-II"><a href="#95-Unique-Binary-Search-Trees-II" class="headerlink" title="95. Unique Binary Search Trees II"></a>95. Unique Binary Search Trees II</h4><p><em>Given an integer n, generate all structurally unique BST’s (binary search trees) that store values 1 … n.</em></p>
+<p>Treat it as a sorted array, use index in recursive method to build the tree.</p>
+<h4 id="96-Unique-Binary-Search-Trees"><a href="#96-Unique-Binary-Search-Trees" class="headerlink" title="96. Unique Binary Search Trees"></a>96. Unique Binary Search Trees</h4><p><em>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?</em></p>
 <ol>
-<li>Use 2D dp matrix to store the maxLen, dp[i][i] = 1; dp[i][i+1] = 1, if string[i] == string[i+1]; dp[i][j] =1, if string[i] == string[j] and dp[i+1][j-1]. We use two loop, first i from 0-&gt;n, second j starts from 0 and ends at i.</li>
-<li>We can also simply starts from the center towards both sides, and be care that center can be a char, or between two characters.</li>
-</ol>
-<h4 id="54-Spiral-Matrix"><a href="#54-Spiral-Matrix" class="headerlink" title="54. Spiral Matrix"></a>54. Spiral Matrix</h4><p><em>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.</em></p>
-<ol>
-<li>Iterative method is good, however it needs an extra matrix.</li>
-<li>Use recursive method, parameter i, j start pointer, n, m end row and column.</li>
-</ol>
-<h4 id="58-Length-of-Last-Word"><a href="#58-Length-of-Last-Word" class="headerlink" title="58. Length of Last Word"></a>58. Length of Last Word</h4><p><em>Given a string s consists of upper/lower-case alphabets and empty space characters ‘ ‘, return the length of last word in the string. If the last word does not exist, return 0.</em></p>
-<p>Start from the end of the string and count the size will be.</p>
-<h4 id="71-Simplify-Path"><a href="#71-Simplify-Path" class="headerlink" title="71. Simplify Path"></a>71. Simplify Path</h4><p><em>Given an absolute path for a file (Unix-style), simplify it. Or in other words, convert it to the canonical path.</em></p>
-<p>The solution is simple, use stack to store the path.</p>
-<h4 id="89-Gray-Code"><a href="#89-Gray-Code" class="headerlink" title="89. Gray Code"></a>89. Gray Code</h4><p><em>The gray code is a binary numeral system where two successive values differ in only one bit. Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.</em></p>
-<ol>
-<li>Convert the binary number into gray code: b(n) = n^(n&gt;&gt;1)</li>
-<li><a href="https://en.wikipedia.org/wiki/Gray_code" target="_blank" rel="noopener">Other solution.</a></li>
-</ol>
-<h4 id="91-Decode-Ways"><a href="#91-Decode-Ways" class="headerlink" title="91. Decode Ways"></a>91. Decode Ways</h4><p><em>A message containing letters from A-Z is being encoded to numbers using the following mapping: A-&gt;1 … Given a non-empty string containing only digits, determine the total number of ways to decode it.</em></p>
-<ol>
-<li><p>Well, I met this one on the apple on campus interview…. we can easily come up with a recursive method.</p>
-</li>
-<li><p>However, DP is a better solution. Use a vector to store that how many decode ways each range from the start to end index has, so that we can save lots of computation.</p>
-</li>
-<li><p>The dp function is v[i] = v[i-1] + v[i-2], v[0] is assigned to 1, v[i-1] represents that i is for a single character, and v[i-2] represents that i and i-1 combines for a character, note that there is v[i-1] + v[i-2].</p>
+<li>if we use the same recursive method as no.95, TLE.</li>
+<li>the clue is, the total number is actually a Catalan number.<ul>
+<li>assign dp[0]=1, if nothing can be selected, only one way; </li>
+<li>dp[1] = 1, with 1 point there is only one way; </li>
+<li>for dp[2], we can assign the first point as the root node, so as the second one, then we have dp[2] = dp[0]dp[1] + dp[1]dp[0]; </li>
+<li>dp[3] = dp[0]dp[2] + dp[1](dp[0])dp[1] + dp[2]dp[0]</li>
+<li>then we conclude \(C_{0}=1\), \(C_{n+1} = \sum_{i=0}^{n}{C_i}{C_{n-i}}\) for \(n&gt;=0\)</li>
+</ul>
 </li>
 </ol>
-<h4 id="93-Restore-IP-Addresses"><a href="#93-Restore-IP-Addresses" class="headerlink" title="93. Restore IP Addresses"></a>93. Restore IP Addresses</h4><p><em>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</em></p>
-<p>In fact, we only have at most $ C^3_11 $ cases, so it will be fine to do Bruce Forte. So we need to enumerate all of the cases in four while loops, and use stoi to transfer the string into int.</p>
-<h4 id="128-Longest-Consecutive-Sequence"><a href="#128-Longest-Consecutive-Sequence" class="headerlink" title="128. Longest Consecutive Sequence"></a>128. Longest Consecutive Sequence</h4><p><em>Given an unsorted array of integers, find the length of the longest consecutive elements sequence. Your algorithm should run in O(n) complexity.</em></p>
-<p>Use a hash map to store the length of the sequence, <strong>in the left and right end index of the sequence</strong>, smart!</p>
-<h4 id="134-Gas-Station"><a href="#134-Gas-Station" class="headerlink" title="134. Gas Station"></a>134. Gas Station</h4><p><em>There are N gas stations along a circular route, where the amount of gas at station i is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations. Return the starting gas station’s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</em></p>
+<h4 id="98-Validate-Binary-Search-Tree"><a href="#98-Validate-Binary-Search-Tree" class="headerlink" title="98. Validate Binary Search Tree"></a>98. Validate Binary Search Tree</h4><p><em>Given a binary tree, determine if it is a valid binary search tree (BST).</em></p>
+<p>Recursive, pass by max and min to next level. When pass to left node, change max to self value, otherwise change min for the right node.</p>
+<h4 id="102-Binary-Tree-Level-Order-Traversal"><a href="#102-Binary-Tree-Level-Order-Traversal" class="headerlink" title="102. Binary Tree Level Order Traversal"></a>102. Binary Tree Level Order Traversal</h4><p><em>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).</em></p>
 <ol>
-<li>Compute the difference between cost and gas</li>
-<li>Use a loop to compute the sum of the differences, if sum&gt;=0 there will be a solution, otherwise not</li>
-<li>In the same loop, compute a temporary sum, when the sum is negative, clear the sum and restart from the next index.</li>
-<li>Why? If the temporary sum is negative, it means there is no solution from the original starting index to this index.</li>
-<li>A weird solution, requiring explanation.</li>
+<li><p>We can use a new structure to store the level, as</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LvlTreeNode</span> &#123;</span></span><br><span class="line">        TreeNode * node;</span><br><span class="line">        <span class="keyword">int</span> lvl;</span><br><span class="line">        LvlTreeNode(TreeNode* n_, <span class="keyword">int</span> lvl_): node(n_), lvl(lvl_)&#123;&#125;;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>However, it is slow. We can do this using original structure. Use loop and first initial the size of queue, so we can exactly traverse one level of a tree.</p>
+</li>
 </ol>
-<h4 id="151-Reverse-Words-in-a-String"><a href="#151-Reverse-Words-in-a-String" class="headerlink" title="151. Reverse Words in a String"></a>151. Reverse Words in a String</h4><p><em>Given an input string, reverse the string word by word.</em></p>
+<h4 id="103-Binary-Tree-Zigzag-Level-Order-Traversal"><a href="#103-Binary-Tree-Zigzag-Level-Order-Traversal" class="headerlink" title="103. Binary Tree Zigzag Level Order Traversal"></a>103. Binary Tree Zigzag Level Order Traversal</h4><p><em>Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).</em></p>
+<p>Same idea as 102.</p>
+<h4 id="107-Binary-Tree-Level-Order-Traversal-II"><a href="#107-Binary-Tree-Level-Order-Traversal-II" class="headerlink" title="107. Binary Tree Level Order Traversal II"></a>107. Binary Tree Level Order Traversal II</h4><p><em>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).</em></p>
+<p>Same idea as 102.</p>
+<h4 id="111-Minimum-Depth-of-Binary-Tree"><a href="#111-Minimum-Depth-of-Binary-Tree" class="headerlink" title="111. Minimum Depth of Binary Tree"></a>111. Minimum Depth of Binary Tree</h4><p><em>Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</em></p>
 <ol>
-<li>Reverse the string, and do split, push back reversed words into res.</li>
-<li>Don not insert char in the front of string, which makes it really slow.</li>
-<li><strong>Transfer the size_t into int first, because unsigned int may get out of the range.</strong> </li>
+<li>DFS is OK, however it has lots of extra operations, we could use a reference value for pruning.</li>
+<li>We can also use BFS, when we meet the first leaf node, return it.</li>
 </ol>
-<h4 id="165-Compare-Version-Numbers"><a href="#165-Compare-Version-Numbers" class="headerlink" title="165. Compare Version Numbers"></a>165. Compare Version Numbers</h4><p><em>Compare two version numbers version1 and version2.<br>If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.</em></p>
+<h4 id="112-Path-Sum-113-Path-Sum-II"><a href="#112-Path-Sum-113-Path-Sum-II" class="headerlink" title="112. Path Sum, 113. Path Sum II"></a>112. Path Sum, 113. Path Sum II</h4><p>These two problems needs to end up with a leaf node and see if the sum up of value meets the target. For 113, we also need to return the paths, so we could use reference of vector to fast up. Note for the path right now: vector<int> v, we also can declare it as a reference, but remember to pop out the value.</int></p>
+<h4 id="116-Populating-Next-Right-Pointers-in-Each-Node"><a href="#116-Populating-Next-Right-Pointers-in-Each-Node" class="headerlink" title="116. Populating Next Right Pointers in Each Node"></a>116. Populating Next Right Pointers in Each Node</h4><p><em>You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.</em></p>
 <ol>
-<li>Detect the sub version of both v1, v2 in a loop and compare them.</li>
-<li>If one of the string end, set the version to 0, keep comparing it with the other</li>
+<li>BFS using stack is a natural thought.</li>
+<li>However, this problem requires constant space, then we could use DFS. Because it is a perfect binary tree, we can link the left tree of a node (if has) to its right tree, and for the right tree, we point it to its next node’s left tree. smart.</li>
+<li>Based on 2, we can also only use two pointers to finish the process, one for start, one for traversing.</li>
+</ol>
+<h4 id="117-Populating-Next-Right-Pointers-in-Each-Node-II"><a href="#117-Populating-Next-Right-Pointers-in-Each-Node-II" class="headerlink" title="117. Populating Next Right Pointers in Each Node II"></a>117. Populating Next Right Pointers in Each Node II</h4><p><em>Given a binary tree. Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.</em></p>
+<ol>
+<li>the same dfs method as 116, but note that we have to go right tree, otherwise it will fail. Look at node 7-&gt;6 for the reason.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">          2</span><br><span class="line">       /     \</span><br><span class="line">    4         3</span><br><span class="line">   / \        / \</span><br><span class="line">  0   7     9   1</span><br><span class="line"> /   / \       / \</span><br><span class="line">5  12  6      8   11</span><br><span class="line">       /</span><br><span class="line">     10</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="127-Word-Ladder"><a href="#127-Word-Ladder" class="headerlink" title="127. Word Ladder"></a>127. Word Ladder</h4><p><em>Given two words (beginWord and endWord), and a dictionary’s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: Only one letter can be changed at a time. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</em></p>
+<ol>
+<li>Use intermediate node: abc -&gt; *bc, a*c, ab*.</li>
+<li>First build a unordered_map<string, pair<bool,="" vector<string="">&gt;&gt; to store the intermediate node and to mark if it is visited.</string,></li>
+<li>Insert all the intermediate nodes into the map, and start BFS searching without visiting the same intermediate node. Why BFS, BFS ensures that the first result will be the answer. However, if we use DFS, we have to search all the graph.</li>
+<li>TC: O(MN), SC: O(MN), M-&gt; the length of word, N-&gt; the number of words</li>
+</ol>
+<h4 id="133-Clone-Graph"><a href="#133-Clone-Graph" class="headerlink" title="133. Clone Graph"></a>133. Clone Graph</h4><p><em>Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors.</em></p>
+<ol>
+<li>Use a map, the key is the original node, and the value is the new node.</li>
+<li>Use DFS to clone the graph.</li>
 </ol>
 
       
@@ -483,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/21/unordered_map/" rel="next" title="C++ STL - Unordered_map">
-                <i class="fa fa-chevron-left"></i> C++ STL - Unordered_map
+              <a href="/2019/09/21/leetcode-string-array/" rel="next" title="Leetcode Summary - String, Array">
+                <i class="fa fa-chevron-left"></i> Leetcode Summary - String, Array
               </a>
             
           </div>
@@ -493,8 +499,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/28/leetcode-tree-graph/" rel="prev" title="Leetcode Summary - Tree & Graph">
-                Leetcode Summary - Tree & Graph <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/29/leetcode-heap/" rel="prev" title="Leetcode Summary - Heap">
+                Leetcode Summary - Heap <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -644,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">1.1.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vector"><span class="nav-number">1.2.</span> <span class="nav-text">Vector</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">2.1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#54-Spiral-Matrix"><span class="nav-number">2.2.</span> <span class="nav-text">54. Spiral Matrix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#58-Length-of-Last-Word"><span class="nav-number">2.3.</span> <span class="nav-text">58. Length of Last Word</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#71-Simplify-Path"><span class="nav-number">2.4.</span> <span class="nav-text">71. Simplify Path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#89-Gray-Code"><span class="nav-number">2.5.</span> <span class="nav-text">89. Gray Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#91-Decode-Ways"><span class="nav-number">2.6.</span> <span class="nav-text">91. Decode Ways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#93-Restore-IP-Addresses"><span class="nav-number">2.7.</span> <span class="nav-text">93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#128-Longest-Consecutive-Sequence"><span class="nav-number">2.8.</span> <span class="nav-text">128. Longest Consecutive Sequence</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#134-Gas-Station"><span class="nav-number">2.9.</span> <span class="nav-text">134. Gas Station</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#151-Reverse-Words-in-a-String"><span class="nav-number">2.10.</span> <span class="nav-text">151. Reverse Words in a String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#165-Compare-Version-Numbers"><span class="nav-number">2.11.</span> <span class="nav-text">165. Compare Version Numbers</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Tree</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#95-Unique-Binary-Search-Trees-II"><span class="nav-number">2.1.</span> <span class="nav-text">95. Unique Binary Search Trees II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#96-Unique-Binary-Search-Trees"><span class="nav-number">2.2.</span> <span class="nav-text">96. Unique Binary Search Trees</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#98-Validate-Binary-Search-Tree"><span class="nav-number">2.3.</span> <span class="nav-text">98. Validate Binary Search Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#102-Binary-Tree-Level-Order-Traversal"><span class="nav-number">2.4.</span> <span class="nav-text">102. Binary Tree Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#103-Binary-Tree-Zigzag-Level-Order-Traversal"><span class="nav-number">2.5.</span> <span class="nav-text">103. Binary Tree Zigzag Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#107-Binary-Tree-Level-Order-Traversal-II"><span class="nav-number">2.6.</span> <span class="nav-text">107. Binary Tree Level Order Traversal II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#111-Minimum-Depth-of-Binary-Tree"><span class="nav-number">2.7.</span> <span class="nav-text">111. Minimum Depth of Binary Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#112-Path-Sum-113-Path-Sum-II"><span class="nav-number">2.8.</span> <span class="nav-text">112. Path Sum, 113. Path Sum II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#116-Populating-Next-Right-Pointers-in-Each-Node"><span class="nav-number">2.9.</span> <span class="nav-text">116. Populating Next Right Pointers in Each Node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#117-Populating-Next-Right-Pointers-in-Each-Node-II"><span class="nav-number">2.10.</span> <span class="nav-text">117. Populating Next Right Pointers in Each Node II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#127-Word-Ladder"><span class="nav-number">2.11.</span> <span class="nav-text">127. Word Ladder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#133-Clone-Graph"><span class="nav-number">2.12.</span> <span class="nav-text">133. Clone Graph</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -814,9 +820,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/';
-          this.page.identifier = '2019/09/21/leetcode-string-array/';
-          this.page.title = 'Leetcode Summary - String, Array';
+          this.page.url = 'https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/';
+          this.page.identifier = '2019/09/28/leetcode-tree-graph/';
+          this.page.title = 'Leetcode Summary - Tree & Graph';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

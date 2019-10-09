@@ -122,14 +122,14 @@
 <meta name="description" content="This post records my solutions of leetcode in the Recursive and Backtracking tag.">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode_recursive_backtracking">
+<meta property="og:title" content="Leetcode Summary - Recursive &amp; Backtracking">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Recursive and Backtracking tag.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-02T17:53:20.030Z">
+<meta property="og:updated_time" content="2019-10-09T03:53:40.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode_recursive_backtracking">
+<meta name="twitter:title" content="Leetcode Summary - Recursive &amp; Backtracking">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Recursive and Backtracking tag.">
 
 
@@ -166,7 +166,7 @@
 
 
 
-  <title>leetcode_recursive_backtracking | Jinshin's Blog</title>
+  <title>Leetcode Summary - Recursive & Backtracking | Jinshin's Blog</title>
   
 
 
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode_recursive_backtracking</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - Recursive & Backtracking</h1>
         
 
         <div class="post-meta">
@@ -415,6 +415,14 @@
 <li>We also can use bit manipulation to solve this problem: <a href="https://liam.page/2016/01/31/binomial-in-cpp/" target="_blank" rel="noopener">click me</a>.</li>
 <li>Also using <a href="https://leetcode.com/problems/combinations/solution/" target="_blank" rel="noopener">Lexicographic (binary sorted) combinations</a>, which is a little bit hard to understand.</li>
 </ol>
+<h4 id="130-Surrounded-Regions"><a href="#130-Surrounded-Regions" class="headerlink" title="130. Surrounded Regions"></a>130. Surrounded Regions</h4><p><em>Given a 2D board containing ‘X’ and ‘O’ (the letter O), capture all regions surrounded by ‘X’. A region is captured by flipping all ‘O’s into ‘X’s in that surrounded region.</em></p>
+<ol>
+<li>First turn all ‘O’ on the board of 2D array into ‘#’</li>
+<li>Start DFS from these ‘#’, turn all connected ‘O’ into ‘#’</li>
+<li>After DFS, turn all ‘O’ into ‘X’, ‘#’ into ‘O’</li>
+<li>Why use this solution? Starting from inside of the array is hard to solve.</li>
+<li>TC: O(n), SC: O(1) </li>
+</ol>
 
       
     </div>
@@ -455,8 +463,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/02/leetcode-dp/" rel="prev" title="leetcode_dp">
-                leetcode_dp <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/02/leetcode-dp/" rel="prev" title="Leetcode Summary - DP">
+                Leetcode Summary - DP <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,7 +552,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -606,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#46-Permutations"><span class="nav-number">1.</span> <span class="nav-text">46. Permutations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#47-Permutations-II"><span class="nav-number">2.</span> <span class="nav-text">47. Permutations II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#77-Combinations"><span class="nav-number">3.</span> <span class="nav-text">77. Combinations</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#46-Permutations"><span class="nav-number">1.</span> <span class="nav-text">46. Permutations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#47-Permutations-II"><span class="nav-number">2.</span> <span class="nav-text">47. Permutations II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#77-Combinations"><span class="nav-number">3.</span> <span class="nav-text">77. Combinations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#130-Surrounded-Regions"><span class="nav-number">4.</span> <span class="nav-text">130. Surrounded Regions</span></a></li></ol></div>
             
 
           </div>
@@ -778,7 +786,7 @@
         var disqus_config = function () {
           this.page.url = 'https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/';
           this.page.identifier = '2019/10/01/leetcode-recursive-backtracking/';
-          this.page.title = 'leetcode_recursive_backtracking';
+          this.page.title = 'Leetcode Summary - Recursive & Backtracking';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

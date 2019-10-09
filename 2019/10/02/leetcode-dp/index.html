@@ -122,14 +122,14 @@
 <meta name="description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode_dp">
+<meta property="og:title" content="Leetcode Summary - DP">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/10/02/leetcode-dp/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-02T18:00:35.998Z">
+<meta property="og:updated_time" content="2019-10-09T03:53:24.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode_dp">
+<meta name="twitter:title" content="Leetcode Summary - DP">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
 
 
@@ -166,7 +166,7 @@
 
 
 
-  <title>leetcode_dp | Jinshin's Blog</title>
+  <title>Leetcode Summary - DP | Jinshin's Blog</title>
   
 
 
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode_dp</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - DP</h1>
         
 
         <div class="post-meta">
@@ -402,8 +402,26 @@
 
       
         <p>This post records my solutions of leetcode in the <strong>Dynamic Programming</strong> tag. <a id="more"></a></p>
+<h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a>5. Longest Palindromic Substring</h4><p><em>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</em></p>
+<p>Use dp array to store whether subarray dp[i][j] is a palindrome.</p>
+<ol>
+<li>initialize dp[i][i] to true</li>
+<li>create dp in loop as <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(i from 0 to size)</span><br><span class="line">    dp[i][i] = true</span><br><span class="line">    for(j from 0 to i)</span><br><span class="line">        dp[j][i] ? palindrome</span><br><span class="line">        -&gt; dp[j+1][i-1] &amp;&amp; s[j] ?= s[i]</span><br><span class="line">        if max palindrome string?</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h4 id="70-Climbing-Stairs"><a href="#70-Climbing-Stairs" class="headerlink" title="70. Climbing Stairs"></a>70. Climbing Stairs</h4><p><em>You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positive integer.</em></p>
 <p>The dp equation is dp[n] = dp[n-1] + dp[n-2]</p>
+<h4 id="131-Palindrome-Partitioning"><a href="#131-Palindrome-Partitioning" class="headerlink" title="131. Palindrome Partitioning"></a>131. Palindrome Partitioning</h4><p><em>Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.</em></p>
+<ol>
+<li>Use the same 2D dp array idea as <em>5. Longest Palindromic Substring</em>.</li>
+<li>Then use DFS to get all possible results.</li>
+<li>TC: <strong>O(): ?</strong> \(C_{n-1}^1 + C_{n-1}^2 + … + C_{n-1}^{n-1}\), SC: O(n^2)</li>
+</ol>
+<h4 id="132-Palindrome-Partitioning-II"><a href="#132-Palindrome-Partitioning-II" class="headerlink" title="132. Palindrome Partitioning II"></a>132. Palindrome Partitioning II</h4><p><em>Given a string s, partition s such that every substring of the partition is a palindrome. Return the minimum cuts needed for a palindrome partitioning of s.</em></p>
+<ol>
+<li>Build the same 2D dp array as <em>5. Longest Palindromic Substring</em>, also build a dp array S to records the minimum cuts needed in substring 0-i</li>
+<li>When determine dp[j][i], if dp[j][i] is true, also determine S[i] = min(S[i], dp[0][j-1]+1) (if j==0, S[i] = 0).</li>
+</ol>
 
       
     </div>
@@ -434,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/01/leetcode-recursive-backtracking/" rel="next" title="leetcode_recursive_backtracking">
-                <i class="fa fa-chevron-left"></i> leetcode_recursive_backtracking
+              <a href="/2019/10/01/leetcode-recursive-backtracking/" rel="next" title="Leetcode Summary - Recursive & Backtracking">
+                <i class="fa fa-chevron-left"></i> Leetcode Summary - Recursive & Backtracking
               </a>
             
           </div>
@@ -443,6 +461,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/05/leetcode-others/" rel="prev" title="Leetcode Summary - Others">
+                Leetcode Summary - Others <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -529,7 +551,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -591,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#70-Climbing-Stairs"><span class="nav-number">1.</span> <span class="nav-text">70. Climbing Stairs</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#70-Climbing-Stairs"><span class="nav-number">2.</span> <span class="nav-text">70. Climbing Stairs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#131-Palindrome-Partitioning"><span class="nav-number">3.</span> <span class="nav-text">131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#132-Palindrome-Partitioning-II"><span class="nav-number">4.</span> <span class="nav-text">132. Palindrome Partitioning II</span></a></li></ol></div>
             
 
           </div>
@@ -763,7 +785,7 @@
         var disqus_config = function () {
           this.page.url = 'https://jiaomawhu.github.io/2019/10/02/leetcode-dp/';
           this.page.identifier = '2019/10/02/leetcode-dp/';
-          this.page.title = 'leetcode_dp';
+          this.page.title = 'Leetcode Summary - DP';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

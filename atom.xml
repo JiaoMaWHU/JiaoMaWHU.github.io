@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-10-02T18:00:35.998Z</updated>
+  <updated>2019-10-09T02:43:31.153Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>leetcode_dp</title>
+    <title>Leetcode Summary - Others</title>
+    <link href="https://jiaomawhu.github.io/2019/10/05/leetcode-others/"/>
+    <id>https://jiaomawhu.github.io/2019/10/05/leetcode-others/</id>
+    <published>2019-10-06T03:43:40.000Z</published>
+    <updated>2019-10-09T02:43:31.153Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Bit-manipulation&lt;/strong&gt;, &lt;strong&gt;Union-Find&lt;/strong&gt; tag.
+    
+    </summary>
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
+    
+    
+      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode Summary - DP</title>
     <link href="https://jiaomawhu.github.io/2019/10/02/leetcode-dp/"/>
     <id>https://jiaomawhu.github.io/2019/10/02/leetcode-dp/</id>
     <published>2019-10-02T17:53:00.000Z</published>
-    <updated>2019-10-02T18:00:35.998Z</updated>
+    <updated>2019-10-09T03:53:24.273Z</updated>
     
     <summary type="html">
     
@@ -37,11 +57,11 @@
   </entry>
   
   <entry>
-    <title>leetcode_recursive_backtracking</title>
+    <title>Leetcode Summary - Recursive &amp; Backtracking</title>
     <link href="https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/"/>
     <id>https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/</id>
     <published>2019-10-01T21:17:07.000Z</published>
-    <updated>2019-10-02T17:53:20.030Z</updated>
+    <updated>2019-10-09T03:53:40.994Z</updated>
     
     <summary type="html">
     
@@ -61,11 +81,11 @@
     <link href="https://jiaomawhu.github.io/2019/09/29/leetcode-heap/"/>
     <id>https://jiaomawhu.github.io/2019/09/29/leetcode-heap/</id>
     <published>2019-09-30T03:19:30.000Z</published>
-    <updated>2019-09-30T21:30:30.633Z</updated>
+    <updated>2019-10-06T03:40:26.428Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Heap&lt;/strong&gt; and &lt;strong&gt;Union-find&lt;/strong&gt; tag and useful data structures in C++.
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Heap&lt;/strong&gt; tag and useful data structures in C++.
     
     </summary>
     
@@ -77,15 +97,15 @@
   </entry>
   
   <entry>
-    <title>Leetcode Summary - Tree</title>
-    <link href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree/"/>
-    <id>https://jiaomawhu.github.io/2019/09/28/leetcode-tree/</id>
+    <title>Leetcode Summary - Tree &amp; Graph</title>
+    <link href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/"/>
+    <id>https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/</id>
     <published>2019-09-28T20:20:35.000Z</published>
-    <updated>2019-10-04T05:33:23.379Z</updated>
+    <updated>2019-10-09T02:32:23.356Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Tree&lt;/strong&gt; tag and useful data structures in C++.
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Tree&lt;/strong&gt; and &lt;strong&gt;Graph&lt;/strong&gt;tag and useful data structures in C++.
     
     </summary>
     
@@ -97,11 +117,11 @@
   </entry>
   
   <entry>
-    <title>Leetcode Summary - String, Array, and Other</title>
+    <title>Leetcode Summary - String, Array</title>
     <link href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/"/>
     <id>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</id>
     <published>2019-09-21T23:06:33.000Z</published>
-    <updated>2019-10-02T19:20:27.874Z</updated>
+    <updated>2019-10-09T03:53:49.441Z</updated>
     
     <summary type="html">
     
@@ -197,7 +217,7 @@
     <link href="https://jiaomawhu.github.io/2019/03/23/search-sort/"/>
     <id>https://jiaomawhu.github.io/2019/03/23/search-sort/</id>
     <published>2019-03-23T21:28:35.000Z</published>
-    <updated>2019-10-01T02:06:31.155Z</updated>
+    <updated>2019-10-06T04:07:35.843Z</updated>
     
     <summary type="html">
     
