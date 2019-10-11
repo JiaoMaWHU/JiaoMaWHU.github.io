@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-10-10T22:08:43.929Z</updated>
+  <updated>2019-10-11T04:23:39.806Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://jiaomawhu.github.io/2019/10/05/leetcode-others/"/>
     <id>https://jiaomawhu.github.io/2019/10/05/leetcode-others/</id>
     <published>2019-10-06T03:43:40.000Z</published>
-    <updated>2019-10-10T22:08:43.929Z</updated>
+    <updated>2019-10-11T04:23:39.806Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Stack&lt;/strong&gt;, &lt;strong&gt;Queue&lt;/strong&gt;, &lt;strong&gt;Bit-manipulation&lt;/strong&gt;, &lt;strong&gt;Union-Find&lt;/strong&gt;, &lt;strong&gt;Design&lt;/strong&gt; tag.
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Math&lt;/strong&gt;, &lt;strong&gt;Stack&lt;/strong&gt;, &lt;strong&gt;Queue&lt;/strong&gt;, &lt;strong&gt;Bit-manipulation&lt;/strong&gt;, &lt;strong&gt;Union-Find&lt;/strong&gt;, &lt;strong&gt;Design&lt;/strong&gt; tag.
     
     </summary>
     
@@ -41,7 +41,7 @@
     <link href="https://jiaomawhu.github.io/2019/10/02/leetcode-dp/"/>
     <id>https://jiaomawhu.github.io/2019/10/02/leetcode-dp/</id>
     <published>2019-10-02T17:53:00.000Z</published>
-    <updated>2019-10-09T04:54:19.775Z</updated>
+    <updated>2019-10-11T03:24:27.424Z</updated>
     
     <summary type="html">
     
@@ -121,7 +121,7 @@
     <link href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/"/>
     <id>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</id>
     <published>2019-09-21T23:06:33.000Z</published>
-    <updated>2019-10-09T03:53:49.441Z</updated>
+    <updated>2019-10-11T02:19:01.806Z</updated>
     
     <summary type="html">
     

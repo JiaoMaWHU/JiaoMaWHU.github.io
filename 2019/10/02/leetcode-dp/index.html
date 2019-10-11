@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-09T04:54:19.775Z">
+<meta property="og:updated_time" content="2019-10-11T03:24:27.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode Summary - DP">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
@@ -411,6 +411,12 @@
 </ol>
 <h4 id="70-Climbing-Stairs"><a href="#70-Climbing-Stairs" class="headerlink" title="70. Climbing Stairs"></a>70. Climbing Stairs</h4><p><em>You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positive integer.</em></p>
 <p>The dp equation is dp[n] = dp[n-1] + dp[n-2]</p>
+<h4 id="72-Edit-Distance"><a href="#72-Edit-Distance" class="headerlink" title="72. Edit Distance"></a>72. Edit Distance</h4><p><em>Given two words word1 and word2, find the minimum number of operations required to <strong>convert word1 to word2</strong>. You have the following 3 operations permitted on a word: Insert a character, Delete a character, Replace a character</em></p>
+<ol>
+<li>Build a 2D dp array dp[size1][size2], where dp[i][j] means the edit distance of string1[0…i] with string2[0…j]</li>
+<li>Initialize dp[0][j] = j, from j=0 -&gt; j=size2, so does dp[i][0]</li>
+<li>if string1[i] == string2[j], <strong>dp[i][j] = dp[i-1][j-1]</strong>, else dp[i][j] = 1 + min(dp[i-1][j] (delete string1[i]), dp[i][j-1] (insert string2[j] to string1), dp[i][j] (replace)). </li>
+</ol>
 <h4 id="131-Palindrome-Partitioning"><a href="#131-Palindrome-Partitioning" class="headerlink" title="131. Palindrome Partitioning"></a>131. Palindrome Partitioning</h4><p><em>Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.</em></p>
 <ol>
 <li>Use the same 2D dp array idea as <em>5. Longest Palindromic Substring</em>.</li>
@@ -619,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#70-Climbing-Stairs"><span class="nav-number">2.</span> <span class="nav-text">70. Climbing Stairs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#131-Palindrome-Partitioning"><span class="nav-number">3.</span> <span class="nav-text">131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#132-Palindrome-Partitioning-II"><span class="nav-number">4.</span> <span class="nav-text">132. Palindrome Partitioning II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#139-Word-Break"><span class="nav-number">5.</span> <span class="nav-text">139. Word Break</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#70-Climbing-Stairs"><span class="nav-number">2.</span> <span class="nav-text">70. Climbing Stairs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-Edit-Distance"><span class="nav-number">3.</span> <span class="nav-text">72. Edit Distance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#131-Palindrome-Partitioning"><span class="nav-number">4.</span> <span class="nav-text">131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#132-Palindrome-Partitioning-II"><span class="nav-number">5.</span> <span class="nav-text">132. Palindrome Partitioning II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#139-Word-Break"><span class="nav-number">6.</span> <span class="nav-text">139. Word Break</span></a></li></ol></div>
             
 
           </div>
