@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="This post records my solutions of leetcode in the String, Array tag, some other tags, and useful data structures in C++.">
+<meta name="description" content="This post records my solutions of leetcode in the String, Array, Hash Table and Two Pointers tag, some other tags, and useful data structures in C++.">
 <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leetcode Summary - String, Array">
+<meta property="og:title" content="Leetcode Summary - String &amp; Array">
 <meta property="og:url" content="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="This post records my solutions of leetcode in the String, Array tag, some other tags, and useful data structures in C++.">
+<meta property="og:description" content="This post records my solutions of leetcode in the String, Array, Hash Table and Two Pointers tag, some other tags, and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-11T02:19:01.806Z">
+<meta property="og:updated_time" content="2019-10-12T23:19:18.596Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leetcode Summary - String, Array">
-<meta name="twitter:description" content="This post records my solutions of leetcode in the String, Array tag, some other tags, and useful data structures in C++.">
+<meta name="twitter:title" content="Leetcode Summary - String &amp; Array">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the String, Array, Hash Table and Two Pointers tag, some other tags, and useful data structures in C++.">
 
 
 
@@ -166,7 +166,7 @@
 
 
 
-  <title>Leetcode Summary - String, Array | Jinshin's Blog</title>
+  <title>Leetcode Summary - String & Array | Jinshin's Blog</title>
   
 
 
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Leetcode Summary - String, Array</h1>
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - String & Array</h1>
         
 
         <div class="post-meta">
@@ -401,8 +401,51 @@
       
 
       
-        <p>This post records my solutions of leetcode in the <strong>String</strong>, <strong>Array</strong> tag, some other tags, and useful data structures in C++. <a id="more"></a></p>
-<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a>5. Longest Palindromic Substring</h4><p><em>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</em></p>
+        <p>This post records my solutions of leetcode in the <strong>String</strong>, <strong>Array</strong>, <strong>Hash Table</strong> and <strong>Two Pointers</strong> tag, some other tags, and useful data structures in C++. <a id="more"></a></p>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><h4 id="Vector"><a href="#Vector" class="headerlink" title="Vector: "></a>Vector: <a href="/2019/09/21/unordered_map/" title="C++ STL - Unordered_map">C++ STL - Unordered_map</a></h4><ul>
+<li>2D vector does not have a empty parameters constructor as <code>vector&lt;vector&lt;string&gt;&gt; res()</code></li>
+</ul>
+<h4 id="Unordered-set"><a href="#Unordered-set" class="headerlink" title="Unordered_set"></a>Unordered_set</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="Sum-Topic"><a href="#Sum-Topic" class="headerlink" title="Sum Topic"></a>Sum Topic</h4><p>1.Two Sum</p>
+<p><em>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.</em></p>
+<ul>
+<li><p>The best solution here is using a hash table. We cannot use a vector, because we do not know what the range of integers is. So we need unordered_map, where the key is integer and the value is index.</p>
+</li>
+<li><p>A trick: we can finish the initialization of map and the search in on loop, which is also solid when the two numbers are same.</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (m.count(target - nums[i])) &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;i, m[target - nums[i]]&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    m[nums[i]] = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>15.3Sum</p>
+<p><em>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero. Note: The solution set must not contain duplicate triplets.</em></p>
+<ol>
+<li>Why not use the same way as 2Sum? TLE</li>
+<li>Sort firstly, start from the first element i, use two pointers moving towards each other: i+1 -&gt; &lt;- size()-1.</li>
+<li>Be careful of the duplicate triplets.</li>
+</ol>
+<p>167.Two Sum II - Input array is sorted</p>
+<p><em>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number. The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.</em></p>
+<p>Use two pointer from the start and the end of the vector to find the target pair. Time Complexity is O(n).</p>
+<p>170.Two Sum III - Data structure design</p>
+<p><em>Design and implement a TwoSum class. It should support the following operations: add and find. add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.</em></p>
+<p>Use hashmap to store a element and the times it shows up.</p>
+<p>560.Subarray Sum Equals K</p>
+<p><em>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.</em></p>
+<ol>
+<li>Use hashmap, the key is the sum at index at i, the value represents how many index has this sum.</li>
+<li>Therefore, we can solution this in O(n).</li>
+</ol>
+<h4 id="3-Longest-Substring-Without-Repeating-Characters"><a href="#3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="3. Longest Substring Without Repeating Characters"></a>3. Longest Substring Without Repeating Characters</h4><p>Description: <em>Given a string, find the length of the longest substring without repeating characters.</em></p>
+<ol>
+<li>Apparently, we should use a hash table to store characters. Vector is fine, because we only have 128 characters in ASCII table. Then we can use a loop to find the substring.</li>
+<li>The trick is, when we meet a character c2 that repeats with c1 in the substring, we can jump into index(c1) +1 to reduce computation.</li>
+</ol>
+<h4 id="4-Median-of-Two-Sorted-Arrays"><a href="#4-Median-of-Two-Sorted-Arrays" class="headerlink" title="4. Median of Two Sorted Arrays"></a>4. Median of Two Sorted Arrays</h4><p><em>There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). You may assume nums1 and nums2 cannot be both empty.</em></p>
+<ol>
+<li>Do binary search for K, which means to go over the K/2 numbers, then K/4, … in both of the vectors. Then, the complexity will be O(log(m+n)).</li>
+<li>use get_kth to represent the recursive function. We can use (v(size+1)/2 + v(size+2)/2)/2 as the result, which is both correct when the vector has even numbers or odd numbers.</li>
+<li>Then we start to search in both vectors, we find the No.K/2 number in both arrays at first, then change the index and find the No.K/4 number, …</li>
+<li>Be careful of lots of corner cases, such as the K/2 is already larger then the size of the vector, so we can directly find the result in the other vector.</li>
+</ol>
+<h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a>5. Longest Palindromic Substring</h4><p><em>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</em></p>
 <ol>
 <li>Use 2D dp matrix to store the maxLen, dp[i][i] = 1; dp[i][i+1] = 1, if string[i] == string[i+1]; dp[i][j] =1, if string[i] == string[j] and dp[i+1][j-1]. We use two loop, first i from 0-&gt;n, second j starts from 0 and ends at i.</li>
 <li>We can also simply starts from the center towards both sides, and be care that center can be a char, or between two characters.</li>
@@ -457,6 +500,12 @@
 <ol>
 <li>Detect the sub version of both v1, v2 in a loop and compare them.</li>
 <li>If one of the string end, set the version to 0, keep comparing it with the other</li>
+</ol>
+<h4 id="179-Largest-Number"><a href="#179-Largest-Number" class="headerlink" title="179. Largest Number"></a>179. Largest Number</h4><p><em>Given a list of non negative integers, arrange them such that they form the largest number.</em></p>
+<ol>
+<li>Use custom comparator.</li>
+<li>To compare two string s1, s2, return s1+s2&gt;s2+s1, smart!</li>
+<li>Be careful of 0,0 -&gt; 0, X-&gt;00.</li>
 </ol>
 
       
@@ -649,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">1.1.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vector"><span class="nav-number">1.2.</span> <span class="nav-text">Vector</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">2.1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#54-Spiral-Matrix"><span class="nav-number">2.2.</span> <span class="nav-text">54. Spiral Matrix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#58-Length-of-Last-Word"><span class="nav-number">2.3.</span> <span class="nav-text">58. Length of Last Word</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#71-Simplify-Path"><span class="nav-number">2.4.</span> <span class="nav-text">71. Simplify Path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#89-Gray-Code"><span class="nav-number">2.5.</span> <span class="nav-text">89. Gray Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#91-Decode-Ways"><span class="nav-number">2.6.</span> <span class="nav-text">91. Decode Ways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#93-Restore-IP-Addresses"><span class="nav-number">2.7.</span> <span class="nav-text">93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#128-Longest-Consecutive-Sequence"><span class="nav-number">2.8.</span> <span class="nav-text">128. Longest Consecutive Sequence</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#134-Gas-Station"><span class="nav-number">2.9.</span> <span class="nav-text">134. Gas Station</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#151-Reverse-Words-in-a-String"><span class="nav-number">2.10.</span> <span class="nav-text">151. Reverse Words in a String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#161-One-Edit-Distance"><span class="nav-number">2.11.</span> <span class="nav-text">161. One Edit Distance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#165-Compare-Version-Numbers"><span class="nav-number">2.12.</span> <span class="nav-text">165. Compare Version Numbers</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String"><span class="nav-number">1.1.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vector"><span class="nav-number">1.2.</span> <span class="nav-text">Vector: C++ STL - Unordered_map</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unordered-set"><span class="nav-number">1.3.</span> <span class="nav-text">Unordered_set</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sum-Topic"><span class="nav-number">2.1.</span> <span class="nav-text">Sum Topic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Longest-Substring-Without-Repeating-Characters"><span class="nav-number">2.2.</span> <span class="nav-text">3. Longest Substring Without Repeating Characters</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Median-of-Two-Sorted-Arrays"><span class="nav-number">2.3.</span> <span class="nav-text">4. Median of Two Sorted Arrays</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">2.4.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#54-Spiral-Matrix"><span class="nav-number">2.5.</span> <span class="nav-text">54. Spiral Matrix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#58-Length-of-Last-Word"><span class="nav-number">2.6.</span> <span class="nav-text">58. Length of Last Word</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#71-Simplify-Path"><span class="nav-number">2.7.</span> <span class="nav-text">71. Simplify Path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#89-Gray-Code"><span class="nav-number">2.8.</span> <span class="nav-text">89. Gray Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#91-Decode-Ways"><span class="nav-number">2.9.</span> <span class="nav-text">91. Decode Ways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#93-Restore-IP-Addresses"><span class="nav-number">2.10.</span> <span class="nav-text">93. Restore IP Addresses</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#128-Longest-Consecutive-Sequence"><span class="nav-number">2.11.</span> <span class="nav-text">128. Longest Consecutive Sequence</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#134-Gas-Station"><span class="nav-number">2.12.</span> <span class="nav-text">134. Gas Station</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#151-Reverse-Words-in-a-String"><span class="nav-number">2.13.</span> <span class="nav-text">151. Reverse Words in a String</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#161-One-Edit-Distance"><span class="nav-number">2.14.</span> <span class="nav-text">161. One Edit Distance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#165-Compare-Version-Numbers"><span class="nav-number">2.15.</span> <span class="nav-text">165. Compare Version Numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#179-Largest-Number"><span class="nav-number">2.16.</span> <span class="nav-text">179. Largest Number</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -821,7 +870,7 @@
         var disqus_config = function () {
           this.page.url = 'https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/';
           this.page.identifier = '2019/09/21/leetcode-string-array/';
-          this.page.title = 'Leetcode Summary - String, Array';
+          this.page.title = 'Leetcode Summary - String & Array';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
