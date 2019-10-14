@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Heap tag and useful data structures in C++.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-06T03:40:26.428Z">
+<meta property="og:updated_time" content="2019-10-13T20:08:52.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode Summary - Heap">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Heap tag and useful data structures in C++.">
@@ -411,7 +411,7 @@
 <li><p>A better solution is using a min heap to get the smallest value, and then push its next val into the heap. It time complexity is O(log(k)N), space complexity is O(k)</p>
 </li>
 </ol>
-
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// priority_queue for linked list</span></span><br><span class="line"><span class="keyword">auto</span> cmp = [](LinkList* l1, LinkedList* l2)&#123;</span><br><span class="line">    <span class="keyword">return</span> l1-&gt;val &gt; l2-&gt;val;</span><br><span class="line">&#125;</span><br><span class="line">priority_queue&lt;LinkedList*, <span class="built_in">vector</span>&lt;LinkedList*&gt;, <span class="keyword">decltype</span>(cmp)&gt; q(cmp); <span class="comment">// max heap</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
