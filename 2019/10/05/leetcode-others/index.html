@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Math, Stack, Queue, Bit-manipulation, Union-Find, Design tag.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-14T01:28:22.156Z">
+<meta property="og:updated_time" content="2019-10-29T04:30:08.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode Summary - Others">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Math, Stack, Queue, Bit-manipulation, Union-Find, Design tag.">
@@ -407,8 +407,9 @@
 <li>Use regular minus will be too slow;</li>
 <li>Use binary search, square the division everytime.</li>
 </ol>
-<h4 id="50-Pow-x-n"><a href="#50-Pow-x-n" class="headerlink" title="50. Pow(x, n)"></a>50. Pow(x, n)</h4><p><em>Implement pow(x, n), which calculates x raised to the power n (xn).</em></p>
+<h4 id="50-Pow-x-n"><a href="#50-Pow-x-n" class="headerlink" title="50. Pow(x, n)"></a>50. Pow(x, n)</h4><p><em>Implement pow(x, n), which calculates x raised to the power n (x^n).</em></p>
 <p>Do 1, x , x^2, x^4…., making x grow exponentially to meet the time requirements.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n; i!=<span class="number">0</span>; i/=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i%<span class="number">2</span>!=<span class="number">0</span>)&#123;</span><br><span class="line">            res *= x;</span><br><span class="line">        &#125;</span><br><span class="line">        x *= x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (n&lt;<span class="number">0</span>)?(<span class="number">1.0</span>/res):res; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="137-Single-Number-II"><a href="#137-Single-Number-II" class="headerlink" title="137. Single Number II"></a>137. Single Number II</h4><p><em>Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.</em></p>
 <ol>
 <li>For all integers in the vector, sum up 1 for every bit from the no.0 to the no.31, then mod the sum to 3, and add up all the bit together, therefore we get the final value.</li>

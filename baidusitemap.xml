@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/</loc>
+    <lastmod>2019-10-29T05:51:34.651Z</lastmod>
+  </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/10/05/leetcode-others/</loc>
-    <lastmod>2019-10-14T01:28:22.156Z</lastmod>
+    <lastmod>2019-10-29T04:30:08.358Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</loc>
     <lastmod>2019-10-14T01:20:47.583Z</lastmod>
@@ -18,9 +21,6 @@
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/10/02/leetcode-dp/</loc>
     <lastmod>2019-10-11T23:03:05.593Z</lastmod>
-  </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/</loc>
-    <lastmod>2019-10-11T05:29:30.230Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/04/01/tree/</loc>
     <lastmod>2019-10-10T19:02:53.219Z</lastmod>
