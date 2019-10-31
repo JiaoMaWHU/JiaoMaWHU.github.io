@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-11T23:03:05.593Z">
+<meta property="og:updated_time" content="2019-10-30T23:33:37.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode Summary - DP">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
@@ -461,6 +461,11 @@
 <li>Use a DP array dp[i], represent the max money when the robber is at house i.</li>
 <li>dp[i] = max(dp[i-1], dp[i-2]+money[i])</li>
 </ol>
+<h4 id="221-Maximal-Square"><a href="#221-Maximal-Square" class="headerlink" title="221. Maximal Square"></a>221. Maximal Square</h4><p><em>Given a 2D binary matrix filled with 0’s and 1’s, find the largest square containing only 1’s and return its area.</em></p>
+<ol>
+<li>Use 2D dp to denote the maximum square side length, if this point is the right bottom of the square. So we have the dp equation: dp[i][j] = min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1]) + 1, (if this point is ‘1’). The insight is, the other bigger two points supports the smallest point to be the right bottom of a square. </li>
+<li>We can even use a 1D dp array by using a variable PREV, which represents the value of dp[i-1][j-1]. Then, the equation is dp[j] = min(dp[j], dp[j-1], prev) + 1, and we also need to update the PREV at the end. </li>
+</ol>
 
       
     </div>
@@ -590,7 +595,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -652,7 +657,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#70-Climbing-Stairs"><span class="nav-number">2.</span> <span class="nav-text">70. Climbing Stairs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-Edit-Distance"><span class="nav-number">3.</span> <span class="nav-text">72. Edit Distance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#131-Palindrome-Partitioning"><span class="nav-number">4.</span> <span class="nav-text">131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#132-Palindrome-Partitioning-II"><span class="nav-number">5.</span> <span class="nav-text">132. Palindrome Partitioning II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#139-Word-Break"><span class="nav-number">6.</span> <span class="nav-text">139. Word Break</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stock-Topic"><span class="nav-number">7.</span> <span class="nav-text">Stock Topic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#198-House-Robber"><span class="nav-number">8.</span> <span class="nav-text">198. House Robber</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#70-Climbing-Stairs"><span class="nav-number">2.</span> <span class="nav-text">70. Climbing Stairs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-Edit-Distance"><span class="nav-number">3.</span> <span class="nav-text">72. Edit Distance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#131-Palindrome-Partitioning"><span class="nav-number">4.</span> <span class="nav-text">131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#132-Palindrome-Partitioning-II"><span class="nav-number">5.</span> <span class="nav-text">132. Palindrome Partitioning II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#139-Word-Break"><span class="nav-number">6.</span> <span class="nav-text">139. Word Break</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stock-Topic"><span class="nav-number">7.</span> <span class="nav-text">Stock Topic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#198-House-Robber"><span class="nav-number">8.</span> <span class="nav-text">198. House Robber</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#221-Maximal-Square"><span class="nav-number">9.</span> <span class="nav-text">221. Maximal Square</span></a></li></ol></div>
             
 
           </div>
