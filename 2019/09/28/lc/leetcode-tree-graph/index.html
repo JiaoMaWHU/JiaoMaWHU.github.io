@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|Baskerville:300,300italic,400,400italic,700,700italic|Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Leetcode,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jinshin's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="This post records my solutions of leetcode in the Tree and Graphtag and useful data structures in C++.">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode Summary - Tree &amp; Graph">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/index.html">
+<meta property="og:site_name" content="Jinshin&#39;s Blog">
+<meta property="og:description" content="This post records my solutions of leetcode in the Tree and Graphtag and useful data structures in C++.">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-01T01:47:40.213Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leetcode Summary - Tree &amp; Graph">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the Tree and Graphtag and useful data structures in C++.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/">
+
+
+
+
+
+  <title>Leetcode Summary - Tree & Graph | Jinshin's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '129723642', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5f5dad2fbe171a306f5c2925fa8ee9fa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jinshin's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jinshin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinshin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - Tree & Graph</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-28T15:20:35-05:00">
+                2019-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/28/lc/leetcode-tree-graph/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/28/lc/leetcode-tree-graph/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>This post records my solutions of leetcode in the <strong>Tree</strong> and <strong>Graph</strong>tag and useful data structures in C++. <a id="more"></a></p>
+<h3 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h3><h4 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h4><h3 id="Leetcode-Solutions"><a href="#Leetcode-Solutions" class="headerlink" title="Leetcode Solutions"></a>Leetcode Solutions</h3><h4 id="95-Unique-Binary-Search-Trees-II"><a href="#95-Unique-Binary-Search-Trees-II" class="headerlink" title="95. Unique Binary Search Trees II"></a>95. Unique Binary Search Trees II</h4><p><em>Given an integer n, generate all structurally unique BST’s (binary search trees) that store values 1 … n.</em></p>
+<p>Treat it as a sorted array, use index in recursive method to build the tree.</p>
+<h4 id="96-Unique-Binary-Search-Trees"><a href="#96-Unique-Binary-Search-Trees" class="headerlink" title="96. Unique Binary Search Trees"></a>96. Unique Binary Search Trees</h4><p><em>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?</em></p>
+<ol>
+<li>if we use the same recursive method as no.95, TLE.</li>
+<li>the clue is, the total number is actually a Catalan number.<ul>
+<li>assign dp[0]=1, if nothing can be selected, only one way; </li>
+<li>dp[1] = 1, with 1 point there is only one way; </li>
+<li>for dp[2], we can assign the first point as the root node, so as the second one, then we have dp[2] = dp[0]dp[1] + dp[1]dp[0]; </li>
+<li>dp[3] = dp[0]dp[2] + dp[1](dp[0])dp[1] + dp[2]dp[0]</li>
+<li>then we conclude \(C_{0}=1\), \(C_{n+1} = \sum_{i=0}^{n}{C_i}{C_{n-i}}\) for \(n&gt;=0\)</li>
+</ul>
+</li>
+</ol>
+<h4 id="98-Validate-Binary-Search-Tree"><a href="#98-Validate-Binary-Search-Tree" class="headerlink" title="98. Validate Binary Search Tree"></a>98. Validate Binary Search Tree</h4><p><em>Given a binary tree, determine if it is a valid binary search tree (BST).</em></p>
+<p>Recursive, pass by max and min to next level. When pass to left node, change max to self value, otherwise change min for the right node.</p>
+<h4 id="102-Binary-Tree-Level-Order-Traversal"><a href="#102-Binary-Tree-Level-Order-Traversal" class="headerlink" title="102. Binary Tree Level Order Traversal"></a>102. Binary Tree Level Order Traversal</h4><p><em>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).</em></p>
+<ol>
+<li><p>We can use a new structure to store the level, as</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LvlTreeNode</span> &#123;</span></span><br><span class="line">        TreeNode * node;</span><br><span class="line">        <span class="keyword">int</span> lvl;</span><br><span class="line">        LvlTreeNode(TreeNode* n_, <span class="keyword">int</span> lvl_): node(n_), lvl(lvl_)&#123;&#125;;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>However, it is slow. We can do this using original structure. Use loop and first initial the size of queue, so we can exactly traverse one level of a tree.</p>
+</li>
+</ol>
+<h4 id="103-Binary-Tree-Zigzag-Level-Order-Traversal"><a href="#103-Binary-Tree-Zigzag-Level-Order-Traversal" class="headerlink" title="103. Binary Tree Zigzag Level Order Traversal"></a>103. Binary Tree Zigzag Level Order Traversal</h4><p><em>Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).</em></p>
+<p>Same idea as 102.</p>
+<h4 id="107-Binary-Tree-Level-Order-Traversal-II"><a href="#107-Binary-Tree-Level-Order-Traversal-II" class="headerlink" title="107. Binary Tree Level Order Traversal II"></a>107. Binary Tree Level Order Traversal II</h4><p><em>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).</em></p>
+<p>Same idea as 102.</p>
+<h4 id="111-Minimum-Depth-of-Binary-Tree"><a href="#111-Minimum-Depth-of-Binary-Tree" class="headerlink" title="111. Minimum Depth of Binary Tree"></a>111. Minimum Depth of Binary Tree</h4><p><em>Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</em></p>
+<ol>
+<li>DFS is OK, however it has lots of extra operations, we could use a reference value for pruning.</li>
+<li>We can also use BFS, when we meet the first leaf node, return it.</li>
+</ol>
+<h4 id="112-Path-Sum-113-Path-Sum-II"><a href="#112-Path-Sum-113-Path-Sum-II" class="headerlink" title="112. Path Sum, 113. Path Sum II"></a>112. Path Sum, 113. Path Sum II</h4><p>These two problems needs to end up with a leaf node and see if the sum up of value meets the target. For 113, we also need to return the paths, so we could use reference of vector to fast up. Note for the path right now: vector<int> v, we also can declare it as a reference, but remember to pop out the value.</int></p>
+<h4 id="116-Populating-Next-Right-Pointers-in-Each-Node"><a href="#116-Populating-Next-Right-Pointers-in-Each-Node" class="headerlink" title="116. Populating Next Right Pointers in Each Node"></a>116. Populating Next Right Pointers in Each Node</h4><p><em>You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.</em></p>
+<ol>
+<li>BFS using stack is a natural thought.</li>
+<li>However, this problem requires constant space, then we could use DFS. Because it is a perfect binary tree, we can link the left tree of a node (if has) to its right tree, and for the right tree, we point it to its next node’s left tree. smart.</li>
+<li>Based on 2, we can also only use two pointers to finish the process, one for start, one for traversing.</li>
+</ol>
+<h4 id="117-Populating-Next-Right-Pointers-in-Each-Node-II"><a href="#117-Populating-Next-Right-Pointers-in-Each-Node-II" class="headerlink" title="117. Populating Next Right Pointers in Each Node II"></a>117. Populating Next Right Pointers in Each Node II</h4><p><em>Given a binary tree. Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL. Initially, all next pointers are set to NULL.</em></p>
+<ol>
+<li>the same dfs method as 116, but note that we have to go right tree, otherwise it will fail. Look at node 7-&gt;6 for the reason.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">          2</span><br><span class="line">       /     \</span><br><span class="line">    4         3</span><br><span class="line">   / \        / \</span><br><span class="line">  0   7     9   1</span><br><span class="line"> /   / \       / \</span><br><span class="line">5  12  6      8   11</span><br><span class="line">       /</span><br><span class="line">     10</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="127-Word-Ladder"><a href="#127-Word-Ladder" class="headerlink" title="127. Word Ladder"></a>127. Word Ladder</h4><p><em>Given two words (beginWord and endWord), and a dictionary’s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: Only one letter can be changed at a time. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</em></p>
+<ol>
+<li>Use intermediate node: abc -&gt; *bc, a*c, ab*.</li>
+<li>First build a unordered_map<string, pair<bool,="" vector<string="">&gt;&gt; to store the intermediate node and to mark if it is visited.</string,></li>
+<li>Insert all the intermediate nodes into the map, and start BFS searching without visiting the same intermediate node. Why BFS, BFS ensures that the first result will be the answer. However, if we use DFS, we have to search all the graph.</li>
+<li>TC: O(MN), SC: O(MN), M-&gt; the length of word, N-&gt; the number of words</li>
+</ol>
+<h4 id="133-Clone-Graph"><a href="#133-Clone-Graph" class="headerlink" title="133. Clone Graph"></a>133. Clone Graph</h4><p><em>Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors.</em></p>
+<ol>
+<li>Use a map, the key is the original node, and the value is the new node.</li>
+<li>Use DFS to clone the graph.</li>
+</ol>
+<h4 id="173-Binary-Search-Tree-Iterator"><a href="#173-Binary-Search-Tree-Iterator" class="headerlink" title="173. Binary Search Tree Iterator"></a>173. Binary Search Tree Iterator</h4><p><em>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST. Calling next() will return the next smallest number in the BST.</em></p>
+<p>Use the same idea as the iterative inorder traversal of Tree.</p>
+<h4 id="207-Course-Schedule"><a href="#207-Course-Schedule" class="headerlink" title="207. Course Schedule"></a>207. Course Schedule</h4><p><em>There are a total of n courses you have to take, labeled from 0 to n-1. Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]. Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?</em></p>
+<ol>
+<li><p>DFS solution uses visited graph to detect if there is a cycle.</p>
+</li>
+<li><p>BFS solution is more interesting. If to take course 0 we need to take course 1, we build a edge from 1 to 0, and we construct a array to record the in edges of each node. Then we push all nodes with 0 in edges into the queue. While the queue is not empty, we keep minus the in edge number of each node, and if some node has no in edges, it means this course can taken, so we push it into queue. At last, if all courses have no in edges, all courses can be taken.</p>
+</li>
+</ol>
+<h4 id="208-Implement-Trie-Prefix-Tree"><a href="#208-Implement-Trie-Prefix-Tree" class="headerlink" title="208. Implement Trie (Prefix Tree)"></a>208. Implement Trie (Prefix Tree)</h4><p>Remember there is a isWord bool variable, meaning if the path from root to this node represents a word. </p>
+<h4 id="235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree"><a href="#235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree" class="headerlink" title="235. Lowest Common Ancestor of a Binary Search Tree"></a>235. Lowest Common Ancestor of a Binary Search Tree</h4><p><em>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</em></p>
+<p>Because it is a BST, when meet a node, that the value is between the two target values, return the node. Otherwise, we can determine go right or go left.</p>
+<h4 id="236-Lowest-Common-Ancestor-of-a-Binary-Tree"><a href="#236-Lowest-Common-Ancestor-of-a-Binary-Tree" class="headerlink" title="236. Lowest Common Ancestor of a Binary Tree"></a>236. Lowest Common Ancestor of a Binary Tree</h4><p><em>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.</em></p>
+<p>The difference with 235 is that this is a binary tree. The point is that the two nodes are definitely in the tree. Therefore, we can simply return this node, if the node have a target value, or left or right child has a target value. Otherwise, we just return nullptr.</p>
+<h4 id="xxx-Distance-between-two-nodes-in-BST"><a href="#xxx-Distance-between-two-nodes-in-BST" class="headerlink" title="xxx, Distance between two nodes in BST."></a>xxx, Distance between two nodes in BST.</h4><p>First, find the LCA; Then, find the level; Use the level to get the result.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">TreeNode* <span class="title">LCA</span><span class="params">(TreeNode * root, <span class="keyword">int</span> n1, <span class="keyword">int</span> n2)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="comment">// find the lowest common ancestor</span></span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) </span><br><span class="line">       <span class="keyword">return</span> root; </span><br><span class="line">    <span class="keyword">if</span> (root-&gt;val == n1 || root-&gt;val == n2) </span><br><span class="line">       <span class="keyword">return</span> root; </span><br><span class="line">  </span><br><span class="line">    TreeNode* left = LCA(root-&gt;left, n1, n2); </span><br><span class="line">    TreeNode* right = LCA(root-&gt;right, n1, n2); </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">if</span> (left != <span class="literal">NULL</span> &amp;&amp; right != <span class="literal">NULL</span>) </span><br><span class="line">         <span class="keyword">return</span> root; </span><br><span class="line">    <span class="keyword">if</span> (left != <span class="literal">NULL</span>) </span><br><span class="line">        <span class="keyword">return</span> LCA(root-&gt;left, n1, n2); </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> LCA(root-&gt;right, n1, n2); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Returns level of val k if it is present in </span></span><br><span class="line"><span class="comment">// tree, otherwise returns -1 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findLevel</span><span class="params">(TreeNode *root, <span class="keyword">int</span> k, <span class="keyword">int</span> level)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">    <span class="keyword">if</span>(root-&gt;val == k) <span class="keyword">return</span> level; </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">int</span> left = findLevel(root-&gt;left, k, level+<span class="number">1</span>); </span><br><span class="line">    <span class="keyword">if</span> (left == <span class="number">-1</span>) </span><br><span class="line">       <span class="keyword">return</span> findLevel(root-&gt;right, k, level+<span class="number">1</span>); </span><br><span class="line">    <span class="keyword">return</span> left; </span><br><span class="line">&#125; </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findDistance</span><span class="params">(TreeNode* root, <span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="comment">// Your code here </span></span><br><span class="line">    TreeNode* lca = LCA(root, a , b); </span><br><span class="line">    <span class="keyword">if</span>(lca==<span class="literal">nullptr</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> d1 = findLevel(lca, a, <span class="number">0</span>); </span><br><span class="line">    <span class="keyword">int</span> d2 = findLevel(lca, b, <span class="number">0</span>); </span><br><span class="line">    <span class="keyword">return</span> d1 + d2; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="297-Serialize-and-Deserialize-Binary-Tree"><a href="#297-Serialize-and-Deserialize-Binary-Tree" class="headerlink" title="297. Serialize and Deserialize Binary Tree"></a>297. Serialize and Deserialize Binary Tree</h4><blockquote>
+<p><em>Design an algorithm to serialize and deserialize a binary tree. </em></p>
+</blockquote>
+<ol>
+<li>Use DFS or BFS, quite straightforward, however, you should know how to split string in C++. </li>
+<li>If use a whitespace as the separator, the ‘&gt;&gt;’ in istringstream can directly give the next output.</li>
+</ol>
+<h4 id="783-Minimum-Distance-Between-BST-Nodes"><a href="#783-Minimum-Distance-Between-BST-Nodes" class="headerlink" title="783. Minimum Distance Between BST Nodes"></a>783. Minimum Distance Between BST Nodes</h4><blockquote>
+<p><em>Given a Binary Search Tree (BST) with the root node root, return the minimum difference between the values of any two different nodes in the tree.</em></p>
+</blockquote>
+<p>Using the inorder or preorder traversal of BST tree, in order to find the minimum difference between adjacent nodes.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/21/lc/leetcode-string-array/" rel="next" title="Leetcode Summary - String & Array">
+                <i class="fa fa-chevron-left"></i> Leetcode Summary - String & Array
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/29/lc/leetcode-heap/" rel="prev" title="Leetcode Summary - Heap">
+                Leetcode Summary - Heap <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jinshin</p>
+              <p class="site-description motion-element" itemprop="description">Blog of my experiences and code</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">Data Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tree"><span class="nav-number">1.1.</span> <span class="nav-text">Tree</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Leetcode-Solutions"><span class="nav-number">2.</span> <span class="nav-text">Leetcode Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#95-Unique-Binary-Search-Trees-II"><span class="nav-number">2.1.</span> <span class="nav-text">95. Unique Binary Search Trees II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#96-Unique-Binary-Search-Trees"><span class="nav-number">2.2.</span> <span class="nav-text">96. Unique Binary Search Trees</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#98-Validate-Binary-Search-Tree"><span class="nav-number">2.3.</span> <span class="nav-text">98. Validate Binary Search Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#102-Binary-Tree-Level-Order-Traversal"><span class="nav-number">2.4.</span> <span class="nav-text">102. Binary Tree Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#103-Binary-Tree-Zigzag-Level-Order-Traversal"><span class="nav-number">2.5.</span> <span class="nav-text">103. Binary Tree Zigzag Level Order Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#107-Binary-Tree-Level-Order-Traversal-II"><span class="nav-number">2.6.</span> <span class="nav-text">107. Binary Tree Level Order Traversal II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#111-Minimum-Depth-of-Binary-Tree"><span class="nav-number">2.7.</span> <span class="nav-text">111. Minimum Depth of Binary Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#112-Path-Sum-113-Path-Sum-II"><span class="nav-number">2.8.</span> <span class="nav-text">112. Path Sum, 113. Path Sum II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#116-Populating-Next-Right-Pointers-in-Each-Node"><span class="nav-number">2.9.</span> <span class="nav-text">116. Populating Next Right Pointers in Each Node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#117-Populating-Next-Right-Pointers-in-Each-Node-II"><span class="nav-number">2.10.</span> <span class="nav-text">117. Populating Next Right Pointers in Each Node II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#127-Word-Ladder"><span class="nav-number">2.11.</span> <span class="nav-text">127. Word Ladder</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#133-Clone-Graph"><span class="nav-number">2.12.</span> <span class="nav-text">133. Clone Graph</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#173-Binary-Search-Tree-Iterator"><span class="nav-number">2.13.</span> <span class="nav-text">173. Binary Search Tree Iterator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#207-Course-Schedule"><span class="nav-number">2.14.</span> <span class="nav-text">207. Course Schedule</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#208-Implement-Trie-Prefix-Tree"><span class="nav-number">2.15.</span> <span class="nav-text">208. Implement Trie (Prefix Tree)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree"><span class="nav-number">2.16.</span> <span class="nav-text">235. Lowest Common Ancestor of a Binary Search Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#236-Lowest-Common-Ancestor-of-a-Binary-Tree"><span class="nav-number">2.17.</span> <span class="nav-text">236. Lowest Common Ancestor of a Binary Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xxx-Distance-between-two-nodes-in-BST"><span class="nav-number">2.18.</span> <span class="nav-text">xxx, Distance between two nodes in BST.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#297-Serialize-and-Deserialize-Binary-Tree"><span class="nav-number">2.19.</span> <span class="nav-text">297. Serialize and Deserialize Binary Tree</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#783-Minimum-Distance-Between-BST-Nodes"><span class="nav-number">2.20.</span> <span class="nav-text">783. Minimum Distance Between BST Nodes</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinshin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://https-jiaomawhu-github-io-2.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/';
+          this.page.identifier = '2019/09/28/lc/leetcode-tree-graph/';
+          this.page.title = 'Leetcode Summary - Tree & Graph';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

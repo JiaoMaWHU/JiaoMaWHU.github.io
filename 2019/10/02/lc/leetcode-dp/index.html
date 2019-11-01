@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|Baskerville:300,300italic,400,400italic,700,700italic|Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Leetcode,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jinshin's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
+<meta name="keywords" content="Leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode Summary - DP">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/index.html">
+<meta property="og:site_name" content="Jinshin&#39;s Blog">
+<meta property="og:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-01T04:12:30.737Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Leetcode Summary - DP">
+<meta name="twitter:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/">
+
+
+
+
+
+  <title>Leetcode Summary - DP | Jinshin's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '129723642', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5f5dad2fbe171a306f5c2925fa8ee9fa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jinshin's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jinshin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinshin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Leetcode Summary - DP</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-02T12:53:00-05:00">
+                2019-10-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/02/lc/leetcode-dp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/10/02/lc/leetcode-dp/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>This post records my solutions of leetcode in the <strong>Dynamic Programming</strong> tag. <a id="more"></a></p>
+<h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a>5. Longest Palindromic Substring</h4><p><em>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</em></p>
+<p>Use dp array to store whether subarray dp[i][j] is a palindrome.</p>
+<ol>
+<li>initialize dp[i][i] to true</li>
+<li>create dp in loop as <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(i from 0 to size)</span><br><span class="line">    dp[i][i] = true</span><br><span class="line">    for(j from 0 to i)</span><br><span class="line">        dp[j][i] ? palindrome</span><br><span class="line">        -&gt; dp[j+1][i-1] &amp;&amp; s[j] ?= s[i]</span><br><span class="line">        if max palindrome string?</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="70-Climbing-Stairs"><a href="#70-Climbing-Stairs" class="headerlink" title="70. Climbing Stairs"></a>70. Climbing Stairs</h4><p><em>You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positive integer.</em></p>
+<p>The dp equation is dp[n] = dp[n-1] + dp[n-2]</p>
+<h4 id="72-Edit-Distance"><a href="#72-Edit-Distance" class="headerlink" title="72. Edit Distance"></a>72. Edit Distance</h4><p><em>Given two words word1 and word2, find the minimum number of operations required to <strong>convert word1 to word2</strong>. You have the following 3 operations permitted on a word: Insert a character, Delete a character, Replace a character</em></p>
+<ol>
+<li>Build a 2D dp array dp[size1][size2], where dp[i][j] means the edit distance of string1[0…i] with string2[0…j]</li>
+<li>Initialize dp[0][j] = j, from j=0 -&gt; j=size2, so does dp[i][0]</li>
+<li>if string1[i] == string2[j], <strong>dp[i][j] = dp[i-1][j-1]</strong>, else dp[i][j] = 1 + min(dp[i-1][j] (delete string1[i]), dp[i][j-1] (insert string2[j] to string1), dp[i][j] (replace)). </li>
+</ol>
+<h4 id="131-Palindrome-Partitioning"><a href="#131-Palindrome-Partitioning" class="headerlink" title="131. Palindrome Partitioning"></a>131. Palindrome Partitioning</h4><p><em>Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.</em></p>
+<ol>
+<li>Use the same 2D dp array idea as <em>5. Longest Palindromic Substring</em>.</li>
+<li>Then use DFS to get all possible results.</li>
+<li>TC: <strong>O(): ?</strong> \(C_{n-1}^1 + C_{n-1}^2 + … + C_{n-1}^{n-1}\), SC: O(n^2)</li>
+</ol>
+<h4 id="132-Palindrome-Partitioning-II"><a href="#132-Palindrome-Partitioning-II" class="headerlink" title="132. Palindrome Partitioning II"></a>132. Palindrome Partitioning II</h4><p><em>Given a string s, partition s such that every substring of the partition is a palindrome. Return the minimum cuts needed for a palindrome partitioning of s.</em></p>
+<ol>
+<li>Build the same 2D dp array as <em>5. Longest Palindromic Substring</em>, also build a dp array S to records the minimum cuts needed in substring 0-i</li>
+<li>When determine dp[j][i], if dp[j][i] is true, also determine S[i] = min(S[i], dp[0][j-1]+1) (j&gt;0, else j==0, S[i] = 0).</li>
+</ol>
+<h4 id="139-Word-Break"><a href="#139-Word-Break" class="headerlink" title="139. Word Break"></a>139. Word Break</h4><p><em>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.</em></p>
+<p>Note: The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.</p>
+<ol>
+<li>Use the same DP idea as in 132. Palindrome Partitioning II.</li>
+<li>Build a 1D DP array, DP[i] means if substring 0-i can be segmented into words in dictionary.</li>
+</ol>
+<h4 id="Stock-Topic"><a href="#Stock-Topic" class="headerlink" title="Stock Topic"></a><strong>Stock Topic</strong></h4><p>121.Best Time to Buy and Sell Stock I</p>
+<p><em>Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note that you cannot sell a stock before you buy one.</em></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. Record the minimum price of a stock</span></span><br><span class="line"><span class="comment">// 2. Recode the max profit at the same time </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;p: prices)&#123;</span><br><span class="line">    buy = min(p, buy);</span><br><span class="line">    profit = max(profit, p - buy);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>122.Best Time to Buy and Sell Stock II</p>
+<p><em>Say you have an array for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times). Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</em></p>
+<ol>
+<li>when the next price is increasing, buy and sell</li>
+<li>push back a 0 into the vector, it will address the last purchase problem.</li>
+</ol>
+<p>123.Best Time to Buy and Sell Stock III</p>
+<p><em>Say you have an array for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete at most two transactions. Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</em></p>
+<ol>
+<li>Use DP : local[i][j], global[i][j] to represent the profit. local[i][j] means the NO. j purchase is sold at time i. global[i][j] is the max profit at time i, where the last stock may be smaller than j.</li>
+<li>The update for local is <strong>local[i][j] = max(local[i-1][j], g[i-1][j-1]) + (prices[i] - prices[i-1])</strong>. Why? <strong>g[i-1][j-1]</strong> means that the last stock is purchased at time i-1, and I want to sell it right, so it is the diff profit plus the profit before. <strong>local[i-1][j]</strong> means that the last stock was purchased before i-1 and selled at time i-1, but I want to sell it right now.</li>
+<li><strong>global[i][j] = max(global[i-1][j], local[i][j])</strong></li>
+</ol>
+<p>188.Best Time to Buy and Sell Stock IV</p>
+<p><em>The description is the same as 123.Best Time to Buy and Sell Stock III, however, you can buy at most K transactions.</em></p>
+<ol>
+<li>The same idea as 123</li>
+<li>However, when k is more than S/2 where S is the size of stock prices, we can use the idea of 122 to reduce time and space consumption.</li>
+</ol>
+<h4 id="198-House-Robber"><a href="#198-House-Robber" class="headerlink" title="198. House Robber"></a>198. House Robber</h4><p><em>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</em></p>
+<ol>
+<li>Use a DP array dp[i], represent the max money when the robber is at house i.</li>
+<li>dp[i] = max(dp[i-1], dp[i-2]+money[i])</li>
+</ol>
+<h4 id="221-Maximal-Square"><a href="#221-Maximal-Square" class="headerlink" title="221. Maximal Square"></a>221. Maximal Square</h4><blockquote>
+<p><em>Given a 2D binary matrix filled with 0’s and 1’s, find the largest square containing only 1’s and return its area.</em></p>
+</blockquote>
+<ol>
+<li>Use 2D dp to denote the maximum square side length, if this point is the right bottom of the square. So we have the dp equation: dp[i][j] = min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1]) + 1, (if this point is ‘1’). The insight is, the other bigger two points supports the smallest point to be the right bottom of a square. </li>
+<li>We can even use a 1D dp array by using a variable PREV, which represents the value of dp[i-1][j-1]. Then, the equation is dp[j] = min(dp[j], dp[j-1], prev) + 1, and we also need to update the PREV at the end. </li>
+</ol>
+<h4 id="300-Longest-Increasing-Subsequence-LIS"><a href="#300-Longest-Increasing-Subsequence-LIS" class="headerlink" title="300. Longest Increasing Subsequence (LIS)"></a>300. Longest Increasing Subsequence (LIS)</h4><blockquote>
+<p><em>Given an unsorted array of integers, find the length of longest increasing subsequence.</em></p>
+</blockquote>
+<ol>
+<li>Note this is a <strong>subsequence</strong>.</li>
+<li>The dp solution is use a 1D array V, where V[i] denotes the LIS whose last element is i. </li>
+<li>There is also a nlogn solution.</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/01/lc/leetcode-recursive-backtracking/" rel="next" title="Leetcode Summary - Recursive & Backtracking">
+                <i class="fa fa-chevron-left"></i> Leetcode Summary - Recursive & Backtracking
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/05/lc/leetcode-others/" rel="prev" title="Leetcode Summary - Others">
+                Leetcode Summary - Others <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jinshin</p>
+              <p class="site-description motion-element" itemprop="description">Blog of my experiences and code</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Longest-Palindromic-Substring"><span class="nav-number">1.</span> <span class="nav-text">5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#70-Climbing-Stairs"><span class="nav-number">2.</span> <span class="nav-text">70. Climbing Stairs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#72-Edit-Distance"><span class="nav-number">3.</span> <span class="nav-text">72. Edit Distance</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#131-Palindrome-Partitioning"><span class="nav-number">4.</span> <span class="nav-text">131. Palindrome Partitioning</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#132-Palindrome-Partitioning-II"><span class="nav-number">5.</span> <span class="nav-text">132. Palindrome Partitioning II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#139-Word-Break"><span class="nav-number">6.</span> <span class="nav-text">139. Word Break</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stock-Topic"><span class="nav-number">7.</span> <span class="nav-text">Stock Topic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#198-House-Robber"><span class="nav-number">8.</span> <span class="nav-text">198. House Robber</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#221-Maximal-Square"><span class="nav-number">9.</span> <span class="nav-text">221. Maximal Square</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#300-Longest-Increasing-Subsequence-LIS"><span class="nav-number">10.</span> <span class="nav-text">300. Longest Increasing Subsequence (LIS)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinshin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://https-jiaomawhu-github-io-2.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/';
+          this.page.identifier = '2019/10/02/lc/leetcode-dp/';
+          this.page.title = 'Leetcode Summary - DP';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

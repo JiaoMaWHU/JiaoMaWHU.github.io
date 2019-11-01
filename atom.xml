@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2019-10-30T16:45:10.766Z</updated>
+  <updated>2019-10-31T18:14:21.621Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>C++ STL - Summary</title>
-    <link href="https://jiaomawhu.github.io/2019/10/30/cpp-stl-summary/"/>
-    <id>https://jiaomawhu.github.io/2019/10/30/cpp-stl-summary/</id>
+    <link href="https://jiaomawhu.github.io/2019/10/30/STL/cpp-stl-summary/"/>
+    <id>https://jiaomawhu.github.io/2019/10/30/STL/cpp-stl-summary/</id>
     <published>2019-10-30T16:43:54.000Z</published>
-    <updated>2019-10-30T16:45:10.766Z</updated>
+    <updated>2019-10-31T18:14:21.621Z</updated>
     
     <summary type="html">
     
@@ -38,10 +38,10 @@
   
   <entry>
     <title>Leetcode Summary</title>
-    <link href="https://jiaomawhu.github.io/2019/10/30/leetcode-summary/"/>
-    <id>https://jiaomawhu.github.io/2019/10/30/leetcode-summary/</id>
+    <link href="https://jiaomawhu.github.io/2019/10/30/lc/leetcode-summary/"/>
+    <id>https://jiaomawhu.github.io/2019/10/30/lc/leetcode-summary/</id>
     <published>2019-10-30T16:29:18.000Z</published>
-    <updated>2019-10-30T16:35:42.284Z</updated>
+    <updated>2019-10-31T18:13:59.426Z</updated>
     
     <summary type="html">
     
@@ -58,10 +58,10 @@
   
   <entry>
     <title>Leetcode Summary - Others</title>
-    <link href="https://jiaomawhu.github.io/2019/10/05/leetcode-others/"/>
-    <id>https://jiaomawhu.github.io/2019/10/05/leetcode-others/</id>
+    <link href="https://jiaomawhu.github.io/2019/10/05/lc/leetcode-others/"/>
+    <id>https://jiaomawhu.github.io/2019/10/05/lc/leetcode-others/</id>
     <published>2019-10-06T03:43:40.000Z</published>
-    <updated>2019-10-30T16:37:24.359Z</updated>
+    <updated>2019-10-31T18:13:59.303Z</updated>
     
     <summary type="html">
     
@@ -78,10 +78,10 @@
   
   <entry>
     <title>Leetcode Summary - DP</title>
-    <link href="https://jiaomawhu.github.io/2019/10/02/leetcode-dp/"/>
-    <id>https://jiaomawhu.github.io/2019/10/02/leetcode-dp/</id>
+    <link href="https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/"/>
+    <id>https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/</id>
     <published>2019-10-02T17:53:00.000Z</published>
-    <updated>2019-10-30T23:33:37.107Z</updated>
+    <updated>2019-11-01T04:12:30.737Z</updated>
     
     <summary type="html">
     
@@ -98,10 +98,10 @@
   
   <entry>
     <title>Leetcode Summary - Recursive &amp; Backtracking</title>
-    <link href="https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/"/>
-    <id>https://jiaomawhu.github.io/2019/10/01/leetcode-recursive-backtracking/</id>
+    <link href="https://jiaomawhu.github.io/2019/10/01/lc/leetcode-recursive-backtracking/"/>
+    <id>https://jiaomawhu.github.io/2019/10/01/lc/leetcode-recursive-backtracking/</id>
     <published>2019-10-01T21:17:07.000Z</published>
-    <updated>2019-10-30T16:34:13.996Z</updated>
+    <updated>2019-10-31T18:13:59.303Z</updated>
     
     <summary type="html">
     
@@ -118,10 +118,10 @@
   
   <entry>
     <title>Leetcode Summary - Heap</title>
-    <link href="https://jiaomawhu.github.io/2019/09/29/leetcode-heap/"/>
-    <id>https://jiaomawhu.github.io/2019/09/29/leetcode-heap/</id>
+    <link href="https://jiaomawhu.github.io/2019/09/29/lc/leetcode-heap/"/>
+    <id>https://jiaomawhu.github.io/2019/09/29/lc/leetcode-heap/</id>
     <published>2019-09-30T03:19:30.000Z</published>
-    <updated>2019-10-30T16:34:08.421Z</updated>
+    <updated>2019-11-01T00:45:45.276Z</updated>
     
     <summary type="html">
     
@@ -138,10 +138,10 @@
   
   <entry>
     <title>Leetcode Summary - Tree &amp; Graph</title>
-    <link href="https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/"/>
-    <id>https://jiaomawhu.github.io/2019/09/28/leetcode-tree-graph/</id>
+    <link href="https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/"/>
+    <id>https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/</id>
     <published>2019-09-28T20:20:35.000Z</published>
-    <updated>2019-10-30T16:34:20.357Z</updated>
+    <updated>2019-11-01T01:47:40.213Z</updated>
     
     <summary type="html">
     
@@ -158,14 +158,14 @@
   
   <entry>
     <title>Leetcode Summary - String &amp; Array</title>
-    <link href="https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/"/>
-    <id>https://jiaomawhu.github.io/2019/09/21/leetcode-string-array/</id>
+    <link href="https://jiaomawhu.github.io/2019/09/21/lc/leetcode-string-array/"/>
+    <id>https://jiaomawhu.github.io/2019/09/21/lc/leetcode-string-array/</id>
     <published>2019-09-21T23:06:33.000Z</published>
-    <updated>2019-10-30T16:33:54.844Z</updated>
+    <updated>2019-10-31T21:36:31.186Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;String&lt;/strong&gt;, &lt;strong&gt;Array&lt;/strong&gt;, &lt;strong&gt;Hash Table&lt;/strong&gt; and &lt;strong&gt;Two Pointers&lt;/strong&gt; tag, some other tags, and useful data structures in C++.
+      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;String&lt;/strong&gt;, &lt;strong&gt;Array&lt;/strong&gt;, &lt;strong&gt;Hash Table&lt;/strong&gt; and &lt;strong&gt;Two Pointers&lt;/strong&gt; tags, and useful data structures in C++.
     
     </summary>
     
@@ -178,10 +178,10 @@
   
   <entry>
     <title>C++ STL - Unordered_map</title>
-    <link href="https://jiaomawhu.github.io/2019/09/21/unordered_map/"/>
-    <id>https://jiaomawhu.github.io/2019/09/21/unordered_map/</id>
+    <link href="https://jiaomawhu.github.io/2019/09/21/STL/unordered_map/"/>
+    <id>https://jiaomawhu.github.io/2019/09/21/STL/unordered_map/</id>
     <published>2019-09-21T21:10:49.000Z</published>
-    <updated>2019-10-30T17:31:11.404Z</updated>
+    <updated>2019-10-31T18:14:21.621Z</updated>
     
     <summary type="html">
     
@@ -198,10 +198,10 @@
   
   <entry>
     <title>Leetcode Summary - Hash Table</title>
-    <link href="https://jiaomawhu.github.io/2019/08/03/leetcode-hash/"/>
-    <id>https://jiaomawhu.github.io/2019/08/03/leetcode-hash/</id>
+    <link href="https://jiaomawhu.github.io/2019/08/03/lc/leetcode-hash/"/>
+    <id>https://jiaomawhu.github.io/2019/08/03/lc/leetcode-hash/</id>
     <published>2019-08-03T05:54:26.000Z</published>
-    <updated>2019-10-12T23:10:52.597Z</updated>
+    <updated>2019-10-31T18:13:19.968Z</updated>
     
     <summary type="html">
     
@@ -292,10 +292,10 @@
   
   <entry>
     <title>支持向量机SVM总结</title>
-    <link href="https://jiaomawhu.github.io/2019/02/11/svm/"/>
-    <id>https://jiaomawhu.github.io/2019/02/11/svm/</id>
+    <link href="https://jiaomawhu.github.io/2019/02/11/ML/svm/"/>
+    <id>https://jiaomawhu.github.io/2019/02/11/ML/svm/</id>
     <published>2019-02-12T02:04:19.000Z</published>
-    <updated>2019-03-15T07:37:03.794Z</updated>
+    <updated>2019-10-31T18:15:08.265Z</updated>
     
     <summary type="html">
     
@@ -312,10 +312,10 @@
   
   <entry>
     <title>集成学习总结：GBDT, xgboost方法</title>
-    <link href="https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/"/>
-    <id>https://jiaomawhu.github.io/2019/01/12/BoostingNewMethod/</id>
+    <link href="https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/"/>
+    <id>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</id>
     <published>2019-01-12T15:39:56.000Z</published>
-    <updated>2019-03-08T11:51:39.599Z</updated>
+    <updated>2019-10-31T18:15:08.265Z</updated>
     
     <summary type="html">
     
@@ -332,10 +332,10 @@
   
   <entry>
     <title>集成学习总结：Bagging</title>
-    <link href="https://jiaomawhu.github.io/2019/01/08/bagging/"/>
-    <id>https://jiaomawhu.github.io/2019/01/08/bagging/</id>
+    <link href="https://jiaomawhu.github.io/2019/01/08/ML/bagging/"/>
+    <id>https://jiaomawhu.github.io/2019/01/08/ML/bagging/</id>
     <published>2019-01-08T15:39:56.000Z</published>
-    <updated>2019-03-08T06:18:49.730Z</updated>
+    <updated>2019-10-31T18:15:08.265Z</updated>
     
     <summary type="html">
     
@@ -352,10 +352,10 @@
   
   <entry>
     <title>集成学习总结：Boosting</title>
-    <link href="https://jiaomawhu.github.io/2019/01/07/boosting/"/>
-    <id>https://jiaomawhu.github.io/2019/01/07/boosting/</id>
+    <link href="https://jiaomawhu.github.io/2019/01/07/ML/boosting/"/>
+    <id>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</id>
     <published>2019-01-07T21:49:09.000Z</published>
-    <updated>2019-03-08T06:27:33.627Z</updated>
+    <updated>2019-10-31T18:15:08.265Z</updated>
     
     <summary type="html">
     
