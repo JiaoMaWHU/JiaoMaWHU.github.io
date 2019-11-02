@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-01T04:12:30.737Z">
+<meta property="og:updated_time" content="2019-11-02T00:16:56.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode Summary - DP">
 <meta name="twitter:description" content="This post records my solutions of leetcode in the Dynamic Programming tag.">
@@ -447,26 +447,40 @@
 <li>Build a 1D DP array, DP[i] means if substring 0-i can be segmented into words in dictionary.</li>
 </ol>
 <h4 id="Stock-Topic"><a href="#Stock-Topic" class="headerlink" title="Stock Topic"></a><strong>Stock Topic</strong></h4><p>121.Best Time to Buy and Sell Stock I</p>
+<blockquote>
 <p><em>Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note that you cannot sell a stock before you buy one.</em></p>
+</blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. Record the minimum price of a stock</span></span><br><span class="line"><span class="comment">// 2. Recode the max profit at the same time </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;p: prices)&#123;</span><br><span class="line">    buy = min(p, buy);</span><br><span class="line">    profit = max(profit, p - buy);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>122.Best Time to Buy and Sell Stock II</p>
+<blockquote>
 <p><em>Say you have an array for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times). Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</em></p>
+</blockquote>
 <ol>
 <li>when the next price is increasing, buy and sell</li>
 <li>push back a 0 into the vector, it will address the last purchase problem.</li>
 </ol>
 <p>123.Best Time to Buy and Sell Stock III</p>
+<blockquote>
 <p><em>Say you have an array for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete at most two transactions. Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</em></p>
+</blockquote>
 <ol>
 <li>Use DP : local[i][j], global[i][j] to represent the profit. local[i][j] means the NO. j purchase is sold at time i. global[i][j] is the max profit at time i, where the last stock may be smaller than j.</li>
 <li>The update for local is <strong>local[i][j] = max(local[i-1][j], g[i-1][j-1]) + (prices[i] - prices[i-1])</strong>. Why? <strong>g[i-1][j-1]</strong> means that the last stock is purchased at time i-1, and I want to sell it right, so it is the diff profit plus the profit before. <strong>local[i-1][j]</strong> means that the last stock was purchased before i-1 and selled at time i-1, but I want to sell it right now.</li>
 <li><strong>global[i][j] = max(global[i-1][j], local[i][j])</strong></li>
 </ol>
 <p>188.Best Time to Buy and Sell Stock IV</p>
+<blockquote>
 <p><em>The description is the same as 123.Best Time to Buy and Sell Stock III, however, you can buy at most K transactions.</em></p>
+</blockquote>
 <ol>
 <li>The same idea as 123</li>
-<li>However, when k is more than S/2 where S is the size of stock prices, we can use the idea of 122 to reduce time and space consumption.</li>
+<li><p>However, when k is more than S/2 where S is the size of stock prices, we can use the idea of 122 to reduce time and space consumption.</p>
+</li>
+<li><p>Best Time to Buy and Sell Stock with Cooldown</p>
+<blockquote>
+<p><em>Say you have an array for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times) with the following restrictions: You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again). After you sell your stock, you cannot buy stock on next day. (ie, cooldown 1 day)</em></p>
+</blockquote>
+</li>
 </ol>
 <h4 id="198-House-Robber"><a href="#198-House-Robber" class="headerlink" title="198. House Robber"></a>198. House Robber</h4><p><em>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</em></p>
 <ol>
