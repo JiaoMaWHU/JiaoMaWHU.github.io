@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/</loc>
-    
-    <lastmod>2019-11-02T04:10:01.774Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/</loc>
-    
-    <lastmod>2019-11-02T00:16:56.405Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jiaomawhu.github.io/2019/03/10/jzoffer/</loc>
     
     <lastmod>2019-11-01T05:15:12.270Z</lastmod>
@@ -23,28 +9,7 @@
   </url>
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/09/29/lc/leetcode-heap/</loc>
-    
-    <lastmod>2019-11-01T00:45:45.276Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/09/21/lc/leetcode-string-array/</loc>
-    
-    <lastmod>2019-10-31T21:36:31.186Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/02/11/ML/svm/</loc>
-    
-    <lastmod>2019-10-31T18:15:08.265Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</loc>
+    <loc>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</loc>
     
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
     
@@ -58,16 +23,16 @@
   </url>
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</loc>
+    <loc>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</loc>
     
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/09/21/STL/unordered_map/</loc>
+    <loc>https://jiaomawhu.github.io/2019/02/11/ML/svm/</loc>
     
-    <lastmod>2019-10-31T18:14:21.621Z</lastmod>
+    <lastmod>2019-10-31T18:15:08.265Z</lastmod>
     
   </url>
   
@@ -79,30 +44,9 @@
   </url>
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/10/30/lc/leetcode-summary/</loc>
+    <loc>https://jiaomawhu.github.io/2019/09/21/STL/unordered_map/</loc>
     
-    <lastmod>2019-10-31T18:13:59.426Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/10/05/lc/leetcode-others/</loc>
-    
-    <lastmod>2019-10-31T18:13:59.303Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/10/01/lc/leetcode-recursive-backtracking/</loc>
-    
-    <lastmod>2019-10-31T18:13:59.303Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/08/03/lc/leetcode-hash/</loc>
-    
-    <lastmod>2019-10-31T18:13:19.968Z</lastmod>
+    <lastmod>2019-10-31T18:14:21.621Z</lastmod>
     
   </url>
   

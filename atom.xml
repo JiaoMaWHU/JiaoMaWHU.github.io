@@ -37,146 +37,6 @@
   </entry>
   
   <entry>
-    <title>Leetcode Summary</title>
-    <link href="https://jiaomawhu.github.io/2019/10/30/lc/leetcode-summary/"/>
-    <id>https://jiaomawhu.github.io/2019/10/30/lc/leetcode-summary/</id>
-    <published>2019-10-30T16:29:18.000Z</published>
-    <updated>2019-10-31T18:13:59.426Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode and useful data structures in C++.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode Summary - Others</title>
-    <link href="https://jiaomawhu.github.io/2019/10/05/lc/leetcode-others/"/>
-    <id>https://jiaomawhu.github.io/2019/10/05/lc/leetcode-others/</id>
-    <published>2019-10-06T03:43:40.000Z</published>
-    <updated>2019-10-31T18:13:59.303Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Math&lt;/strong&gt;, &lt;strong&gt;Stack&lt;/strong&gt;, &lt;strong&gt;Queue&lt;/strong&gt;, &lt;strong&gt;Bit-manipulation&lt;/strong&gt;, &lt;strong&gt;Union-Find&lt;/strong&gt;, &lt;strong&gt;Design&lt;/strong&gt; tag.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode Summary - DP</title>
-    <link href="https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/"/>
-    <id>https://jiaomawhu.github.io/2019/10/02/lc/leetcode-dp/</id>
-    <published>2019-10-02T17:53:00.000Z</published>
-    <updated>2019-11-02T00:16:56.405Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Dynamic Programming&lt;/strong&gt; tag.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode Summary - Recursive &amp; Backtracking</title>
-    <link href="https://jiaomawhu.github.io/2019/10/01/lc/leetcode-recursive-backtracking/"/>
-    <id>https://jiaomawhu.github.io/2019/10/01/lc/leetcode-recursive-backtracking/</id>
-    <published>2019-10-01T21:17:07.000Z</published>
-    <updated>2019-10-31T18:13:59.303Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Recursive&lt;/strong&gt; and &lt;strong&gt;Backtracking&lt;/strong&gt; tag.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode Summary - Heap</title>
-    <link href="https://jiaomawhu.github.io/2019/09/29/lc/leetcode-heap/"/>
-    <id>https://jiaomawhu.github.io/2019/09/29/lc/leetcode-heap/</id>
-    <published>2019-09-30T03:19:30.000Z</published>
-    <updated>2019-11-01T00:45:45.276Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Heap&lt;/strong&gt; tag and useful data structures in C++.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode Summary - Tree &amp; Graph</title>
-    <link href="https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/"/>
-    <id>https://jiaomawhu.github.io/2019/09/28/lc/leetcode-tree-graph/</id>
-    <published>2019-09-28T20:20:35.000Z</published>
-    <updated>2019-11-02T04:10:01.774Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Tree&lt;/strong&gt; and &lt;strong&gt;Graph&lt;/strong&gt;tag and useful data structures in C++.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode Summary - String &amp; Array</title>
-    <link href="https://jiaomawhu.github.io/2019/09/21/lc/leetcode-string-array/"/>
-    <id>https://jiaomawhu.github.io/2019/09/21/lc/leetcode-string-array/</id>
-    <published>2019-09-21T23:06:33.000Z</published>
-    <updated>2019-10-31T21:36:31.186Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;String&lt;/strong&gt;, &lt;strong&gt;Array&lt;/strong&gt;, &lt;strong&gt;Hash Table&lt;/strong&gt; and &lt;strong&gt;Two Pointers&lt;/strong&gt; tags, and useful data structures in C++.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C++ STL - Unordered_map</title>
     <link href="https://jiaomawhu.github.io/2019/09/21/STL/unordered_map/"/>
     <id>https://jiaomawhu.github.io/2019/09/21/STL/unordered_map/</id>
@@ -193,26 +53,6 @@
     
     
       <category term="STL" scheme="https://jiaomawhu.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode Summary - Hash Table</title>
-    <link href="https://jiaomawhu.github.io/2019/08/03/lc/leetcode-hash/"/>
-    <id>https://jiaomawhu.github.io/2019/08/03/lc/leetcode-hash/</id>
-    <published>2019-08-03T05:54:26.000Z</published>
-    <updated>2019-10-31T18:13:19.968Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post records my solutions of leetcode in the &lt;strong&gt;Hash Table&lt;/strong&gt; tag and useful data structures in C++.
-    
-    </summary>
-    
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
-    
-    
-      <category term="Leetcode" scheme="https://jiaomawhu.github.io/tags/Leetcode/"/>
     
   </entry>
   
@@ -407,6 +247,26 @@
     
     
       <category term="申请文书" scheme="https://jiaomawhu.github.io/tags/%E7%94%B3%E8%AF%B7%E6%96%87%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Markdown 语法总结</title>
+    <link href="https://jiaomawhu.github.io/2018/11/16/testforpost/"/>
+    <id>https://jiaomawhu.github.io/2018/11/16/testforpost/</id>
+    <published>2018-11-17T02:00:10.000Z</published>
+    <updated>2019-03-07T07:18:58.458Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tutorial" scheme="https://jiaomawhu.github.io/categories/Tutorial/"/>
+    
+    
+      <category term="Markdown" scheme="https://jiaomawhu.github.io/tags/Markdown/"/>
     
   </entry>
   
