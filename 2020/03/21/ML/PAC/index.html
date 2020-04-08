@@ -131,16 +131,17 @@
 
 
 
-<meta name="description" content="Blog of my experiences and code">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jinshin&#39;s Blog">
-<meta property="og:url" content="https://jiaomawhu.github.io/page/2/index.html">
+<meta name="description" content="这个关于ML的系列中，我想总结下一些基础和经典的算法，包括理论，实现，以及面试点。这个系列主要参考的文献是[1,2,3]。 做为这个系列的第一篇，我们会讨论PAC Learning。它确定了理论体系，为之后的算法讨论奠定了基础。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="总结PAC Learning体系">
+<meta property="og:url" content="https://jiaomawhu.github.io/2020/03/21/ML/PAC/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="Blog of my experiences and code">
+<meta property="og:description" content="这个关于ML的系列中，我想总结下一些基础和经典的算法，包括理论，实现，以及面试点。这个系列主要参考的文献是[1,2,3]。 做为这个系列的第一篇，我们会讨论PAC Learning。它确定了理论体系，为之后的算法讨论奠定了基础。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-08T23:00:15.450Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jinshin&#39;s Blog">
-<meta name="twitter:description" content="Blog of my experiences and code">
+<meta name="twitter:title" content="总结PAC Learning体系">
+<meta name="twitter:description" content="这个关于ML的系列中，我想总结下一些基础和经典的算法，包括理论，实现，以及面试点。这个系列主要参考的文献是[1,2,3]。 做为这个系列的第一篇，我们会讨论PAC Learning。它确定了理论体系，为之后的算法讨论奠定了基础。">
 
 
 
@@ -170,13 +171,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/page/2/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2020/03/21/ML/PAC/">
 
 
 
 
 
-  <title>Jinshin's Blog</title>
+  <title>总结PAC Learning体系 | Jinshin's Blog</title>
   
 
 
@@ -214,8 +215,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,10 +298,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-        
 
   
 
@@ -314,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2018/11/23/tips-for-ps-sop/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2020/03/21/ML/PAC/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -331,9 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/23/tips-for-ps-sop/" itemprop="url">写文书的注意事项</a></h1>
+          <h1 class="post-title" itemprop="name headline">总结PAC Learning体系</h1>
         
 
         <div class="post-meta">
@@ -345,8 +342,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-23T10:13:33-06:00">
-                2018-11-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-21T10:28:55-05:00">
+                2020-03-21
               </time>
             
 
@@ -368,8 +365,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Experience/" itemprop="url" rel="index">
-                    <span itemprop="name">Experience</span>
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
                   </a>
                 </span>
 
@@ -386,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/23/tips-for-ps-sop/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/23/tips-for-ps-sop/" itemprop="commentCount"></span>
+                <a href="/2020/03/21/ML/PAC/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/21/ML/PAC/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -415,18 +412,17 @@
       
 
       
-        
-          <p>写文书的时候，深感英文写作水平的匮乏。好在文书不全看写作水平，因此多方寻找经验贴阅读。网络上有如此多的经验介绍贴，无非就是两种，一种是详细向导：哪一段写什么怎么写，另一种则是Tips：侧重原则方法论。我在阅读一亩三分地用户<code>YiranCdr</code>收集的<a href="https://www.1point3acres.com/bbs/forum.php?mod=viewthread&amp;tid=434161&amp;extra=page%3D1" target="_blank" rel="noopener">汇总贴</a>时，有不少收获，特此把其中的有用的Tips整理出来，以供写文书查阅。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/23/tips-for-ps-sop/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>这个关于ML的系列中，我想总结下一些基础和经典的算法，包括理论，实现，以及面试点。这个系列主要参考的文献是[1,2,3]。</p>
+<p>做为这个系列的第一篇，我们会讨论PAC Learning。它确定了理论体系，为之后的算法讨论奠定了基础。<a id="more"></a></p>
+<p>既然说机器学习，那显然就是让机器能够自动学习到某种知识，模式，从而在之后能给出有意义的行为。学习算法有很多种，我们会在之后的篇章中讨论，在本篇中，我们首先确定一种算法训练以及预测的流程，或者说体系。</p>
+<h2 id="ERM"><a href="#ERM" class="headerlink" title="ERM"></a>ERM</h2><p>不妨问自己一个问题，在日常生活中，我们是怎么学习，理解新知识，再应用的呢？假设说你要应付一个考试，而且还有一些往年的卷子。一个很直观的想法就是把这些卷子写了，再根据答案，看看自己哪里错了，从而订正理解有问题的点。这样，即使我们不知道真正的考试试卷，我们至少不会做错这些已经见过的题（希望如此）。</p>
+<p>ERM (Empirical Risk Minimization) 就是这样一种根据经验的学习流程。假设说我们有training set $S$, 它是从distribution $D$中采样得来的。这些数据的真实label是由函数$f$所确定的。虽然我们的目标是找到算法$h_S$，使得其在$D$和$f$上的error最小，但是由于$D$和$f$往往是未知的，我们只能选择那些在training set上表现最好的算法。</p>
+<p>正式来说，定义<em>training/empirical error</em>为</p>
+<script type="math/tex; mode=display">L_S(h) = \frac{|\{i \in [m] : h(x_i) \ne y_i\}|}{m}</script><p>这里$m$是training set的大小，$[m]=\{1, \dots, m\}$。Empirical Risk Minimization就是找到算法$h$，其在$S$上的empirical error最小。</p>
+<p>[1] Understanding Machine Learning: From Theory to Algorithms, Shai Shalev-Shwartz, Shai Ben-David<br>[2] 机器学习西瓜书，周志华<br>[3] 统计学习方法(第二版), 李航</p>
+
       
-    </p></div>
+    </div>
     
     
     
@@ -441,170 +437,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
 
       
-    
-      
-        
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2018/11/16/testforpost/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinshin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jinshin's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/16/testforpost/" itemprop="url">Hexo Markdown 语法总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-16T20:00:10-06:00">
-                2018-11-16
-              </time>
+              <a href="/2019/04/01/tree/" rel="next" title="二叉树经典题目整理">
+                <i class="fa fa-chevron-left"></i> 二叉树经典题目整理
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tutorial/" itemprop="url" rel="index">
-                    <span itemprop="name">Tutorial</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/11/16/testforpost/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/16/testforpost/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/16/testforpost/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -614,15 +468,11 @@
   </article>
 
 
+
+    <div class="post-spread">
       
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    </div>
+  </div>
 
 
           </div>
@@ -630,6 +480,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -650,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -718,6 +591,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ERM"><span class="nav-number">1.</span> <span class="nav-text">ERM</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -858,6 +747,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -875,6 +768,18 @@
       <script id="dsq-count-scr" src="https://https-jiaomawhu-github-io-2.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jiaomawhu.github.io/2020/03/21/ML/PAC/';
+          this.page.identifier = '2020/03/21/ML/PAC/';
+          this.page.title = '总结PAC Learning体系';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

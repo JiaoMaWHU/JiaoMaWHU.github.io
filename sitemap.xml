@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiaomawhu.github.io/2020/03/21/ML/PAC/</loc>
+    
+    <lastmod>2020-04-08T23:00:15.450Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jiaomawhu.github.io/2019/03/23/search-sort/</loc>
     
-    <lastmod>2019-11-21T03:17:52.577Z</lastmod>
+    <lastmod>2020-03-20T18:29:06.605Z</lastmod>
     
   </url>
   
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</loc>
+    <loc>https://jiaomawhu.github.io/2019/01/08/ML/bagging/</loc>
     
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/01/08/ML/bagging/</loc>
+    <loc>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</loc>
     
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
     
