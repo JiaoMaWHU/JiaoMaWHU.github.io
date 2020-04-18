@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2020-04-08T23:00:15.450Z</updated>
+  <updated>2020-04-11T16:42:23.339Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>梯度下降(GD, SGD)总结</title>
+    <link href="https://jiaomawhu.github.io/2020/04/11/ML/sgd/"/>
+    <id>https://jiaomawhu.github.io/2020/04/11/ML/sgd/</id>
+    <published>2020-04-11T16:41:08.000Z</published>
+    <updated>2020-04-11T16:42:23.339Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="https://jiaomawhu.github.io/categories/Machine-Learning/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>总结PAC Learning体系</title>

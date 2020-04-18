@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaomawhu.github.io/2020/04/11/ML/sgd/</loc>
+    <lastmod>2020-04-11T16:42:23.339Z</lastmod>
+  </url>  <url>
     <loc>https://jiaomawhu.github.io/2020/03/21/ML/PAC/</loc>
     <lastmod>2020-04-08T23:00:15.450Z</lastmod>
   </url>  <url>
@@ -10,10 +13,10 @@
     <loc>https://jiaomawhu.github.io/2019/03/10/jzoffer/</loc>
     <lastmod>2019-11-01T05:15:12.270Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/01/08/ML/bagging/</loc>
+    <loc>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</loc>
+    <loc>https://jiaomawhu.github.io/2019/01/08/ML/bagging/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</loc>
