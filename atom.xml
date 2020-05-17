@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2020-04-11T16:42:23.339Z</updated>
+  <updated>2020-05-17T04:38:21.624Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git Summary</title>
+    <link href="https://jiaomawhu.github.io/2020/05/15/tools/git/"/>
+    <id>https://jiaomawhu.github.io/2020/05/15/tools/git/</id>
+    <published>2020-05-15T19:28:14.000Z</published>
+    <updated>2020-05-17T04:38:21.624Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A summary of git data model and commonly used commands.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="https://jiaomawhu.github.io/categories/Tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Multicore Algorithm Summary</title>
+    <link href="https://jiaomawhu.github.io/2020/05/03/multicore/"/>
+    <id>https://jiaomawhu.github.io/2020/05/03/multicore/</id>
+    <published>2020-05-03T15:20:20.000Z</published>
+    <updated>2020-05-03T16:27:52.429Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post is a summary of common parallel algorithms and the implementation of common parallel data structures. The resource comes from the UT EE361C course I took this semester.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/categories/Algorithms/"/>
+    
+    
+      <category term="Parallel Algorithm" scheme="https://jiaomawhu.github.io/tags/Parallel-Algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>梯度下降(GD, SGD)总结</title>

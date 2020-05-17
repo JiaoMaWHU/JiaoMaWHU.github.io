@@ -118,7 +118,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Parallel Algorithm,">
 
 
 
@@ -131,16 +131,18 @@
 
 
 
-<meta name="description" content="Blog of my experiences and code">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jinshin&#39;s Blog">
-<meta property="og:url" content="https://jiaomawhu.github.io/categories/Experience/index.html">
+<meta name="description" content="This post is a summary of common parallel algorithms and the implementation of common parallel data structures. The resource comes from the UT EE361C course I took this semester.">
+<meta name="keywords" content="Parallel Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multicore Algorithm Summary">
+<meta property="og:url" content="https://jiaomawhu.github.io/2020/05/03/multicore/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="Blog of my experiences and code">
+<meta property="og:description" content="This post is a summary of common parallel algorithms and the implementation of common parallel data structures. The resource comes from the UT EE361C course I took this semester.">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-03T16:27:52.429Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jinshin&#39;s Blog">
-<meta name="twitter:description" content="Blog of my experiences and code">
+<meta name="twitter:title" content="Multicore Algorithm Summary">
+<meta name="twitter:description" content="This post is a summary of common parallel algorithms and the implementation of common parallel data structures. The resource comes from the UT EE361C course I took this semester.">
 
 
 
@@ -170,13 +172,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/categories/Experience/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2020/05/03/multicore/">
 
 
 
 
 
-  <title>Category: Experience | Jinshin's Blog</title>
+  <title>Multicore Algorithm Summary | Jinshin's Blog</title>
   
 
 
@@ -214,7 +216,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -298,53 +300,185 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Experience<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2020/05/03/multicore/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jinshin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinshin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/11/23/tips-for-ps-sop/" itemprop="url">
-              
-                <span itemprop="name">写文书的注意事项</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Multicore Algorithm Summary</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-23T10:13:33-06:00" content="2018-11-23">
-          11-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-03T10:20:20-05:00">
+                2020-05-03
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/05/03/multicore/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/03/multicore/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>This post is a summary of common parallel algorithms and the implementation of common parallel data structures. The resource comes from the UT EE361C course I took this semester.<br><a id="more"></a></p>
+<h3 id="Tree-Algorithm"><a href="#Tree-Algorithm" class="headerlink" title="Tree Algorithm"></a>Tree Algorithm</h3><p>Euler Tour Technique is used to get O(log n) time parallel algorithms for solving problems related to trees with n nodes.</p>
+<p>First, Euler tour can be used to compute the height of a tree in O(logn) time, no matter the tree is balanced or not.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Parallel-Algorithm/" rel="tag"># Parallel Algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/11/ML/sgd/" rel="next" title="梯度下降(GD, SGD)总结">
+                <i class="fa fa-chevron-left"></i> 梯度下降(GD, SGD)总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/15/tools/git/" rel="prev" title="Git Summary">
+                Git Summary <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +486,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -372,8 +520,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -440,6 +597,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tree-Algorithm"><span class="nav-number">1.</span> <span class="nav-text">Tree Algorithm</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -580,6 +753,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -597,6 +774,18 @@
       <script id="dsq-count-scr" src="https://https-jiaomawhu-github-io-2.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jiaomawhu.github.io/2020/05/03/multicore/';
+          this.page.identifier = '2020/05/03/multicore/';
+          this.page.title = 'Multicore Algorithm Summary';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

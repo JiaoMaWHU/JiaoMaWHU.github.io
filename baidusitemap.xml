@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaomawhu.github.io/2020/05/15/tools/git/</loc>
+    <lastmod>2020-05-17T04:38:21.624Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2020/05/03/multicore/</loc>
+    <lastmod>2020-05-03T16:27:52.429Z</lastmod>
+  </url>  <url>
     <loc>https://jiaomawhu.github.io/2020/04/11/ML/sgd/</loc>
     <lastmod>2020-04-11T16:42:23.339Z</lastmod>
   </url>  <url>
