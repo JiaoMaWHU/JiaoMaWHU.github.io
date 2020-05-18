@@ -138,10 +138,15 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="A summary of git data model and commonly used commands.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-17T04:38:21.624Z">
+<meta property="og:image" content="https://jiaomawhu.github.io/images/git_structure.png">
+<meta property="og:image" content="https://git-scm.com/book/en/v2/images/lifecycle.png">
+<meta property="og:image" content="https://jiaomawhu.github.io/images/reset-co.png">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0e7e711dc7?imageslim">
+<meta property="og:updated_time" content="2020-05-18T05:09:25.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Summary">
 <meta name="twitter:description" content="A summary of git data model and commonly used commands.">
+<meta name="twitter:image" content="https://jiaomawhu.github.io/images/git_structure.png">
 
 
 
@@ -421,10 +426,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;root&gt; (tree)</span><br><span class="line">|</span><br><span class="line">+- foo (tree)</span><br><span class="line">|  |</span><br><span class="line">|  + bar.txt (blob, contents = &quot;hello world&quot;)</span><br><span class="line">|</span><br><span class="line">+- baz.txt (blob, contents = &quot;git is wonderful&quot;)</span><br></pre></td></tr></table></figure>
 <p>In fact, a git history is a <strong>directed acyclic graph (DAG)</strong> of commits. Visualizing a commit history might look something like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">o &lt;-- o &lt;-- o &lt;-- o</span><br><span class="line">            ^  </span><br><span class="line">             \</span><br><span class="line">              --- o &lt;-- o</span><br></pre></td></tr></table></figure></p>
 <p>where each “o”, i.e. commit, is pointing to its parent commit (the older commit). After the third commit, the history branches into two separate branches. This might correspond to, for example, two separate features being developed in parallel, independently from each other.</p>
-<h2 id="Objects-and-content-addressing"><a href="#Objects-and-content-addressing" class="headerlink" title="Objects and content-addressing"></a>Objects and content-addressing</h2><p>An “object” type in git is a blob, tree, or commit:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type object = blob | tree | commit</span><br><span class="line">objects = map&lt;string, object&gt;</span><br></pre></td></tr></table></figure>
-<p>In Git data store, all objects are <strong>content-addressed</strong> by their SHA-1 hash (i.e. a hashed string with 40 characters). </p>
-<p>Blobs, trees, and commits are unified in this way: they are all objects. When they reference other objects, they don’t actually contain them in their on-disk representation, but have a reference to them by their hash. </p>
+<h2 id="Objects-and-content-addressing"><a href="#Objects-and-content-addressing" class="headerlink" title="Objects and content-addressing"></a>Objects and content-addressing</h2><p>In Git data store, Blobs, trees, and commits are unified in this way: they are all objects. All objects are <strong>content-addressed</strong> by their SHA-1 hash (i.e. a hashed string with 40 characters).  When they reference other objects, they don’t actually contain them in their on-disk representation, but have a reference to them by their hash.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type object = blob | tree | commit</span><br><span class="line">objects = map&lt;string, object&gt;</span><br></pre></td></tr></table></figure></p>
 <p>You can easily image this using the idea of pointer references, the only difference is that git uses the hashed values for addressing the content.</p>
 <p>Since git uses content addressable storage, it means that commits in Git are immutable. This doesn’t mean that mistakes can’t be corrected, however; it’s just that “edits” to the commit history are actually creating entirely new commits.</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>Now, all snapshots can be identified by their SHA-1 hash. That’s inconvenient, because humans aren’t good at remembering strings of 40 hexadecimal characters.</p>
@@ -437,6 +439,81 @@
 <p>Whenever you’re typing in any command, think about what manipulation the command is making to the underlying graph data structure.</p>
 <h2 id="Staging-area"><a href="#Staging-area" class="headerlink" title="Staging area"></a>Staging area</h2><p>One more thing to mention is that, imaging a scenario where you have print logs in your repository; you want to commit the code while discarding all the logs.</p>
 <p>Git accommodates such scenarios by allowing you to specify which modifications should be included in the next snapshot through a mechanism called the “staging area”.</p>
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><p>Now let’s see some commonly used git commands. Before we get started, we should be able to relate the following figure with the concepts we discussed above, so that it’ll be easy to understand and memorize the git commands.</p>
+<p><img src="/images/git_structure.png" alt="Git Components."></p>
+<h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><ul>
+<li><code>git init</code>: creates a new git repo, with data stored in the .git directory</li>
+<li><code>git status</code>: tells you what’s going on</li>
+<li><code>git add &lt;filename&gt;</code>: adds files to staging area</li>
+<li><code>git commit</code>: creates a new commit</li>
+<li><code>git log --all --graph --decorate</code>: visualizes history as a DAG</li>
+<li><code>git diff &lt;filename&gt;</code>: show differences since the last commit</li>
+<li><code>git diff &lt;revision&gt; &lt;filename&gt;</code>: shows differences in a file between snapshots</li>
+</ul>
+<h3 id="Undo-Checkout-and-Reset"><a href="#Undo-Checkout-and-Reset" class="headerlink" title="Undo, Checkout and Reset"></a>Undo, Checkout and Reset</h3><p>The status of git files is as follows.<br><img src="https://git-scm.com/book/en/v2/images/lifecycle.png" alt="status of git files"></p>
+<ul>
+<li><code>git commit --amend</code>: lets you combine staged changes with the previous commit instead of creating an entirely new commit. It can also be used to simply edit the previous commit message without changing its snapshot (creating a new one).</li>
+<li><code>git checkout</code>: Updates files in the working tree to match the version in the index or the specified tree. If no <code>pathspec</code> was given, it will also update <strong>HEAD</strong> to set the specified branch as the current branch.<ul>
+<li><code>git checkout &lt;revision&gt;</code>: no <code>pathspec</code>, updates <strong>HEAD</strong> and current branch</li>
+<li><code>git checkout &lt;--&gt; &lt;file&gt;</code>: restore a file <strong>only</strong> to the workspace from the staging area</li>
+<li><code>git checkout &lt;commit&gt; &lt;file&gt;</code>: restore a file to <strong>workspace</strong> and <strong>the staging area</strong> using the <code>commit</code> version in repository.</li>
+</ul>
+</li>
+<li><code>git reset</code>: Reset the <strong>HEAD</strong> of current branch to the specified state.<ul>
+<li>For <strong>HEAD</strong>: <code>git reset &lt;--soft | --mixed [-N] | --hard | --merge | --keep&gt;</code>: see the following table.</li>
+<li>For files: <code>git reset &lt;commit&gt; &lt;file&gt;</code>: unstage a file, i.e, copy entries from <code>&lt;commit&gt;</code> to the staging area.</li>
+</ul>
+</li>
+<li><p>To differentiate <code>reset</code> and <code>checkout</code>, check the following table.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">                         head    stage   work dir  wd safe</span><br><span class="line">Commit Level</span><br><span class="line">reset --soft [commit]    REF     NO      NO        YES</span><br><span class="line">reset [commit]           REF     YES     NO        YES</span><br><span class="line">reset --hard [commit]    REF     YES     YES       NO</span><br><span class="line">checkout [commit]        YES     YES     NO        YES</span><br><span class="line"></span><br><span class="line">File Level</span><br><span class="line">reset (commit) [file]    NO      YES     NO        YES</span><br><span class="line">checkout (commit) [file] NO      YES     YES       NO</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Note that reset will change the Reference values (REF) in <strong>HEAD</strong>, while checkout only load a new value to <strong>HEAD</strong>, which can be visualized as follows.<br><img src="/images/reset-co.png" alt="One more difference"></p>
+</li>
+<li>If we need to restore a file or the entire repository to a specific version, we can use <code>checkout [commit] .</code> so that we load the target content to the stage and the work dir, and <strong>HEAD</strong> won’t be changed. Instead, <code>reset [commit] .</code> won’t do anything to the work dir. </li>
+<li>But if we want to discard all commits after <code>[commit]</code>, we should use <code>reset --hard [commit]</code> since <code>checkout</code> will load <strong>HEAD</strong> as that commit.</li>
+<li><code>git stash</code> and <code>git stash pop</code>: temporarily remove modifications to working directory</li>
+<li><code>git revert &lt;commit&gt;</code>: undo the changes of the <code>[commit]</code> in <strong>HEAD</strong> and create a new commit.</li>
+</ul>
+<h3 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h3><ul>
+<li><code>git remote</code>: list remotes</li>
+<li><code>git remote add &lt;name&gt; &lt;url&gt;</code>: add a remote</li>
+<li><code>git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;</code>: send objects to remote, and update remote reference</li>
+<li><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;</code>: set up correspondence between local and remote branch</li>
+<li><code>git branch -u o/master foo</code>: will set the foo branch to track o/master.</li>
+<li><code>git fetch &lt;remote&gt; &lt;remote branch&gt;:&lt;local branch&gt;</code>: retrieve objects/references from a remote branch, it doesn’t require <strong>HEAD</strong> to be on target <code>&lt;commit&gt;</code>, and it doesn’t update your local non-remote branches. If no branch specified, fetch all the branches. </li>
+<li><code>git pull &lt;remote&gt; &lt;remote branch&gt;:&lt;local branch&gt;</code>: During a pull operation, commits are downloaded onto o/master and then merged into the current branch. It basically a <code>pull</code> and a <code>merge</code>.</li>
+<li><code>git clone</code>: download repository from remote</li>
+</ul>
+<h3 id="Branching-and-merging"><a href="#Branching-and-merging" class="headerlink" title="Branching and merging"></a>Branching and merging</h3><ul>
+<li><code>git branch</code>: shows branches</li>
+<li><code>git branch &lt;name&gt;</code>: creates a branch</li>
+<li><code>git checkout -b &lt;name&gt;</code>: creates a branch and switches to it</li>
+<li><code>git merge &lt;revision&gt;</code>: merges <code>&lt;revision&gt;</code> into current branch</li>
+<li><code>git mergetool</code>: use a fancy tool to help resolve merge conflicts</li>
+<li><code>git rebase &lt;to-branch&gt; &lt;from-branch&gt;</code>: rebase set of patches of <code>&lt;from-branch&gt;</code> onto a new base, i.e. <code>&lt;to-branch&gt;</code>. It can be used to combine a few commits to one commit before merging, so that we won’t have to much separate information. Another adv of rebase is that it can simplify the process of merging. This <a href="http://jartto.wang/2018/12/11/git-rebase/" target="_blank" rel="noopener">Chinese post</a> is very helpful to understand <code>rebase</code>.</li>
+</ul>
+<h3 id="Advanced-Git"><a href="#Advanced-Git" class="headerlink" title="Advanced Git"></a>Advanced Git</h3><ul>
+<li><code>git config</code>: Git is highly customizable</li>
+<li><code>git clone --shallow</code>: clone without entire version history</li>
+<li><code>git add -p</code>: interactive staging</li>
+<li><code>git rebase -i</code>: interactive rebasing</li>
+<li><code>git blame</code>: show who last edited which line</li>
+<li><code>git bisect</code>: binary search history (e.g. for regressions)</li>
+<li><code>git tag [commit]</code>: Create a tag on [commit], it is permanent, unlike branches. If you leave the commit off, git will just use whatever HEAD is at</li>
+<li><code>git describe &lt;ref&gt;</code>: tell you where you are relative to the closest “anchor” (aka tag)</li>
+<li><code>.gitignore</code>: specify intentionally untracked files to ignore</li>
+</ul>
+<h3 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h3><ul>
+<li>Use relative ref: the first parent of C1: <code>C1^</code>, the second parent: <code>C1^2</code>，the parent of C1’s parent: <code>C1^^</code>, find the xth ancestor of C1: <code>C1~x</code>.</li>
+<li><code>git branch -f [branch] [commit], git reset [commit] (current branch)</code>: move the point of a branch to a specific commit</li>
+<li><code>git checkout [commit]</code>: use this command to set <strong>HEAD</strong> to commits (not branch)</li>
+<li><code>git cherry-pick [commits]</code>: replicate commits under current <strong>HEAD</strong>.</li>
+</ul>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>The following figure visualizes commonly used git commands.<br><img src="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0e7e711dc7?imageslim" alt="Detailed relations."></p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ol>
+<li>The text of this post is largely based on <a href="https://missing.csail.mit.edu/2020/version-control/" target="_blank" rel="noopener">MIT The missing semester</a>, <a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">RuanYifeng Blog</a>, <a href="https://segmentfault.com/a/1190000006185954" target="_blank" rel="noopener">chanjarster post</a>.</li>
+<li>Two exercises are recommended: <a href="https://github.com/git-game/git-game" target="_blank" rel="noopener">git-game</a>, <a href="https://learngitbranching.js.org/" target="_blank" rel="noopener">branching game</a>.</li>
+</ol>
 
       
     </div>
@@ -618,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-model"><span class="nav-number">1.</span> <span class="nav-text">Data model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objects-and-content-addressing"><span class="nav-number">2.</span> <span class="nav-text">Objects and content-addressing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repositories"><span class="nav-number">4.</span> <span class="nav-text">Repositories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Staging-area"><span class="nav-number">5.</span> <span class="nav-text">Staging area</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-model"><span class="nav-number">1.</span> <span class="nav-text">Data model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objects-and-content-addressing"><span class="nav-number">2.</span> <span class="nav-text">Objects and content-addressing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repositories"><span class="nav-number">4.</span> <span class="nav-text">Repositories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Staging-area"><span class="nav-number">5.</span> <span class="nav-text">Staging area</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commands"><span class="nav-number">6.</span> <span class="nav-text">Commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics"><span class="nav-number">6.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Undo-Checkout-and-Reset"><span class="nav-number">6.2.</span> <span class="nav-text">Undo, Checkout and Reset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remote"><span class="nav-number">6.3.</span> <span class="nav-text">Remote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Branching-and-merging"><span class="nav-number">6.4.</span> <span class="nav-text">Branching and merging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advanced-Git"><span class="nav-number">6.5.</span> <span class="nav-text">Advanced Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Miscellaneous"><span class="nav-number">6.6.</span> <span class="nav-text">Miscellaneous</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Summary"><span class="nav-number">6.7.</span> <span class="nav-text">Summary</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resources"><span class="nav-number">7.</span> <span class="nav-text">Resources</span></a></li></ol></div>
             
 
           </div>
