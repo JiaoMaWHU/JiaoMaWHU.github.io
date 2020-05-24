@@ -142,7 +142,7 @@
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/lifecycle.png">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/reset-co.png">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0e7e711dc7?imageslim">
-<meta property="og:updated_time" content="2020-05-19T17:57:09.101Z">
+<meta property="og:updated_time" content="2020-05-19T18:10:09.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Summary">
 <meta name="twitter:description" content="A summary of git data model and commonly used commands.">
@@ -473,6 +473,7 @@
 <li>But if we want to discard all commits after <code>[commit]</code>, we should use <code>reset --hard [commit]</code> since <code>checkout</code> will load <strong>HEAD</strong> as that commit.</li>
 <li><code>git stash</code> and <code>git stash pop</code>: temporarily remove modifications to working directory</li>
 <li><code>git revert &lt;commit&gt;</code>: undo the changes of the <code>[commit]</code> in <strong>HEAD</strong> and create a new commit.</li>
+<li><code>git restore &lt;file&gt;</code>: by default, load content from the staging area in <strong>HEAD</strong>.</li>
 </ul>
 <h3 id="Remote"><a href="#Remote" class="headerlink" title="Remote"></a>Remote</h3><ul>
 <li><code>git remote</code>: list remotes</li>
@@ -489,6 +490,7 @@
 <li><code>git branch &lt;name&gt;</code>: creates a branch</li>
 <li><code>git checkout -b &lt;name&gt;</code>: creates a branch and switches to it</li>
 <li><code>git merge &lt;revision&gt;</code>: merges <code>&lt;revision&gt;</code> into current branch</li>
+<li><code>git merge --abort</code>: abort a merge.</li>
 <li><code>git mergetool</code>: use a fancy tool to help resolve merge conflicts</li>
 <li><code>git rebase &lt;to-branch&gt; &lt;from-branch&gt;</code>: rebase set of patches of <code>&lt;from-branch&gt;</code> onto a new base, i.e. <code>&lt;to-branch&gt;</code>. It can be used to combine a few commits to one commit before merging, so that we won’t have to much separate information. Another adv of rebase is that it can simplify the process of merging. This <a href="http://jartto.wang/2018/12/11/git-rebase/" target="_blank" rel="noopener">Chinese post</a> is very helpful to understand <code>rebase</code>.</li>
 </ul>
