@@ -142,7 +142,7 @@
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/lifecycle.png">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/reset-co.png">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0e7e711dc7?imageslim">
-<meta property="og:updated_time" content="2020-05-28T04:39:41.276Z">
+<meta property="og:updated_time" content="2020-05-28T04:43:54.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Summary">
 <meta name="twitter:description" content="A summary of git data model and commonly used commands.">
@@ -492,7 +492,7 @@
 <li><code>git merge &lt;revision&gt;</code>: merges <code>&lt;revision&gt;</code> into current branch</li>
 <li><code>git merge --abort</code>: abort a merge.</li>
 <li><code>git mergetool</code>: use a fancy tool to help resolve merge conflicts</li>
-<li><code>git rebase &lt;to-branch&gt; &lt;from-branch&gt;</code>: rebase set of patches of <code>&lt;from-branch&gt;</code> onto a new base, i.e. <code>&lt;to-branch&gt;</code>. It can be used to combine a few commits to one commit before merging, so that we won’t have to much separate information. Another adv of rebase is that it can simplify the process of merging. This <a href="http://jartto.wang/2018/12/11/git-rebase/" target="_blank" rel="noopener">Chinese post</a> is very helpful to understand <code>rebase</code>.</li>
+<li><code>git rebase &lt;to-branch&gt; &lt;from-branch&gt;</code>: rebase set of patches of <code>&lt;from-branch&gt;</code> onto a new base, i.e. <code>&lt;to-branch&gt;</code>. If your master branch is <code>A-B-C</code>, and you do rebase to master on another branch: <code>A-B-D</code>, the <strong>HEAD</strong> will be set to master branch, and now master branch is <code>A-B-C-D</code>. It also can be used to combine a few commits to one commit before merging, so that we won’t have to much separate information. Another adv of rebase is that it can simplify the process of merging. This <a href="http://jartto.wang/2018/12/11/git-rebase/" target="_blank" rel="noopener">Chinese post</a> is very helpful to understand <code>rebase</code>.</li>
 </ul>
 <h3 id="Advanced-Git"><a href="#Advanced-Git" class="headerlink" title="Advanced Git"></a>Advanced Git</h3><ul>
 <li><code>git config</code>: Git is highly customizable</li>
