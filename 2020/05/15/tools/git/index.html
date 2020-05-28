@@ -142,7 +142,7 @@
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/lifecycle.png">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/reset-co.png">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0e7e711dc7?imageslim">
-<meta property="og:updated_time" content="2020-05-19T18:10:09.589Z">
+<meta property="og:updated_time" content="2020-05-28T04:39:41.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Summary">
 <meta name="twitter:description" content="A summary of git data model and commonly used commands.">
@@ -482,7 +482,7 @@
 <li><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;</code>: set up correspondence between local and remote branch</li>
 <li><code>git branch -u o/master foo</code>: will set the foo branch to track o/master.</li>
 <li><code>git fetch &lt;remote&gt; &lt;remote branch&gt;:&lt;local branch&gt;</code>: retrieve objects/references from a remote branch, it doesn’t require <strong>HEAD</strong> to be on target <code>&lt;commit&gt;</code>, and it doesn’t update your local non-remote branches. If no branch specified, fetch all the branches. </li>
-<li><code>git pull &lt;remote&gt; &lt;remote branch&gt;:&lt;local branch&gt;</code>: During a pull operation, commits are downloaded onto o/master and then merged into the current branch. It basically a <code>pull</code> and a <code>merge</code>.</li>
+<li><code>git pull &lt;remote&gt; &lt;remote branch&gt;:&lt;local branch&gt;</code>: During a pull operation, commits are downloaded onto o/master and then merged into the current branch. It basically a <code>fetch</code> and a <code>merge</code>.</li>
 <li><code>git clone</code>: download repository from remote</li>
 </ul>
 <h3 id="Branching-and-merging"><a href="#Branching-and-merging" class="headerlink" title="Branching and merging"></a>Branching and merging</h3><ul>
@@ -515,6 +515,7 @@
 <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ol>
 <li>The text of this post is largely based on <a href="https://missing.csail.mit.edu/2020/version-control/" target="_blank" rel="noopener">MIT The missing semester</a>, <a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html" target="_blank" rel="noopener">RuanYifeng Blog</a>, <a href="https://segmentfault.com/a/1190000006185954" target="_blank" rel="noopener">chanjarster post</a>.</li>
 <li>Two exercises are recommended: <a href="https://github.com/git-game/git-game" target="_blank" rel="noopener">git-game</a>, <a href="https://learngitbranching.js.org/" target="_blank" rel="noopener">branching game</a>.</li>
+<li><a href="https://marklodato.github.io/visual-git-guide/index-zh-cn.html#rebase" target="_blank" rel="noopener">Visualize Git</a></li>
 </ol>
 
       
