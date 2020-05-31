@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2020-05-28T04:43:54.154Z</updated>
+  <updated>2020-05-31T23:52:02.780Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Computer Network Key notes.</title>
+    <link href="https://jiaomawhu.github.io/2020/05/31/cscore/network/"/>
+    <id>https://jiaomawhu.github.io/2020/05/31/cscore/network/</id>
+    <published>2020-05-31T22:05:53.000Z</published>
+    <updated>2020-05-31T23:52:02.780Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post is a note of computer network key points and useful tools and is organized according to the TCP/IP model.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Computer Network" scheme="https://jiaomawhu.github.io/tags/Computer-Network/"/>
+    
+  </entry>
   
   <entry>
     <title>Git Summary</title>
@@ -36,10 +54,10 @@
   
   <entry>
     <title>Multicore Algorithm Summary</title>
-    <link href="https://jiaomawhu.github.io/2020/05/03/multicore/"/>
-    <id>https://jiaomawhu.github.io/2020/05/03/multicore/</id>
+    <link href="https://jiaomawhu.github.io/2020/05/03/cscore/multicore/"/>
+    <id>https://jiaomawhu.github.io/2020/05/03/cscore/multicore/</id>
     <published>2020-05-03T15:20:20.000Z</published>
-    <updated>2020-05-03T16:27:52.429Z</updated>
+    <updated>2020-05-31T22:06:59.949Z</updated>
     
     <summary type="html">
     
@@ -91,10 +109,10 @@
   
   <entry>
     <title>二叉树经典题目整理</title>
-    <link href="https://jiaomawhu.github.io/2019/04/01/tree/"/>
-    <id>https://jiaomawhu.github.io/2019/04/01/tree/</id>
+    <link href="https://jiaomawhu.github.io/2019/04/01/cscore/tree/"/>
+    <id>https://jiaomawhu.github.io/2019/04/01/cscore/tree/</id>
     <published>2019-04-01T18:37:23.000Z</published>
-    <updated>2019-10-30T16:40:05.480Z</updated>
+    <updated>2020-05-31T22:07:12.030Z</updated>
     
     <summary type="html">
     
@@ -109,10 +127,10 @@
   
   <entry>
     <title>链表经典题目总结</title>
-    <link href="https://jiaomawhu.github.io/2019/03/28/linkedlist/"/>
-    <id>https://jiaomawhu.github.io/2019/03/28/linkedlist/</id>
+    <link href="https://jiaomawhu.github.io/2019/03/28/cscore/linkedlist/"/>
+    <id>https://jiaomawhu.github.io/2019/03/28/cscore/linkedlist/</id>
     <published>2019-03-29T01:11:35.000Z</published>
-    <updated>2019-10-30T16:40:00.276Z</updated>
+    <updated>2020-05-31T22:07:05.212Z</updated>
     
     <summary type="html">
     
@@ -127,10 +145,10 @@
   
   <entry>
     <title>常用数据结构与算法整理</title>
-    <link href="https://jiaomawhu.github.io/2019/03/23/search-sort/"/>
-    <id>https://jiaomawhu.github.io/2019/03/23/search-sort/</id>
+    <link href="https://jiaomawhu.github.io/2019/03/23/cscore/search-sort/"/>
+    <id>https://jiaomawhu.github.io/2019/03/23/cscore/search-sort/</id>
     <published>2019-03-23T21:28:35.000Z</published>
-    <updated>2020-05-24T22:50:17.813Z</updated>
+    <updated>2020-05-31T22:07:07.015Z</updated>
     
     <summary type="html">
     
@@ -145,10 +163,10 @@
   
   <entry>
     <title>剑指offer</title>
-    <link href="https://jiaomawhu.github.io/2019/03/10/jzoffer/"/>
-    <id>https://jiaomawhu.github.io/2019/03/10/jzoffer/</id>
+    <link href="https://jiaomawhu.github.io/2019/03/10/cscore/jzoffer/"/>
+    <id>https://jiaomawhu.github.io/2019/03/10/cscore/jzoffer/</id>
     <published>2019-03-11T01:27:18.000Z</published>
-    <updated>2019-11-01T05:15:12.270Z</updated>
+    <updated>2020-05-31T22:07:03.433Z</updated>
     
     <summary type="html">
     
@@ -245,10 +263,10 @@
   
   <entry>
     <title>0/1 Knapsack Problem</title>
-    <link href="https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/"/>
-    <id>https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/</id>
+    <link href="https://jiaomawhu.github.io/2018/12/18/cscore/01knapsack-problem/"/>
+    <id>https://jiaomawhu.github.io/2018/12/18/cscore/01knapsack-problem/</id>
     <published>2018-12-18T23:51:22.000Z</published>
-    <updated>2019-03-07T07:36:15.843Z</updated>
+    <updated>2020-05-31T22:07:09.024Z</updated>
     
     <summary type="html">
     

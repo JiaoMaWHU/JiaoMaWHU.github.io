@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaomawhu.github.io/2020/05/31/cscore/network/</loc>
+    <lastmod>2020-05-31T23:52:02.780Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2019/04/01/cscore/tree/</loc>
+    <lastmod>2020-05-31T22:07:12.030Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2018/12/18/cscore/01knapsack-problem/</loc>
+    <lastmod>2020-05-31T22:07:09.024Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2019/03/23/cscore/search-sort/</loc>
+    <lastmod>2020-05-31T22:07:07.015Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2019/03/28/cscore/linkedlist/</loc>
+    <lastmod>2020-05-31T22:07:05.212Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2019/03/10/cscore/jzoffer/</loc>
+    <lastmod>2020-05-31T22:07:03.433Z</lastmod>
+  </url>  <url>
+    <loc>https://jiaomawhu.github.io/2020/05/03/cscore/multicore/</loc>
+    <lastmod>2020-05-31T22:06:59.949Z</lastmod>
+  </url>  <url>
     <loc>https://jiaomawhu.github.io/2020/05/15/tools/git/</loc>
     <lastmod>2020-05-28T04:43:54.154Z</lastmod>
-  </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/23/search-sort/</loc>
-    <lastmod>2020-05-24T22:50:17.813Z</lastmod>
-  </url>  <url>
-    <loc>https://jiaomawhu.github.io/2020/05/03/multicore/</loc>
-    <lastmod>2020-05-03T16:27:52.429Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2020/04/11/ML/sgd/</loc>
     <lastmod>2020-04-11T16:42:23.339Z</lastmod>
@@ -16,29 +31,17 @@
     <loc>https://jiaomawhu.github.io/2020/03/21/ML/PAC/</loc>
     <lastmod>2020-04-08T23:00:15.450Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/10/jzoffer/</loc>
-    <lastmod>2019-11-01T05:15:12.270Z</lastmod>
-  </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/01/12/ML/BoostingNewMethod/</loc>
-    <lastmod>2019-10-31T18:15:08.265Z</lastmod>
-  </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/02/11/ML/svm/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2019/01/08/ML/bagging/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</loc>
+    <loc>https://jiaomawhu.github.io/2019/02/11/ML/svm/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/04/01/tree/</loc>
-    <lastmod>2019-10-30T16:40:05.480Z</lastmod>
-  </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/28/linkedlist/</loc>
-    <lastmod>2019-10-30T16:40:00.276Z</lastmod>
-  </url>  <url>
-    <loc>https://jiaomawhu.github.io/2018/12/18/01knapsack-problem/</loc>
-    <lastmod>2019-03-07T07:36:15.843Z</lastmod>
+    <loc>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</loc>
+    <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2018/11/16/testforpost/</loc>
     <lastmod>2019-03-07T07:18:58.458Z</lastmod>
