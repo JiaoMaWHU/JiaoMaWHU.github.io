@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jiaomawhu.github.io/2020/05/31/cscore/docker/</loc>
+    <lastmod>2020-06-01T02:26:35.535Z</lastmod>
+  </url>  <url>
     <loc>https://jiaomawhu.github.io/2020/05/31/cscore/network/</loc>
     <lastmod>2020-05-31T23:52:02.780Z</lastmod>
   </url>  <url>
@@ -37,10 +40,10 @@
     <loc>https://jiaomawhu.github.io/2019/01/08/ML/bagging/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/02/11/ML/svm/</loc>
+    <loc>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/01/07/ML/boosting/</loc>
+    <loc>https://jiaomawhu.github.io/2019/02/11/ML/svm/</loc>
     <lastmod>2019-10-31T18:15:08.265Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2018/11/16/testforpost/</loc>

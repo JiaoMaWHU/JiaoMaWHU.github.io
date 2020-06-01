@@ -118,7 +118,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Container,">
 
 
 
@@ -131,17 +131,18 @@
 
 
 
-<meta name="description" content="Blog of my experiences and code">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://jiaomawhu.github.io/tags/index.html">
+<meta name="description" content="This post summarizes the key concepts and commonly used commands of Dockers and Kubernetes.">
+<meta name="keywords" content="Container">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker">
+<meta property="og:url" content="https://jiaomawhu.github.io/2020/05/31/cscore/docker/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="Blog of my experiences and code">
+<meta property="og:description" content="This post summarizes the key concepts and commonly used commands of Dockers and Kubernetes.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-07T07:06:36.428Z">
+<meta property="og:updated_time" content="2020-06-01T02:26:35.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Blog of my experiences and code">
+<meta name="twitter:title" content="docker">
+<meta name="twitter:description" content="This post summarizes the key concepts and commonly used commands of Dockers and Kubernetes.">
 
 
 
@@ -171,13 +172,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/tags/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2020/05/31/cscore/docker/">
 
 
 
 
 
-  <title>tags | Jinshin's Blog</title>
+  <title>docker | Jinshin's Blog</title>
   
 
 
@@ -301,40 +302,179 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2020/05/31/cscore/docker/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jinshin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinshin's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                9 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Computer-Network/" style="font-size: 12px; color: #ccc">Computer Network</a> <a href="/tags/Container/" style="font-size: 12px; color: #ccc">Container</a> <a href="/tags/Knapsack-Problem/" style="font-size: 12px; color: #ccc">Knapsack Problem</a> <a href="/tags/Markdown/" style="font-size: 12px; color: #ccc">Markdown</a> <a href="/tags/Parallel-Algorithm/" style="font-size: 12px; color: #ccc">Parallel Algorithm</a> <a href="/tags/SVM/" style="font-size: 12px; color: #ccc">SVM</a> <a href="/tags/剑指offer/" style="font-size: 12px; color: #ccc">剑指offer</a> <a href="/tags/申请文书/" style="font-size: 12px; color: #ccc">申请文书</a> <a href="/tags/集成学习/" style="font-size: 30px; color: #111">集成学习</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">docker</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-31T20:35:36-05:00">
+                2020-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/05/31/cscore/docker/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/31/cscore/docker/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>This post summarizes the key concepts and commonly used commands of Dockers and Kubernetes.<br><a id="more"></a></p>
+<h1 id="Containers"><a href="#Containers" class="headerlink" title="Containers"></a>Containers</h1><p>Containers are a way to provide isolation. It is based on the following concepts.</p>
+<h2 id="1-chroot"><a href="#1-chroot" class="headerlink" title="1. chroot"></a>1. chroot</h2><ul>
+<li><code>chroot</code> is a way to isolate a directory. Using this command, you can set a target directory as the root directory.</li>
+<li>After getting into that dir using <code>chroot</code>, you cannot access anything out of the dir.</li>
+<li>Consider a use case. A <code>makebox.sh</code> contains the following content.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line">mkdir box</span><br><span class="line">mkdir box/bin</span><br><span class="line">cp -v /bin/bash /home/class/box/bin</span><br><span class="line">cp -v /bin/ls /home/class/box/bin</span><br><span class="line">mkdir box/lib</span><br><span class="line">mkdir box/lib64</span><br><span class="line">cp /lib/x86_64-linux-gnu/libselinux.so.1 box/lib</span><br><span class="line">cp /lib/x86_64-linux-gnu/libc.so.6 box/lib</span><br><span class="line">cp /lib/x86_64-linux-gnu/libpcre.so.3 box/lib</span><br><span class="line">cp /lib/x86_64-linux-gnu/libdl.so.2 box/lib</span><br><span class="line">cp /lib64/ld-linux-x86-64.so.2 box/lib64</span><br><span class="line">cp /lib/x86_64-linux-gnu/libpthread.so.0 box/lib</span><br><span class="line">cp /lib/x86_64-linux-gnu/libtinfo.so.6 box/lib</span><br><span class="line">cp /lib/x86_64-linux-gnu/libtinfo.so.6 box/lib</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Then, use this command <code>sudo chroot $HOME/box /bin/bash</code>, we will get into the box dir, and it is able to use the tools that we copied like <code>ls</code>, but that’s all.</p>
+<h2 id="2-cgroups"><a href="#2-cgroups" class="headerlink" title="2. cgroups"></a>2. cgroups</h2><p><code>cgroups</code> is short for Control Groups. Developed in 2006 by 2 google engineers. In 2008 it was added to the Linux kernel 2.6.24. Used by many container projects, Docker, LXC.</p>
+<p><code>cgroup</code> can be used to</p>
+<ul>
+<li>limit resources: Groups can be set to not exceed a configured memory limit.</li>
+<li>prioritize: Some groups may get a larger share of CPU utilization or disk I/O throughput.</li>
+<li>measure the resource usage of a group.</li>
+<li>control groups: freezing groups of processes, their checkpointing and restarting.</li>
+</ul>
+<h2 id="3-namespace"><a href="#3-namespace" class="headerlink" title="3. namespace"></a>3. namespace</h2><p>Namespace enables a process to have a different view of the system than other processes, which provides a way for isolation.</p>
+<p>The 7 namespaces are Cgourp, IPC, Network, Mount, PID, User, UTS (host name and NIS domain name). One can use these namespace to isolate corresponding resources. </p>
+<p>The use of namespace is related with a few linux commands, which will not be included here.</p>
+<h2 id="Roles"><a href="#Roles" class="headerlink" title="Roles"></a>Roles</h2><p>The roles of the three concepts in dockers are,</p>
+<ul>
+<li><code>chroot</code> restricts access to the filesystem.</li>
+<li><code>cgrups</code> restricts access to the system resources.</li>
+<li>namespaces provide isolation.</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Container/" rel="tag"># Container</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/31/cscore/network/" rel="next" title="Computer Network Key notes.">
+                <i class="fa fa-chevron-left"></i> Computer Network Key notes.
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -377,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -445,6 +594,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Containers"><span class="nav-number">1.</span> <span class="nav-text">Containers</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-chroot"><span class="nav-number">1.1.</span> <span class="nav-text">1. chroot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-cgroups"><span class="nav-number">1.2.</span> <span class="nav-text">2. cgroups</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-namespace"><span class="nav-number">1.3.</span> <span class="nav-text">3. namespace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Roles"><span class="nav-number">1.4.</span> <span class="nav-text">Roles</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -609,9 +774,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/tags/index.html';
-          this.page.identifier = 'tags/index.html';
-          this.page.title = 'tags';
+          this.page.url = 'https://jiaomawhu.github.io/2020/05/31/cscore/docker/';
+          this.page.identifier = '2020/05/31/cscore/docker/';
+          this.page.title = 'docker';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
