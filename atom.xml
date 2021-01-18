@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2021-01-18T19:29:11.930Z</updated>
+  <updated>2021-01-18T23:16:19.577Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -18,26 +18,26 @@
   
   <entry>
     <title>Container Reminder</title>
-    <link href="https://jiaomawhu.github.io/2020/05/31/cscore/docker/"/>
-    <id>https://jiaomawhu.github.io/2020/05/31/cscore/docker/</id>
+    <link href="https://jiaomawhu.github.io/2020/05/31/frameworks/docker/"/>
+    <id>https://jiaomawhu.github.io/2020/05/31/frameworks/docker/</id>
     <published>2020-06-01T03:35:36.000Z</published>
-    <updated>2021-01-18T19:29:11.930Z</updated>
+    <updated>2021-01-18T23:16:19.577Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post summarizes the key concepts and commonly used commands of Dockers and Kubernetes.&lt;br&gt;
+      &lt;p&gt;This post summarizes the key concepts under Dockers and related tools.&lt;br&gt;
     
     </summary>
     
     
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/tags/Algorithms/"/>
+      <category term="Frameworks" scheme="https://jiaomawhu.github.io/tags/Frameworks/"/>
     
   </entry>
   
   <entry>
     <title>Computer Network Key notes.</title>
-    <link href="https://jiaomawhu.github.io/2020/05/31/cscore/network/"/>
-    <id>https://jiaomawhu.github.io/2020/05/31/cscore/network/</id>
+    <link href="https://jiaomawhu.github.io/2020/05/31/algo/network/"/>
+    <id>https://jiaomawhu.github.io/2020/05/31/algo/network/</id>
     <published>2020-06-01T00:05:53.000Z</published>
     <updated>2021-01-18T02:45:36.908Z</updated>
     
@@ -72,8 +72,8 @@
   
   <entry>
     <title>Multicore Algorithm Summary</title>
-    <link href="https://jiaomawhu.github.io/2020/05/03/cscore/multicore/"/>
-    <id>https://jiaomawhu.github.io/2020/05/03/cscore/multicore/</id>
+    <link href="https://jiaomawhu.github.io/2020/05/03/algo/multicore/"/>
+    <id>https://jiaomawhu.github.io/2020/05/03/algo/multicore/</id>
     <published>2020-05-03T17:20:20.000Z</published>
     <updated>2021-01-18T02:45:32.365Z</updated>
     
@@ -125,8 +125,8 @@
   
   <entry>
     <title>二叉树经典题目整理</title>
-    <link href="https://jiaomawhu.github.io/2019/04/01/cscore/tree/"/>
-    <id>https://jiaomawhu.github.io/2019/04/01/cscore/tree/</id>
+    <link href="https://jiaomawhu.github.io/2019/04/01/algo/tree/"/>
+    <id>https://jiaomawhu.github.io/2019/04/01/algo/tree/</id>
     <published>2019-04-01T20:37:23.000Z</published>
     <updated>2021-01-18T02:45:49.949Z</updated>
     
@@ -143,8 +143,8 @@
   
   <entry>
     <title>链表经典题目总结</title>
-    <link href="https://jiaomawhu.github.io/2019/03/28/cscore/linkedlist/"/>
-    <id>https://jiaomawhu.github.io/2019/03/28/cscore/linkedlist/</id>
+    <link href="https://jiaomawhu.github.io/2019/03/28/algo/linkedlist/"/>
+    <id>https://jiaomawhu.github.io/2019/03/28/algo/linkedlist/</id>
     <published>2019-03-29T03:11:35.000Z</published>
     <updated>2021-01-18T02:45:11.572Z</updated>
     
@@ -161,8 +161,8 @@
   
   <entry>
     <title>常用数据结构与算法整理</title>
-    <link href="https://jiaomawhu.github.io/2019/03/23/cscore/search-sort/"/>
-    <id>https://jiaomawhu.github.io/2019/03/23/cscore/search-sort/</id>
+    <link href="https://jiaomawhu.github.io/2019/03/23/algo/search-sort/"/>
+    <id>https://jiaomawhu.github.io/2019/03/23/algo/search-sort/</id>
     <published>2019-03-23T23:28:35.000Z</published>
     <updated>2021-01-18T02:45:45.311Z</updated>
     
@@ -179,8 +179,8 @@
   
   <entry>
     <title>剑指offer</title>
-    <link href="https://jiaomawhu.github.io/2019/03/10/cscore/jzoffer/"/>
-    <id>https://jiaomawhu.github.io/2019/03/10/cscore/jzoffer/</id>
+    <link href="https://jiaomawhu.github.io/2019/03/10/algo/jzoffer/"/>
+    <id>https://jiaomawhu.github.io/2019/03/10/algo/jzoffer/</id>
     <published>2019-03-11T03:27:18.000Z</published>
     <updated>2021-01-18T02:45:03.227Z</updated>
     
@@ -269,8 +269,8 @@
   
   <entry>
     <title>0/1 Knapsack Problem</title>
-    <link href="https://jiaomawhu.github.io/2018/12/18/cscore/01knapsack-problem/"/>
-    <id>https://jiaomawhu.github.io/2018/12/18/cscore/01knapsack-problem/</id>
+    <link href="https://jiaomawhu.github.io/2018/12/18/algo/01knapsack-problem/"/>
+    <id>https://jiaomawhu.github.io/2018/12/18/algo/01knapsack-problem/</id>
     <published>2018-12-19T01:51:22.000Z</published>
     <updated>2021-01-18T02:44:46.541Z</updated>
     
@@ -287,10 +287,10 @@
   
   <entry>
     <title>写文书的注意事项</title>
-    <link href="https://jiaomawhu.github.io/2018/11/23/tips-for-ps-sop/"/>
-    <id>https://jiaomawhu.github.io/2018/11/23/tips-for-ps-sop/</id>
+    <link href="https://jiaomawhu.github.io/2018/11/23/tutorials/tips-for-ps-sop/"/>
+    <id>https://jiaomawhu.github.io/2018/11/23/tutorials/tips-for-ps-sop/</id>
     <published>2018-11-23T18:13:33.000Z</published>
-    <updated>2021-01-18T02:47:03.463Z</updated>
+    <updated>2021-01-18T22:56:12.963Z</updated>
     
     <summary type="html">
     
@@ -305,10 +305,10 @@
   
   <entry>
     <title>Hexo Markdown 语法总结</title>
-    <link href="https://jiaomawhu.github.io/2018/11/16/testforpost/"/>
-    <id>https://jiaomawhu.github.io/2018/11/16/testforpost/</id>
+    <link href="https://jiaomawhu.github.io/2018/11/16/tutorials/testforpost/"/>
+    <id>https://jiaomawhu.github.io/2018/11/16/tutorials/testforpost/</id>
     <published>2018-11-17T04:00:10.000Z</published>
-    <updated>2021-01-18T02:46:53.291Z</updated>
+    <updated>2021-01-18T22:56:12.491Z</updated>
     
     <summary type="html">
     

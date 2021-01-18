@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jiaomawhu.github.io/2020/05/31/cscore/docker/</loc>
-    <lastmod>2021-01-18T19:29:11.930Z</lastmod>
+    <loc>https://jiaomawhu.github.io/2020/05/31/frameworks/docker/</loc>
+    <lastmod>2021-01-18T23:16:19.577Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2018/11/23/tips-for-ps-sop/</loc>
-    <lastmod>2021-01-18T02:47:03.463Z</lastmod>
+    <loc>https://jiaomawhu.github.io/2018/11/23/tutorials/tips-for-ps-sop/</loc>
+    <lastmod>2021-01-18T22:56:12.963Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2018/11/16/testforpost/</loc>
-    <lastmod>2021-01-18T02:46:53.291Z</lastmod>
+    <loc>https://jiaomawhu.github.io/2018/11/16/tutorials/testforpost/</loc>
+    <lastmod>2021-01-18T22:56:12.491Z</lastmod>
   </url>  <url>
     <loc>https://jiaomawhu.github.io/2020/05/15/tools/git/</loc>
     <lastmod>2021-01-18T02:46:45.375Z</lastmod>
@@ -31,25 +31,25 @@
     <loc>https://jiaomawhu.github.io/2019/01/08/ml/bagging/</loc>
     <lastmod>2021-01-18T02:46:06.736Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/04/01/cscore/tree/</loc>
+    <loc>https://jiaomawhu.github.io/2019/04/01/algo/tree/</loc>
     <lastmod>2021-01-18T02:45:49.949Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/23/cscore/search-sort/</loc>
+    <loc>https://jiaomawhu.github.io/2019/03/23/algo/search-sort/</loc>
     <lastmod>2021-01-18T02:45:45.311Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2020/05/31/cscore/network/</loc>
+    <loc>https://jiaomawhu.github.io/2020/05/31/algo/network/</loc>
     <lastmod>2021-01-18T02:45:36.908Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2020/05/03/cscore/multicore/</loc>
+    <loc>https://jiaomawhu.github.io/2020/05/03/algo/multicore/</loc>
     <lastmod>2021-01-18T02:45:32.365Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/28/cscore/linkedlist/</loc>
+    <loc>https://jiaomawhu.github.io/2019/03/28/algo/linkedlist/</loc>
     <lastmod>2021-01-18T02:45:11.572Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/10/cscore/jzoffer/</loc>
+    <loc>https://jiaomawhu.github.io/2019/03/10/algo/jzoffer/</loc>
     <lastmod>2021-01-18T02:45:03.227Z</lastmod>
   </url>  <url>
-    <loc>https://jiaomawhu.github.io/2018/12/18/cscore/01knapsack-problem/</loc>
+    <loc>https://jiaomawhu.github.io/2018/12/18/algo/01knapsack-problem/</loc>
     <lastmod>2021-01-18T02:44:46.541Z</lastmod>
   </url>
 </urlset>
