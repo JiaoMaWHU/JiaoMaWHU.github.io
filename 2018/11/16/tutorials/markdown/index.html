@@ -104,7 +104,7 @@
 
 
 
-  <meta name="keywords" content="Frameworks,">
+  <meta name="keywords" content="Tutorial,">
 
 
 
@@ -117,22 +117,18 @@
 
 
 
-<meta name="description" content="This post summarizes the key concepts of Dockers and related tools. Photo by Max Williams on Unsplash.">
-<meta name="keywords" content="Frameworks">
+<meta name="description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
+<meta name="keywords" content="Tutorial">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker and related tools.">
-<meta property="og:url" content="https://jiaomawhu.github.io/2020/05/31/frameworks/docker/index.html">
+<meta property="og:title" content="Hexo Markdown 语法总结">
+<meta property="og:url" content="https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="This post summarizes the key concepts of Dockers and related tools. Photo by Max Williams on Unsplash.">
+<meta property="og:description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://jiaomawhu.github.io/images/containers.jpg">
-<meta property="og:image" content="https://jiaomawhu.github.io/images/vm-vs-docker.png">
-<meta property="og:image" content="https://jiaomawhu.github.io/images/docker-vm-pc.png">
-<meta property="og:updated_time" content="2021-01-19T06:43:34.209Z">
+<meta property="og:updated_time" content="2021-01-19T06:05:05.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker and related tools.">
-<meta name="twitter:description" content="This post summarizes the key concepts of Dockers and related tools. Photo by Max Williams on Unsplash.">
-<meta name="twitter:image" content="https://jiaomawhu.github.io/images/containers.jpg">
+<meta name="twitter:title" content="Hexo Markdown 语法总结">
+<meta name="twitter:description" content="总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。">
 
 
 
@@ -162,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2020/05/31/frameworks/docker/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/">
 
 
 
 
 
-  <title>Docker and related tools. | Jinshin's Blog</title>
+  <title>Hexo Markdown 语法总结 | Jinshin's Blog</title>
   
 
 
@@ -294,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2020/05/31/frameworks/docker/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -311,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Docker and related tools.</h1>
+          <h1 class="post-title" itemprop="name headline">Hexo Markdown 语法总结</h1>
         
 
         <div class="post-meta">
@@ -323,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-31T20:35:36-07:00">
-                2020-05-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-16T20:00:10-08:00">
+                2018-11-16
               </time>
             
 
@@ -342,8 +338,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/05/31/frameworks/docker/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/31/frameworks/docker/" itemprop="commentCount"></span>
+                <a href="/2018/11/16/tutorials/markdown/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/11/16/tutorials/markdown/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,44 +367,16 @@
       
 
       
-        <p><img src="/images/containers.jpg" width="90%" height="90%" style="margin: -10px 30px;"><br>This post summarizes the key concepts of Dockers and related tools. <span>Photo by <a href="https://unsplash.com/@max_williams?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Max Williams</a> on <a href="https://unsplash.com/s/photos/containers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener">Unsplash</a></span>.<br><a id="more"></a></p>
-<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h1><p>Container is designed to provide isolation. Docker is a framework that implement its own containers. Containers are mainly based on the following concepts.</p>
-<h2 id="chroot"><a href="#chroot" class="headerlink" title="chroot"></a>chroot</h2><ul>
-<li><code>chroot</code> is a way to isolate a directory. Using this command, you can set a target directory as the root directory.</li>
-<li>After getting into that dir using <code>chroot</code>, you cannot access anything out of the dir. (But it’s not a real secure sandbox, explained below).</li>
-<li>Consider a use case. A <code>makebox.sh</code> contains the following content.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line">mkdir box</span><br><span class="line">mkdir box/bin</span><br><span class="line">cp -v /bin/bash /home/class/box/bin</span><br><span class="line">cp -v /bin/ls /home/class/box/bin</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Then, use this command <code>sudo chroot $HOME/box /bin/bash</code>, we will get into the box dir, and it is able to use the tools that we copied like <code>ls</code>.</p>
-<p>In fact, <code>chroot</code> achieves this simply by prepending the new root path to any path starting with <code>/</code>. Therefore, <code>chroot</code> does not provide a <strong>truly secure</strong> sandbox. A well known ‘problem’ is that a root user can exit the chroot environment, therefore, if a hacker finds out that it’s in a chroot environment, he/she may and exit and be able to enter the real root directory. Fortunately, Docker containers don’t have this problem since it uses <code>namespace</code> to isolate file systems.</p>
-<h2 id="cgroups"><a href="#cgroups" class="headerlink" title="cgroups"></a>cgroups</h2><p><code>cgroups</code> is short for <code>Control Groups</code>, which provides the access controls over system resources. <code>cgroup</code> is developed in 2006 by 2 google engineers. In 2008 it was added to the Linux kernel 2.6.24. Used by many container projects, Docker, LXC.</p>
-<p>Specifically, <code>cgroup</code> can be used to</p>
-<ul>
-<li>limit resources: Groups can be set to not exceed a configured memory limit.</li>
-<li>prioritize: Some groups may get a larger share of CPU utilization or disk I/O throughput.</li>
-<li>measure the resource usage of a group.</li>
-<li>control groups: freezing groups of processes, their checkpointing and restarting.</li>
-</ul>
-<h2 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h2><p>Namespace enables a process to have a different view of the system than other processes.</p>
-<p>The 7 namespaces are Cgourp, IPC, Network, Mount, PID, User, UTS (host name and NIS domain name). One can use these namespaces to isolate corresponding resources. </p>
-<p>For example, two processes in two different network namespaces may run on the same port number, processes in different PID namespaces may have the same PID. In fact, Linux uses two PIDs to identify a process in a new PID namespace, one is global PID and the other one is the new namespace PID. However, the process in the new PID namespace cannot see its global PID, only the parent process knows it.</p>
-<p>As the same, other namespaces isolate a specific global resource and restricts access of a inner process to its own sandbox.</p>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
-<li><code>chroot</code> restricts access to the filesystem.</li>
-<li><code>cgrups</code> restricts access to the system resources.</li>
-<li>namespaces provide 7 types of isolation.</li>
-</ul>
-<h1 id="Docker-vs-VMs"><a href="#Docker-vs-VMs" class="headerlink" title="Docker vs VMs"></a>Docker vs VMs</h1><p>The following figure clearly shows the differences of docker and virtual machines when achieving isolation. On the left side, we can see that all of the docker containers share the same engine, and the docker engine is based on the host OS. While, VMs isolation is achieved on the hardware-level: Hypervisor.<br><img src="/images/vm-vs-docker.png" alt=""></p>
-<p>The pros and cons over docker and VMs are shown in the following figure.<br><img src="/images/docker-vm-pc.png" alt=""></p>
-<h1 id="Related-tools"><a href="#Related-tools" class="headerlink" title="Related tools"></a>Related tools</h1><h2 id="Docker-compose"><a href="#Docker-compose" class="headerlink" title="Docker-compose"></a>Docker-compose</h2><p>In some scenarios, we might need to start a lot of containers at once. But doing this on cmd causes a lot of time, since we need to enter the commands by hands and wait for the last one to finish. That’s why we need docker-compose.</p>
-<p><a href="https://docs.docker.com/compose/" target="_blank" rel="noopener">Docker compose</a> is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration. </p>
-<h2 id="Kubernete"><a href="#Kubernete" class="headerlink" title="Kubernete"></a>Kubernete</h2><p>Different from compose, Kubernete is a container orchestration framework developed by google, you may use the kubernete configuration file to support container connections on different host machines. You might want to look at this <a href="https://stackoverflow.com/questions/47536536/whats-the-difference-between-docker-compose-and-kubernetes" target="_blank" rel="noopener">post</a> to further discriminate different docker-related frameworks.</p>
-<blockquote>
-<p>Kubernete abandons Dockers ?!</p>
-</blockquote>
-<p>Recently, <a href="https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/" target="_blank" rel="noopener">Kubernetes is deprecating Docker as a container runtime after v1.20</a>. It’s because Kubernetes don’t need the nice CLI interaction features that Docker has. Previously, Kubernetes have to use an extra tool Dockershim as a way to interact with Docker, which is quite redundant. Therefore, instead of interacting with Docker, kubernetes decide to directly interact with <code>containerd</code>.</p>
-<p>Then, what is <code>containerd</code>? In fact, <code>containerd</code> is a important platforms that provides the abstract-level APIs to push and pull functionality as well as image management; to create, execute, and manage containers and their tasks. In other words, Kubernetes decide to <strong>directly talk with the core of Docker</strong> so that a step can be saved.</p>
-<h1 id="Reference-and-recommended-reading"><a href="#Reference-and-recommended-reading" class="headerlink" title="Reference and recommended reading."></a>Reference and recommended reading.</h1><p><a href="https://www.docker.com/blog/what-is-containerd-runtime/" target="_blank" rel="noopener">[1] What is containerd?</a><br><a href="https://www.openshift.com/blog/kubernetes-is-removing-docker-support-kubernetes-is-not-removing-docker-support" target="_blank" rel="noopener">[2] Kubernetes is Removing Docker Support, Kubernetes is Not Removing Docker Support.</a><br><a href="https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/" target="_blank" rel="noopener">[3] Don’t Panic: Kubernetes and Docker.</a><br><a href="https://docs.docker.com/engine/security/" target="_blank" rel="noopener">[4] Docker security.</a><br><a href="https://itnext.io/chroot-cgroups-and-namespaces-an-overview-37124d995e3d" target="_blank" rel="noopener">[5] chroot, cgroups and namespaces — An overview.</a><br><a href="https://www.backblaze.com/blog/vm-vs-containers/" target="_blank" rel="noopener">[6] What’s the Diff: VMs vs Containers.</a><br><a href="https://docs.docker.com/get-started/overview/" target="_blank" rel="noopener">[7] Docker overview.</a><br><a href="https://docs.docker.com/compose/" target="_blank" rel="noopener">[8] Overview of Docker Compose.</a></p>
+        <p>总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。<br><a id="more"></a></p>
+<h4 id="1-front-matter-格式"><a href="#1-front-matter-格式" class="headerlink" title="1.front-matter 格式:"></a>1.front-matter 格式:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">layout: &apos;[post]&apos;</span><br><span class="line">title: Hexo Markdown 语法总结</span><br><span class="line">date: 2018-11-16 20:00:10</span><br><span class="line">tags: Markdown</span><br><span class="line">categories: Tutorial</span><br><span class="line">toc: true</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
+<h4 id="2-斜体-斜体-粗体：-粗体"><a href="#2-斜体-斜体-粗体：-粗体" class="headerlink" title="2.斜体: *斜体* 粗体：**粗体**"></a>2.<em>斜体</em>: <code>*斜体*</code> <strong>粗体</strong>：<code>**粗体**</code></h4><h4 id="3-分级标题："><a href="#3-分级标题：" class="headerlink" title="3.分级标题："></a>3.分级标题：</h4><h5 id="使用下划线"><a href="#使用下划线" class="headerlink" title="使用下划线"></a>使用下划线</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一级</span><br><span class="line">=========</span><br><span class="line">二级</span><br><span class="line">---------</span><br><span class="line">### 三级</span><br></pre></td></tr></table></figure>
+<h5 id="使用-标识"><a href="#使用-标识" class="headerlink" title="使用#标识"></a>使用#标识</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># H1</span><br><span class="line">## H2</span><br><span class="line">...</span><br><span class="line">###### H6</span><br></pre></td></tr></table></figure>
+<h4 id="4-分割线：在单独一行使用"><a href="#4-分割线：在单独一行使用" class="headerlink" title="4.分割线：在单独一行使用 -------"></a>4.分割线：在单独一行使用 <code>-------</code></h4><h4 id="5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt"><a href="#5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt" class="headerlink" title="5.删除线: 使用~~删除线~~  下划线:&lt;u&gt;balabala&lt;/u&gt;"></a>5.<del>删除线</del>: 使用<code>~~删除线~~</code>  <u>下划线</u>:<code>&lt;u&gt;balabala&lt;/u&gt;</code></h4><h4 id="6-超链接："><a href="#6-超链接：" class="headerlink" title="6.超链接："></a>6.超链接：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[链接文字](地址 &quot;标题&quot;)</span><br><span class="line">![图片说明](地址 &quot;标题&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="7-注释-注释文字"><a href="#7-注释-注释文字" class="headerlink" title="7.注释: \注释文字"></a>7.注释: <code>\注释文字</code></h4><h4 id="8-引用-gt-文字引用"><a href="#8-引用-gt-文字引用" class="headerlink" title="8.引用: &gt;文字引用"></a>8.引用: <code>&gt;文字引用</code></h4><h4 id="9-脚注-BlaBlaBla-anyword-anyword-Bla-means"><a href="#9-脚注-BlaBlaBla-anyword-anyword-Bla-means" class="headerlink" title="9.脚注: BlaBlaBla [^anyword], [anyword^]: Bla means ..."></a>9.脚注: <code>BlaBlaBla [^anyword], [anyword^]: Bla means ...</code></h4><h4 id="10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2"><a href="#10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2" class="headerlink" title="10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2."></a>10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2.</h4><h4 id="11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。"><a href="#11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。" class="headerlink" title="11.表格: 绘制表格格式如下，|控制分列，-控制分行，:控制对齐方式。"></a>11.表格: 绘制表格格式如下，<code>|</code>控制分列，<code>-</code>控制分行，<code>:</code>控制对齐方式。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| Item     | Value     | Qty   |</span><br><span class="line">| :------- | --------: | :---: |</span><br><span class="line">| Computer | 1600 USD  | 5     |</span><br></pre></td></tr></table></figure>
+<h4 id="12-代码块"><a href="#12-代码块" class="headerlink" title="12.代码块"></a>12.代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">行间：`code`</span><br><span class="line">代码块：`*3 code `*3</span><br><span class="line">代码块(高亮)：`*3 python </span><br><span class="line">some python code</span><br><span class="line">`*3</span><br></pre></td></tr></table></figure>
+<h4 id="13-LaTex公式"><a href="#13-LaTex公式" class="headerlink" title="13.LaTex公式"></a>13.LaTex公式</h4><p>数学公式的默认定界符是<code>$...$</code>和<code>\\(...\\)</code>（对于行内公式），以及<code>$$ ... $$</code>和<code>\\[...\\]</code>（对于块级公式）</p>
+<script type="math/tex; mode=display">
+R_{m \times n}</script><p>参考<br><a href="https://hyxxsfwy.github.io/2016/01/15/Hexo-Markdown-%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C/#fn1" target="_blank" rel="noopener">[1]Hexo Markdown 简明语法手册 - Mobilicorpus</a><br><a href="http://itmyhome.com/markdown/article/syntax/blockquotes.html" target="_blank" rel="noopener">[2]Learning-Markdown (Markdown 入门参考) - LearnShare</a></p>
 
       
     </div>
@@ -426,7 +394,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Frameworks/" rel="tag"># Frameworks</a>
+            <a href="/tags/Tutorial/" rel="tag"># Tutorial</a>
           
         </div>
       
@@ -439,15 +407,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/31/algo/network/" rel="next" title="Computer Network Key notes.">
-                <i class="fa fa-chevron-left"></i> Computer Network Key notes.
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/23/tutorials/tips-for-ps-sop/" rel="prev" title="写文书的注意事项">
+                写文书的注意事项 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -587,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker"><span class="nav-number">1.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#chroot"><span class="nav-number">1.1.</span> <span class="nav-text">chroot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cgroups"><span class="nav-number">1.2.</span> <span class="nav-text">cgroups</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#namespace"><span class="nav-number">1.3.</span> <span class="nav-text">namespace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">1.4.</span> <span class="nav-text">Summary</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-vs-VMs"><span class="nav-number">2.</span> <span class="nav-text">Docker vs VMs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Related-tools"><span class="nav-number">3.</span> <span class="nav-text">Related tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-compose"><span class="nav-number">3.1.</span> <span class="nav-text">Docker-compose</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kubernete"><span class="nav-number">3.2.</span> <span class="nav-text">Kubernete</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference-and-recommended-reading"><span class="nav-number">4.</span> <span class="nav-text">Reference and recommended reading.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-front-matter-格式"><span class="nav-number">1.</span> <span class="nav-text">1.front-matter 格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-斜体-斜体-粗体：-粗体"><span class="nav-number">2.</span> <span class="nav-text">2.斜体: *斜体* 粗体：**粗体**</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-分级标题："><span class="nav-number">3.</span> <span class="nav-text">3.分级标题：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用下划线"><span class="nav-number">3.1.</span> <span class="nav-text">使用下划线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用-标识"><span class="nav-number">3.2.</span> <span class="nav-text">使用#标识</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-分割线：在单独一行使用"><span class="nav-number">4.</span> <span class="nav-text">4.分割线：在单独一行使用 -------</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-删除线-使用-删除线-下划线-lt-u-gt-balabala-lt-u-gt"><span class="nav-number">5.</span> <span class="nav-text">5.删除线: 使用~~删除线~~  下划线:&lt;u&gt;balabala&lt;/u&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-超链接："><span class="nav-number">6.</span> <span class="nav-text">6.超链接：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-注释-注释文字"><span class="nav-number">7.</span> <span class="nav-text">7.注释: \注释文字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-引用-gt-文字引用"><span class="nav-number">8.</span> <span class="nav-text">8.引用: &gt;文字引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-脚注-BlaBlaBla-anyword-anyword-Bla-means"><span class="nav-number">9.</span> <span class="nav-text">9.脚注: BlaBlaBla [^anyword], [anyword^]: Bla means ...</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-无序列表-：实心圆，-：空心圆，-：方形，有序列表：1-2"><span class="nav-number">10.</span> <span class="nav-text">10.无序列表 +：实心圆，-：空心圆，*：方形，有序列表：1. 2.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-表格-绘制表格格式如下，-控制分列，-控制分行，-控制对齐方式。"><span class="nav-number">11.</span> <span class="nav-text">11.表格: 绘制表格格式如下，|控制分列，-控制分行，:控制对齐方式。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-代码块"><span class="nav-number">12.</span> <span class="nav-text">12.代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-LaTex公式"><span class="nav-number">13.</span> <span class="nav-text">13.LaTex公式</span></a></li></ol></div>
             
 
           </div>
@@ -757,9 +725,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2020/05/31/frameworks/docker/';
-          this.page.identifier = '2020/05/31/frameworks/docker/';
-          this.page.title = 'Docker and related tools.';
+          this.page.url = 'https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/';
+          this.page.identifier = '2018/11/16/tutorials/markdown/';
+          this.page.title = 'Hexo Markdown 语法总结';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

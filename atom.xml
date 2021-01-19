@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2021-01-18T23:16:19.577Z</updated>
+  <updated>2021-01-19T06:43:34.209Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,15 +17,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Container Reminder</title>
+    <title>Docker and related tools.</title>
     <link href="https://jiaomawhu.github.io/2020/05/31/frameworks/docker/"/>
     <id>https://jiaomawhu.github.io/2020/05/31/frameworks/docker/</id>
     <published>2020-06-01T03:35:36.000Z</published>
-    <updated>2021-01-18T23:16:19.577Z</updated>
+    <updated>2021-01-19T06:43:34.209Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;This post summarizes the key concepts under Dockers and related tools.&lt;br&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/containers.jpg&quot; width=&quot;90%&quot; height=&quot;90%&quot; style=&quot;margin: -10px 30px;&quot;&gt;&lt;br&gt;This post summarizes the key concepts of Dockers and related tools. &lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@max_williams?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Max Williams&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/containers?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;.&lt;br&gt;
     
     </summary>
     
@@ -305,10 +305,10 @@
   
   <entry>
     <title>Hexo Markdown 语法总结</title>
-    <link href="https://jiaomawhu.github.io/2018/11/16/tutorials/testforpost/"/>
-    <id>https://jiaomawhu.github.io/2018/11/16/tutorials/testforpost/</id>
+    <link href="https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/"/>
+    <id>https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/</id>
     <published>2018-11-17T04:00:10.000Z</published>
-    <updated>2021-01-18T22:56:12.491Z</updated>
+    <updated>2021-01-19T06:05:05.413Z</updated>
     
     <summary type="html">
     
