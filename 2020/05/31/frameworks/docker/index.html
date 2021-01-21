@@ -128,7 +128,7 @@
 <meta property="og:image" content="https://jiaomawhu.github.io/images/containers.jpg">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/vm-vs-docker.png">
 <meta property="og:image" content="https://jiaomawhu.github.io/images/docker-vm-pc.png">
-<meta property="og:updated_time" content="2021-01-19T06:43:34.209Z">
+<meta property="og:updated_time" content="2021-01-19T18:11:20.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker and related tools.">
 <meta name="twitter:description" content="This post summarizes the key concepts of Dockers and related tools. Photo by Max Williams on Unsplash.">
@@ -400,13 +400,13 @@
 </ul>
 <h1 id="Docker-vs-VMs"><a href="#Docker-vs-VMs" class="headerlink" title="Docker vs VMs"></a>Docker vs VMs</h1><p>The following figure clearly shows the differences of docker and virtual machines when achieving isolation. On the left side, we can see that all of the docker containers share the same engine, and the docker engine is based on the host OS. While, VMs isolation is achieved on the hardware-level: Hypervisor.<br><img src="/images/vm-vs-docker.png" alt=""></p>
 <p>The pros and cons over docker and VMs are shown in the following figure.<br><img src="/images/docker-vm-pc.png" alt=""></p>
-<h1 id="Related-tools"><a href="#Related-tools" class="headerlink" title="Related tools"></a>Related tools</h1><h2 id="Docker-compose"><a href="#Docker-compose" class="headerlink" title="Docker-compose"></a>Docker-compose</h2><p>In some scenarios, we might need to start a lot of containers at once. But doing this on cmd causes a lot of time, since we need to enter the commands by hands and wait for the last one to finish. That’s why we need docker-compose.</p>
+<h1 id="Related-tools"><a href="#Related-tools" class="headerlink" title="Related tools"></a>Related tools</h1><h2 id="Docker-compose"><a href="#Docker-compose" class="headerlink" title="Docker-compose"></a>Docker-compose</h2><p>In some scenarios, we might need to start a lot of containers at once. But doing this on cmd causes a lot of time, since we need to enter the commands manually and wait for the last one to finish. That’s why we need docker-compose.</p>
 <p><a href="https://docs.docker.com/compose/" target="_blank" rel="noopener">Docker compose</a> is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration. </p>
-<h2 id="Kubernete"><a href="#Kubernete" class="headerlink" title="Kubernete"></a>Kubernete</h2><p>Different from compose, Kubernete is a container orchestration framework developed by google, you may use the kubernete configuration file to support container connections on different host machines. You might want to look at this <a href="https://stackoverflow.com/questions/47536536/whats-the-difference-between-docker-compose-and-kubernetes" target="_blank" rel="noopener">post</a> to further discriminate different docker-related frameworks.</p>
+<h2 id="Kubernete"><a href="#Kubernete" class="headerlink" title="Kubernete"></a>Kubernete</h2><p>Different from compose, Kubernete is a container orchestration framework developed by google, you may use the kubernete configuration file to support container connections on different host machines. You might want to look at this <a href="https://stackoverflow.com/questions/47536536/whats-the-difference-between-docker-compose-and-kubernetes" target="_blank" rel="noopener">post</a> to further discriminate different docker-related tools.</p>
 <blockquote>
 <p>Kubernete abandons Dockers ?!</p>
 </blockquote>
-<p>Recently, <a href="https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/" target="_blank" rel="noopener">Kubernetes is deprecating Docker as a container runtime after v1.20</a>. It’s because Kubernetes don’t need the nice CLI interaction features that Docker has. Previously, Kubernetes have to use an extra tool Dockershim as a way to interact with Docker, which is quite redundant. Therefore, instead of interacting with Docker, kubernetes decide to directly interact with <code>containerd</code>.</p>
+<p>Recently, <a href="https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/" target="_blank" rel="noopener">Kubernetes is deprecating Docker as a container runtime after v1.20</a>. It’s because Kubernetes don’t need the nice CLI interaction features that Docker has. Previously, Kubernetes have to use an extra tool <code>Dockershim</code> as a way to interact with Docker, which is quite redundant. Therefore, instead of interacting with Docker, kubernetes decide to directly interact with <code>containerd</code>.</p>
 <p>Then, what is <code>containerd</code>? In fact, <code>containerd</code> is a important platforms that provides the abstract-level APIs to push and pull functionality as well as image management; to create, execute, and manage containers and their tasks. In other words, Kubernetes decide to <strong>directly talk with the core of Docker</strong> so that a step can be saved.</p>
 <h1 id="Reference-and-recommended-reading"><a href="#Reference-and-recommended-reading" class="headerlink" title="Reference and recommended reading."></a>Reference and recommended reading.</h1><p><a href="https://www.docker.com/blog/what-is-containerd-runtime/" target="_blank" rel="noopener">[1] What is containerd?</a><br><a href="https://www.openshift.com/blog/kubernetes-is-removing-docker-support-kubernetes-is-not-removing-docker-support" target="_blank" rel="noopener">[2] Kubernetes is Removing Docker Support, Kubernetes is Not Removing Docker Support.</a><br><a href="https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/" target="_blank" rel="noopener">[3] Don’t Panic: Kubernetes and Docker.</a><br><a href="https://docs.docker.com/engine/security/" target="_blank" rel="noopener">[4] Docker security.</a><br><a href="https://itnext.io/chroot-cgroups-and-namespaces-an-overview-37124d995e3d" target="_blank" rel="noopener">[5] chroot, cgroups and namespaces — An overview.</a><br><a href="https://www.backblaze.com/blog/vm-vs-containers/" target="_blank" rel="noopener">[6] What’s the Diff: VMs vs Containers.</a><br><a href="https://docs.docker.com/get-started/overview/" target="_blank" rel="noopener">[7] Docker overview.</a><br><a href="https://docs.docker.com/compose/" target="_blank" rel="noopener">[8] Overview of Docker Compose.</a></p>
 
@@ -448,6 +448,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/01/19/cs/ostep/" rel="prev" title="Notes of Operating Systems Three Easy Pieces.">
+                Notes of Operating Systems Three Easy Pieces. <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -534,7 +538,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -547,7 +551,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

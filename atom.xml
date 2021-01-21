@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2021-01-19T06:43:34.209Z</updated>
+  <updated>2021-01-20T02:02:23.680Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,11 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Notes of Operating Systems Three Easy Pieces.</title>
+    <link href="https://jiaomawhu.github.io/2021/01/19/cs/ostep/"/>
+    <id>https://jiaomawhu.github.io/2021/01/19/cs/ostep/</id>
+    <published>2021-01-19T18:12:22.000Z</published>
+    <updated>2021-01-20T02:02:23.680Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/ostep.jpg&quot; width=&quot;60%&quot; height=&quot;60%&quot; style=&quot;margin: -10px 125px;&quot;&gt;&lt;br&gt;I took the &lt;a href=&quot;http://users.ece.utexas.edu/~gerstl/ee445m_s20/syllabus.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;EE380L Real-time OS&lt;/a&gt; in spring 20. I have to say Prof. Andreas is one of the best ‘teachers’ I’ve met in UT ECE. Operating Systems Three Easy Pieces is a recommended reading from Prof. Andreas and is also a well-known textbook. So I decide to read it and take some notes here. Cover image &lt;a href=&quot;https://images.app.goo.gl/zNCeHGrnuKcw7Keb6&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;credit&lt;/a&gt;.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Computer Systems" scheme="https://jiaomawhu.github.io/tags/Computer-Systems/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker and related tools.</title>
     <link href="https://jiaomawhu.github.io/2020/05/31/frameworks/docker/"/>
     <id>https://jiaomawhu.github.io/2020/05/31/frameworks/docker/</id>
     <published>2020-06-01T03:35:36.000Z</published>
-    <updated>2021-01-19T06:43:34.209Z</updated>
+    <updated>2021-01-19T18:11:20.006Z</updated>
     
     <summary type="html">
     
