@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="剑指offer刷题的记录与总结">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-02-23T07:54:14.761Z">
+<meta property="og:updated_time" content="2021-02-24T06:44:30.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指offer">
 <meta name="twitter:description" content="剑指offer刷题的记录与总结">
@@ -433,7 +433,7 @@
 <h1 id="题五十七-和为s的两个数字-amp-和为s的连续正数序列"><a href="#题五十七-和为s的两个数字-amp-和为s的连续正数序列" class="headerlink" title="题五十七 和为s的两个数字 &amp; 和为s的连续正数序列"></a>题五十七 <a href="https://leetcode-cn.com/problemset/lcof/" target="_blank" rel="noopener">和为s的两个数字 &amp; 和为s的连续正数序列</a></h1><p>看到排序好的序列，我们就要敏感地意识到可以用滑动窗口。</p>
 <h1 id="题六十-n个骰子的点数"><a href="#题六十-n个骰子的点数" class="headerlink" title="题六十 n个骰子的点数"></a>题六十 <a href="https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/" target="_blank" rel="noopener">n个骰子的点数</a></h1><p>这题用递归求解太慢。可以考虑用循环，重复利用两个大小为maxv+1的数组，每一次筛筛子前，清空当前要用的数组，然后dp_now[n] = dp_last[n-1] + … + dp_last[n-6]。 这样，我们就可以用dp求解出来啦。</p>
 <h1 id="题六十一-扑克牌中的顺子"><a href="#题六十一-扑克牌中的顺子" class="headerlink" title="题六十一 扑克牌中的顺子"></a>题六十一 <a href="https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/" target="_blank" rel="noopener">扑克牌中的顺子</a></h1><p>这题，直观想法是，如果sequence没有超过两个的skip number的话，就可以填补成顺子。但是答案中的想法，更直接：如果max-min (not joker) &gt; 2的话就肯定不是顺子啦。</p>
-<h1 id="题六十二-圆圈中最后剩下的数字"><a href="#题六十二-圆圈中最后剩下的数字" class="headerlink" title="题六十二 圆圈中最后剩下的数字"></a>题六十二 <a href="https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/" target="_blank" rel="noopener">圆圈中最后剩下的数字</a></h1><p><strong>这题值得留下姓名</strong>。不懂这题为什么是easy，需要推一个很离谱的递推式。</p>
+<h1 id="题六十二-圆圈中最后剩下的数字"><a href="#题六十二-圆圈中最后剩下的数字" class="headerlink" title="题六十二 圆圈中最后剩下的数字"></a>题六十二 <a href="https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/" target="_blank" rel="noopener">圆圈中最后剩下的数字</a></h1><p><strong>这题值得留下姓名</strong>。不懂这题为什么是easy，需要推一个很离谱的递推式。<br>设p(x, m, n)为从n个数中取走第m个数之后，原来坐标为x的数，现在的坐标。<br>可以得出, p(x, m, n) = (x - (m-1)%n - 1) % n, 我们把(m-1)%n简化为k后可得p(x, m, n) = (x - k - 1) % n。<br>那么可知，p的逆运算为p’(x, m, n) = (x + k + 1) % n。<br>设f(n, m)为从n个数中不停去掉第m个后，最后一个数字的坐标。<br>设f’(n-1, m)为从n个数中去掉第一个m之后，不停去掉剩下的第m个数后，最后一个数字的坐标。<br>则f(n, m) = f’(n-1, m)<br>那么f’(n-1, m) = p’(f(n-1, m)) = (f(n-1, m) + k + 1) % n = (f(n-1, m) + m) % n<br>所以f(n, m) = (f(n-1, m) + m) % n</p>
 <h1 id="题六十四-求1-2-…-n"><a href="#题六十四-求1-2-…-n" class="headerlink" title="题六十四 求1+2+…+n"></a>题六十四 <a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" target="_blank" rel="noopener">求1+2+…+n</a></h1><p>这题就tm离谱。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> res = (n != <span class="number">0</span>) &amp;&amp; ((n += sumNums(n-<span class="number">1</span>)) &gt; <span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
 
       
