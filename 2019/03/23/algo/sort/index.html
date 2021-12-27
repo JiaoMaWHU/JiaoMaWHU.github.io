@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Baskerville:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Algorithms,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jinshin's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="本文总结了常用的排序算法。">
+<meta name="keywords" content="Algorithms">
+<meta property="og:type" content="article">
+<meta property="og:title" content="排序算法整理">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/03/23/algo/sort/index.html">
+<meta property="og:site_name" content="Jinshin&#39;s Blog">
+<meta property="og:description" content="本文总结了常用的排序算法。">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-12-27T07:22:51.132Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="排序算法整理">
+<meta name="twitter:description" content="本文总结了常用的排序算法。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/03/23/algo/sort/">
+
+
+
+
+
+  <title>排序算法整理 | Jinshin's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '129723642', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5f5dad2fbe171a306f5c2925fa8ee9fa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jinshin's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/03/23/algo/sort/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jinshin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinshin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">排序算法整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-23T16:28:35-07:00">
+                2019-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/23/algo/sort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/23/algo/sort/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文总结了常用的排序算法。<a id="more"></a></p>
+<h2 id="排序基础-Stability"><a href="#排序基础-Stability" class="headerlink" title="排序基础 (Stability)"></a>排序基础 (Stability)</h2><p><strong>排序算法稳定性定义</strong>：排序前后两个相等的数相对位置不变，则算法稳定。<br><strong>稳定性的好处</strong>：从一个键上排序，然后再从另一个键上排序，第一个键排序的结果可以为第二个键排序所用。<br>Generally, we use std::sort() to sort container in c++. The default sort is in increasing order. If we want decreasing order, we use, for example:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">sort(v.begin(), v.end(), greater&lt;<span class="keyword">int</span>&gt;());</span><br><span class="line"><span class="comment">// the cmp argument means using the boolean to determine if the first argument in sorting should be go before the second one.</span></span><br><span class="line"><span class="comment">// decreasing -&gt; if the fist is greater than the second, the first goes ahead in the vector.</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p><strong>1.直接插入 (Insertion Sort)</strong><br>从小到大排序：将数组左侧划分为有序区，右侧划分为无序区。每次将无序区的第一个元素插入到有序区的相应位置，同时增大有序区的大小。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertsort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; N; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp=a[i]; </span><br><span class="line">        <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span> (j = i; j&gt;<span class="number">0</span> &amp;&amp; tmp&lt;a[j<span class="number">-1</span>]; --j)&#123;</span><br><span class="line">            a[j]=a[j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        a[j]=tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.希尔排序 (Hill Sort)</strong><br>希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shellsort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> incre=N/<span class="number">2</span>; incre&gt;<span class="number">0</span>; incre/=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=incre; i&lt;N; i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> tmp=a[i]; <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span>(j=i; j&gt;=incre &amp;&amp; tmp&lt;a[j-incre]; j-=incre)&#123;</span><br><span class="line">                a[j]=a[j-incre];</span><br><span class="line">            &#125;</span><br><span class="line">            a[j]=tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Hill sort on average takes $O(n*log_2(n))$ time to sort the input.</li>
+</ul>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p><strong>1.选择排序 (Selection Sort)</strong><br>从小到大排序：将数组左侧划分为有序区，右侧划分为无序区。每次从无序区选择最小的元素与开头交换，继而增大有序区大小。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectsort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp=a[i];<span class="keyword">int</span> min=tmp;<span class="keyword">int</span> min_j;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; N; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(a[min_j]&lt;min) min_j=j;</span><br><span class="line">        &#125;</span><br><span class="line">        a[i]=a[min_j];</span><br><span class="line">        a[min_j]=tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Selection sort is not stable. Consider this case, the original input is [4,2,3,4,1], after the first round, it becomes [1,2,3,4,4], the relative order between the two 4 has changed.</li>
+</ul>
+<p><strong>2.堆排序 (Heap Sort)</strong><br>堆排序的基本思想是：将待排序序列构造成一个大顶堆，此时，整个序列的最大值就是堆顶的根节点。将其与末尾元素进行交换，此时末尾就为最大值。然后将剩余n-1个元素重新构造成一个堆，这样会得到n个元素的次小值。如此反复执行，便能得到一个有序序列了<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">percDown</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> i, <span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = a[i], child;</span><br><span class="line">    <span class="keyword">for</span>(; <span class="number">2</span> * i + <span class="number">1</span> &lt; N; i = child)</span><br><span class="line">    &#123;</span><br><span class="line">        child = <span class="number">2</span> * i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(child + <span class="number">1</span> &lt; N &amp;&amp; a[child] &lt; a[child + <span class="number">1</span>])</span><br><span class="line">            child++;</span><br><span class="line">        <span class="keyword">if</span>(temp &lt; a[child])</span><br><span class="line">            a[i] = a[child];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    a[i] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = N / <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        percDown(a, i, N);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = N<span class="number">-1</span>; i &gt; <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = a[i];</span><br><span class="line">        a[i] = a[<span class="number">0</span>];</span><br><span class="line">        a[<span class="number">0</span>] = temp;</span><br><span class="line">        percDown(a, <span class="number">0</span>, i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>As the same, heap sort is also not stable because it swaps the value to the end of the array without preserving the order. Other than this, the order might also be broken during the heap creation. </li>
+</ul>
+<h2 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h2><p><strong>1.冒泡排序 (Hubble Sort)</strong><br>原理：将序列划分为无序和有序区，不断通过交换较大元素至无序区尾完成排序。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N - i - <span class="number">1</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[j] &gt; a[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = a[j];</span><br><span class="line">                a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">                a[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.快速排序 (Quick Sort)</strong><br>原理：不断寻找一个序列的中点，然后对中点左右的序列递归的进行排序，直至全部序列排序完成，使用了分治的思想。<br>1．先从数列中取出一个数作为基准数。<br>2．分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。<br>3．再对左右区间重复第二步，直到各区间只有一个数。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> e, <span class="keyword">int</span> a[])</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=s, j=e, tmp;</span><br><span class="line">    <span class="keyword">if</span>(s&gt;=e) <span class="keyword">return</span>;</span><br><span class="line">    tmp = a[s];</span><br><span class="line">    <span class="keyword">while</span>(i!=j)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&gt;i &amp;&amp; tmp &lt;= a[j]) j--;</span><br><span class="line">        a[i]=a[j];</span><br><span class="line">        <span class="keyword">while</span>(i&lt;j &amp;&amp; tmp &gt;= a[i]) i++;</span><br><span class="line">        a[j]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    a[i]=tmp;</span><br><span class="line">    quicksort(s,i<span class="number">-1</span>,a[]);</span><br><span class="line">    quicksort(i+<span class="number">1</span>,e,a[]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="归并排序-Merge-Sort"><a href="#归并排序-Merge-Sort" class="headerlink" title="归并排序 (Merge Sort)"></a>归并排序 (Merge Sort)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> temp[], <span class="keyword">int</span> left, <span class="keyword">int</span> mid, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(left &lt; right)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> lpos = left, lend = mid;</span><br><span class="line">        <span class="keyword">int</span> rpos = mid + <span class="number">1</span>, rend = right;</span><br><span class="line">        <span class="keyword">int</span> tpos = left;</span><br><span class="line">        <span class="keyword">while</span>(lpos &lt;= lend &amp;&amp; rpos &lt;= rend)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[lpos] &lt;= a[rpos])</span><br><span class="line">                temp[tpos++] = a[lpos++];</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                temp[tpos++] = a[rpos++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(lpos &lt;= lend)</span><br><span class="line">            temp[tpos++] = a[lpos++];</span><br><span class="line">        <span class="keyword">while</span>(rpos &lt;= rend)</span><br><span class="line">            temp[tpos++] = a[rpos++];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = left; i &lt;= right; i++)</span><br><span class="line">            a[i] = temp[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeSortCore</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> temp[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(left &lt; right)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        mergeSortCore(a, temp, left, mid);</span><br><span class="line">        mergeSortCore(a, temp, mid+<span class="number">1</span>, right);</span><br><span class="line">        merge(a, temp, left, mid, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *temp = <span class="keyword">new</span> <span class="keyword">int</span>[N];</span><br><span class="line">    mergeSortCore(a, temp, <span class="number">0</span>, N<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">delete</span> [] temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="计数排序-Counting-Sort"><a href="#计数排序-Counting-Sort" class="headerlink" title="计数排序 (Counting Sort)"></a>计数排序 (Counting Sort)</h2><ul>
+<li>Time complexity: $O(k + n)$, space complexity $O(n)$, where $k$ is the range of the input integer. For example, if all of the integers in the input array are positive and less than or equal to 256, $k$ will be 256.</li>
+<li>In real practice, when $O(n) = k$, counting sort is a good one to use since the overall time-complexity is only $O(n)$</li>
+<li><p>The below implementation of counting sort is <strong>stable</strong>.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">counting</span><span class="params">(<span class="keyword">int</span> arr[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = arr.length;</span><br><span class="line">    <span class="keyword">int</span>[] output = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">256</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">256</span>; i++) count[i] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> val: arr) count[val]++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;<span class="number">255</span>; i++) count[i] += count[i-<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--) &#123;</span><br><span class="line">        output[count[arr[i]]-<span class="number">1</span>] = arr[i];</span><br><span class="line">        count[arr[i]]--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) arr[i] = output[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>example: <a href="https://leetcode.com/problems/sort-colors/" target="_blank" rel="noopener">https://leetcode.com/problems/sort-colors/</a></p>
+</li>
+</ul>
+<h2 id="基数排序-Radix-Sort"><a href="#基数排序-Radix-Sort" class="headerlink" title="基数排序 (Radix Sort)"></a>基数排序 (Radix Sort)</h2><ul>
+<li><p>Radix sort is very intuitive, it sorts the numbers using each digit from the least significant digit to the most. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i = <span class="number">1</span> to d</span><br><span class="line">    use a stable sort to sort array A on digit i</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Counting sort can be one possible stable sort to use. Then, given $n$ numbers where each has at most $d$ digits, and each digit has $k$ possible values. Radix sort can sort them in $O(d(n+k))$. If the counting sort used is a <strong>stable</strong> implementation, radix sort is also <strong>stable</strong>.</p>
+</li>
+</ul>
+<h2 id="桶排序-Bucket-Sort"><a href="#桶排序-Bucket-Sort" class="headerlink" title="桶排序 (Bucket Sort)"></a>桶排序 (Bucket Sort)</h2><ul>
+<li><p>Implementation:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A is the input array needs to be sorted, where 0 &lt;= A[i] &lt; 1</span></span><br><span class="line"><span class="comment">// B is an array where each element is the head of a linked list</span></span><br><span class="line">n = A.length</span><br><span class="line"><span class="keyword">for</span> i=<span class="number">1</span> to n</span><br><span class="line">    insert A[i] to list B[ lower_bound(n * A[i]) ]</span><br><span class="line"><span class="keyword">for</span> i=<span class="number">0</span> to n-<span class="number">1</span></span><br><span class="line">    sort list B[i] with insertion sort</span><br><span class="line">Merge B[<span class="number">0</span>] to B[n-<span class="number">1</span>] in order as the output</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Bucket sort assumes the input numbers are uniformly distributed. On average the time complexity is $O(n)$.</p>
+</li>
+<li>Bucket sort is stable.</li>
+</ul>
+<h2 id="算法稳定性与性能分析"><a href="#算法稳定性与性能分析" class="headerlink" title="算法稳定性与性能分析"></a>算法稳定性与性能分析</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Algo.</th>
+<th>TC on average</th>
+<th>Stability</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insertion sort</td>
+<td>$O(n^2)$</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Selection sort</td>
+<td>$O(n^2)$</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>Bubble sort</td>
+<td>$O(n^2)$</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Heap sort</td>
+<td>$O(n*log(n))$</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>Quick sort</td>
+<td>$O(n*log(n))$</td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>Merge sort</td>
+<td>$O(n*log(n))$</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Counting sort</td>
+<td>$O(n+k)$</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Radix sort</td>
+<td>$O(d(n+k))$</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Bucket sort</td>
+<td>$O(n)$</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/10/algo/jzoffer/" rel="next" title="剑指offer">
+                <i class="fa fa-chevron-left"></i> 剑指offer
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/28/algo/linkedlist/" rel="prev" title="链表经典题目总结">
+                链表经典题目总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jinshin</p>
+              <p class="site-description motion-element" itemprop="description">I'm lazy.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序基础-Stability"><span class="nav-number">1.</span> <span class="nav-text">排序基础 (Stability)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交换排序"><span class="nav-number">4.</span> <span class="nav-text">交换排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序-Merge-Sort"><span class="nav-number">5.</span> <span class="nav-text">归并排序 (Merge Sort)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计数排序-Counting-Sort"><span class="nav-number">6.</span> <span class="nav-text">计数排序 (Counting Sort)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基数排序-Radix-Sort"><span class="nav-number">7.</span> <span class="nav-text">基数排序 (Radix Sort)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#桶排序-Bucket-Sort"><span class="nav-number">8.</span> <span class="nav-text">桶排序 (Bucket Sort)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法稳定性与性能分析"><span class="nav-number">9.</span> <span class="nav-text">算法稳定性与性能分析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinshin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://https-jiaomawhu-github-io-2.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jiaomawhu.github.io/2019/03/23/algo/sort/';
+          this.page.identifier = '2019/03/23/algo/sort/';
+          this.page.title = '排序算法整理';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

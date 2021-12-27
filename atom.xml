@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiaomawhu.github.io/"/>
-  <updated>2021-01-20T02:02:23.680Z</updated>
+  <updated>2021-12-14T05:11:14.664Z</updated>
   <id>https://jiaomawhu.github.io/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>其他算法知识点整理</title>
+    <link href="https://jiaomawhu.github.io/2021/12/13/algo/other/"/>
+    <id>https://jiaomawhu.github.io/2021/12/13/algo/other/</id>
+    <published>2021-12-14T04:05:37.000Z</published>
+    <updated>2021-12-14T05:11:14.664Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇post整理了所有剩下来的零散算法知识点。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/tags/Algorithms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搜索算法整理</title>
+    <link href="https://jiaomawhu.github.io/2021/12/13/algo/search/"/>
+    <id>https://jiaomawhu.github.io/2021/12/13/algo/search/</id>
+    <published>2021-12-14T04:05:36.000Z</published>
+    <updated>2021-12-14T04:15:16.330Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文总结了常用的搜索算法。
+    
+    </summary>
+    
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/tags/Algorithms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用数据结构整理</title>
+    <link href="https://jiaomawhu.github.io/2021/12/13/algo/data-structure/"/>
+    <id>https://jiaomawhu.github.io/2021/12/13/algo/data-structure/</id>
+    <published>2021-12-14T04:05:35.000Z</published>
+    <updated>2021-12-14T04:34:57.671Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文参照&lt;a href=&quot;https://github.com/kdn251/interviews&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;简单整理了常用的数据结构实现和通用库方法。
+    
+    </summary>
+    
+    
+      <category term="Algorithms" scheme="https://jiaomawhu.github.io/tags/Algorithms/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Notes of Operating Systems Three Easy Pieces.</title>
     <link href="https://jiaomawhu.github.io/2021/01/19/cs/ostep/"/>
     <id>https://jiaomawhu.github.io/2021/01/19/cs/ostep/</id>
     <published>2021-01-19T18:12:22.000Z</published>
-    <updated>2021-01-20T02:02:23.680Z</updated>
+    <updated>2021-12-14T04:42:17.768Z</updated>
     
     <summary type="html">
     
@@ -30,7 +84,7 @@
     </summary>
     
     
-      <category term="Computer Systems" scheme="https://jiaomawhu.github.io/tags/Computer-Systems/"/>
+      <category term="Computer Science" scheme="https://jiaomawhu.github.io/tags/Computer-Science/"/>
     
   </entry>
   
@@ -54,10 +108,10 @@
   
   <entry>
     <title>Computer Network Key notes.</title>
-    <link href="https://jiaomawhu.github.io/2020/05/31/algo/network/"/>
-    <id>https://jiaomawhu.github.io/2020/05/31/algo/network/</id>
+    <link href="https://jiaomawhu.github.io/2020/05/31/cs/network/"/>
+    <id>https://jiaomawhu.github.io/2020/05/31/cs/network/</id>
     <published>2020-06-01T00:05:53.000Z</published>
-    <updated>2021-01-18T02:45:36.908Z</updated>
+    <updated>2021-12-14T04:42:23.826Z</updated>
     
     <summary type="html">
     
@@ -66,7 +120,7 @@
     </summary>
     
     
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/tags/Algorithms/"/>
+      <category term="Computer Science" scheme="https://jiaomawhu.github.io/tags/Computer-Science/"/>
     
   </entry>
   
@@ -90,10 +144,10 @@
   
   <entry>
     <title>Multicore Algorithm Summary</title>
-    <link href="https://jiaomawhu.github.io/2020/05/03/algo/multicore/"/>
-    <id>https://jiaomawhu.github.io/2020/05/03/algo/multicore/</id>
+    <link href="https://jiaomawhu.github.io/2020/05/03/cs/multicore/"/>
+    <id>https://jiaomawhu.github.io/2020/05/03/cs/multicore/</id>
     <published>2020-05-03T17:20:20.000Z</published>
-    <updated>2021-01-18T02:45:32.365Z</updated>
+    <updated>2021-12-14T04:42:26.833Z</updated>
     
     <summary type="html">
     
@@ -102,7 +156,7 @@
     </summary>
     
     
-      <category term="Algorithms" scheme="https://jiaomawhu.github.io/tags/Algorithms/"/>
+      <category term="Computer Science" scheme="https://jiaomawhu.github.io/tags/Computer-Science/"/>
     
   </entry>
   
@@ -142,15 +196,15 @@
   </entry>
   
   <entry>
-    <title>二叉树经典题目整理</title>
-    <link href="https://jiaomawhu.github.io/2019/04/01/algo/tree/"/>
-    <id>https://jiaomawhu.github.io/2019/04/01/algo/tree/</id>
+    <title>树-图经典题目整理</title>
+    <link href="https://jiaomawhu.github.io/2019/04/01/algo/tree-graph/"/>
+    <id>https://jiaomawhu.github.io/2019/04/01/algo/tree-graph/</id>
     <published>2019-04-01T20:37:23.000Z</published>
-    <updated>2021-01-18T02:45:49.949Z</updated>
+    <updated>2021-12-22T04:55:56.796Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本文整理了关于二叉树的总结与经典面试题
+      &lt;p&gt;本文整理了关于树和图的总结与经典面试题
     
     </summary>
     
@@ -164,7 +218,7 @@
     <link href="https://jiaomawhu.github.io/2019/03/28/algo/linkedlist/"/>
     <id>https://jiaomawhu.github.io/2019/03/28/algo/linkedlist/</id>
     <published>2019-03-29T03:11:35.000Z</published>
-    <updated>2021-01-18T02:45:11.572Z</updated>
+    <updated>2021-12-14T04:13:49.199Z</updated>
     
     <summary type="html">
     
@@ -178,15 +232,15 @@
   </entry>
   
   <entry>
-    <title>常用数据结构与算法整理</title>
-    <link href="https://jiaomawhu.github.io/2019/03/23/algo/search-sort/"/>
-    <id>https://jiaomawhu.github.io/2019/03/23/algo/search-sort/</id>
+    <title>排序算法整理</title>
+    <link href="https://jiaomawhu.github.io/2019/03/23/algo/sort/"/>
+    <id>https://jiaomawhu.github.io/2019/03/23/algo/sort/</id>
     <published>2019-03-23T23:28:35.000Z</published>
-    <updated>2021-11-30T08:29:58.682Z</updated>
+    <updated>2021-12-27T07:22:51.132Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本文参照&lt;a href=&quot;https://github.com/kdn251/interviews&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;简单整理了常用的数据结构，搜索和排序算法。
+      &lt;p&gt;本文总结了常用的排序算法。
     
     </summary>
     
@@ -313,24 +367,6 @@
     <summary type="html">
     
       &lt;p&gt;写文书的时候，深感英文写作水平的匮乏。好在文书不全看写作水平，因此多方寻找经验贴阅读。网络上有如此多的经验介绍贴，无非就是两种，一种是详细向导：哪一段写什么怎么写，另一种则是Tips：侧重原则方法论。我在阅读一亩三分地用户&lt;code&gt;YiranCdr&lt;/code&gt;收集的&lt;a href=&quot;https://www.1point3acres.com/bbs/forum.php?mod=viewthread&amp;amp;tid=434161&amp;amp;extra=page%3D1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;汇总贴&lt;/a&gt;时，有不少收获，特此把其中的有用的Tips整理出来，以供写文书查阅。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Tutorial" scheme="https://jiaomawhu.github.io/tags/Tutorial/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo Markdown 语法总结</title>
-    <link href="https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/"/>
-    <id>https://jiaomawhu.github.io/2018/11/16/tutorials/markdown/</id>
-    <published>2018-11-17T04:00:10.000Z</published>
-    <updated>2021-01-19T06:05:05.413Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;总结下Hexo Markdown的语法，发现很多东西都只支持原生markdown。&lt;br&gt;
     
     </summary>
     

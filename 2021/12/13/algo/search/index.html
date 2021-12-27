@@ -117,18 +117,18 @@
 
 
 
-<meta name="description" content="This post is a note of computer network key points and useful tools and is organized according to the TCP/IP model.">
+<meta name="description" content="本文总结了常用的搜索算法。">
 <meta name="keywords" content="Algorithms">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Computer Network Key notes.">
-<meta property="og:url" content="https://jiaomawhu.github.io/2020/05/31/algo/network/index.html">
+<meta property="og:title" content="搜索算法整理">
+<meta property="og:url" content="https://jiaomawhu.github.io/2021/12/13/algo/search/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="This post is a note of computer network key points and useful tools and is organized according to the TCP/IP model.">
+<meta property="og:description" content="本文总结了常用的搜索算法。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-01-18T02:45:36.908Z">
+<meta property="og:updated_time" content="2021-12-14T04:15:16.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Computer Network Key notes.">
-<meta name="twitter:description" content="This post is a note of computer network key points and useful tools and is organized according to the TCP/IP model.">
+<meta name="twitter:title" content="搜索算法整理">
+<meta name="twitter:description" content="本文总结了常用的搜索算法。">
 
 
 
@@ -158,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2020/05/31/algo/network/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2021/12/13/algo/search/">
 
 
 
 
 
-  <title>Computer Network Key notes. | Jinshin's Blog</title>
+  <title>搜索算法整理 | Jinshin's Blog</title>
   
 
 
@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2020/05/31/algo/network/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2021/12/13/algo/search/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Computer Network Key notes.</h1>
+          <h1 class="post-title" itemprop="name headline">搜索算法整理</h1>
         
 
         <div class="post-meta">
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-31T17:05:53-07:00">
-                2020-05-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-12-13T20:05:36-08:00">
+                2021-12-13
               </time>
             
 
@@ -338,8 +338,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/05/31/algo/network/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/31/algo/network/" itemprop="commentCount"></span>
+                <a href="/2021/12/13/algo/search/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/13/algo/search/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,52 +367,10 @@
       
 
       
-        <p>This post is a note of computer network key points and useful tools and is organized according to the TCP/IP model.<br><a id="more"></a></p>
-<h1 id="Link-Layer"><a href="#Link-Layer" class="headerlink" title="Link Layer"></a>Link Layer</h1><h2 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h2><h2 id="MAC"><a href="#MAC" class="headerlink" title="MAC"></a>MAC</h2><h2 id="PPP"><a href="#PPP" class="headerlink" title="PPP"></a>PPP</h2><h2 id="CSMA-CD"><a href="#CSMA-CD" class="headerlink" title="CSMA/CD"></a>CSMA/CD</h2><h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="CAN-Bus"><a href="#CAN-Bus" class="headerlink" title="CAN Bus"></a>CAN Bus</h3><h1 id="Internet-Layer"><a href="#Internet-Layer" class="headerlink" title="Internet Layer"></a>Internet Layer</h1><h2 id="IP-Internet-Protocol"><a href="#IP-Internet-Protocol" class="headerlink" title="IP (Internet Protocol)"></a>IP (Internet Protocol)</h2><p>IP address is a 32 bit number represented by a grouping of 4 octets.</p>
-<ul>
-<li>192.168.0.1</li>
-<li>In hex: c0 a8 00 01</li>
-</ul>
-<h2 id="CIDR"><a href="#CIDR" class="headerlink" title="CIDR"></a>CIDR</h2><ul>
-<li>Classless Inter-Domain Routing.</li>
-<li>Notation for talking about ranges of IP address.</li>
-<li>Rare to see 192.168.0.0 - 192.168.0.255.</li>
-<li>Instead you would see 192.168.0.0/24.</li>
-<li>Equevalant to matching a netmask of 255.255.255.0.</li>
-<li>value after the / is called the prefix length</li>
-<li>0.0.0.0/8 = Class A</li>
-<li>0.0.0.0/16 = Class B</li>
-<li>0.0.0.0/24 = Class C</li>
-</ul>
-<h2 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h2><h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2><p>A Request for Comments (RFC) is a formal document drafted by the Internet Engineering Task Force (IETF) that describes the specifications for a particular technology. When an RFC is ratified, it becomes a formal standards document.</p>
-<p>RFCs were first used during the creation of the ARPANET (predecessor of Internet) protocols that came to establish what became today’s Internet. They continue to be issued on an ongoing basis as the technology underlying the Internet evolves.</p>
-<h1 id="Transport-Layer"><a href="#Transport-Layer" class="headerlink" title="Transport Layer"></a>Transport Layer</h1><h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><h1 id="Application-Layer"><a href="#Application-Layer" class="headerlink" title="Application Layer"></a>Application Layer</h1><h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><p>DNS resolves the network address to the IP address.</p>
-<p>For linux, the local DNS server is in <code>/etc/resolv.conf</code></p>
-<p>DNS is a distributed and decentralized hierarchical database (organized by ICANN)</p>
-<ul>
-<li>root server -&gt; 13 labeled A-M<ul>
-<li>some of the root servers have mirrors all the over world</li>
-</ul>
-</li>
-<li>Top Level Domain server<ul>
-<li>com, org, edu</li>
-</ul>
-</li>
-<li>Authoritative DNS server<ul>
-<li>amazon.com, utexas.edu</li>
-</ul>
-</li>
-</ul>
-<p><code>nslookup xxx.com</code> will show up the IP address of the network address.</p>
-<p><code>whois</code> provides more info about the IP from the whois database</p>
-<p><code>dig</code> similar to nslookup</p>
-<p><code>nmap</code> is a network exploration tool and security / port scanner</p>
-<ul>
-<li><code>-A</code> aggressive, detect vulnerable, </li>
-<li><code>-O</code> OS detection</li>
-</ul>
-<p><code>Zmap</code> is a network tool for scanning the entire Internet (or large samples).</p>
-<h2 id="HTTP-S"><a href="#HTTP-S" class="headerlink" title="HTTP(S)"></a>HTTP(S)</h2><h2 id="TLS-SSL"><a href="#TLS-SSL" class="headerlink" title="TLS/SSL"></a>TLS/SSL</h2><h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><h2 id="Telnet"><a href="#Telnet" class="headerlink" title="Telnet"></a>Telnet</h2><h2 id="SMTP"><a href="#SMTP" class="headerlink" title="SMTP"></a>SMTP</h2><h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2>
+        <p>本文总结了常用的搜索算法。<a id="more"></a></p>
+<h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>在这里补充下二分查找的两种写法。循环写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给定一个有序的数组，查找 value 是否在数组中，不存在返回 - 1。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left=<span class="number">0</span>, right = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">        midde=left+((right-left)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">        	right=middle<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">        	left=middle+<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">return</span> middle;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>关于更多的二分查找的变种可以参考<a href="https://subetter.com/algorithm/binary-search.html" target="_blank" rel="noopener">这里</a>。递归写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&gt;y)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">int</span> middle = x + ((y-x)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(x,middle<span class="number">-1</span>,value);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(middle+<span class="number">1</span>,y,value);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -442,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/15/tools/git/" rel="next" title="Git Summary">
-                <i class="fa fa-chevron-left"></i> Git Summary
+              <a href="/2021/12/13/algo/data-structure/" rel="next" title="常用数据结构整理">
+                <i class="fa fa-chevron-left"></i> 常用数据结构整理
               </a>
             
           </div>
@@ -452,8 +410,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/05/31/frameworks/docker/" rel="prev" title="Docker and related tools.">
-                Docker and related tools. <i class="fa fa-chevron-right"></i>
+              <a href="/2021/12/13/algo/other/" rel="prev" title="其他算法知识点整理">
+                其他算法知识点整理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -541,7 +499,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -554,7 +512,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -594,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Link-Layer"><span class="nav-number">1.</span> <span class="nav-text">Link Layer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ARP"><span class="nav-number">1.1.</span> <span class="nav-text">ARP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC"><span class="nav-number">1.2.</span> <span class="nav-text">MAC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PPP"><span class="nav-number">1.3.</span> <span class="nav-text">PPP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSMA-CD"><span class="nav-number">1.4.</span> <span class="nav-text">CSMA/CD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Misc"><span class="nav-number">1.5.</span> <span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAN-Bus"><span class="nav-number">1.5.1.</span> <span class="nav-text">CAN Bus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Internet-Layer"><span class="nav-number">2.</span> <span class="nav-text">Internet Layer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IP-Internet-Protocol"><span class="nav-number">2.1.</span> <span class="nav-text">IP (Internet Protocol)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CIDR"><span class="nav-number">2.2.</span> <span class="nav-text">CIDR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ICMP"><span class="nav-number">2.3.</span> <span class="nav-text">ICMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RPC"><span class="nav-number">2.4.</span> <span class="nav-text">RPC</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Transport-Layer"><span class="nav-number">3.</span> <span class="nav-text">Transport Layer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP"><span class="nav-number">3.1.</span> <span class="nav-text">TCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP"><span class="nav-number">3.2.</span> <span class="nav-text">UDP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Application-Layer"><span class="nav-number">4.</span> <span class="nav-text">Application Layer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS"><span class="nav-number">4.0.1.</span> <span class="nav-text">DNS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-S"><span class="nav-number">4.1.</span> <span class="nav-text">HTTP(S)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TLS-SSL"><span class="nav-number">4.2.</span> <span class="nav-text">TLS/SSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH"><span class="nav-number">4.3.</span> <span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Telnet"><span class="nav-number">4.4.</span> <span class="nav-text">Telnet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SMTP"><span class="nav-number">4.5.</span> <span class="nav-text">SMTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FTP"><span class="nav-number">4.6.</span> <span class="nav-text">FTP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分查找"><span class="nav-number">1.</span> <span class="nav-text">二分查找</span></a></li></ol></div>
             
 
           </div>
@@ -764,9 +722,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2020/05/31/algo/network/';
-          this.page.identifier = '2020/05/31/algo/network/';
-          this.page.title = 'Computer Network Key notes.';
+          this.page.url = 'https://jiaomawhu.github.io/2021/12/13/algo/search/';
+          this.page.identifier = '2021/12/13/algo/search/';
+          this.page.title = '搜索算法整理';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

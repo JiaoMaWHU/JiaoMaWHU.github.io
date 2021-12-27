@@ -117,18 +117,18 @@
 
 
 
-<meta name="description" content="本文整理了关于二叉树的总结与经典面试题">
+<meta name="description" content="本文整理了关于树和图的总结与经典面试题">
 <meta name="keywords" content="Algorithms">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树经典题目整理">
-<meta property="og:url" content="https://jiaomawhu.github.io/2019/04/01/algo/tree/index.html">
+<meta property="og:title" content="树-图经典题目整理">
+<meta property="og:url" content="https://jiaomawhu.github.io/2019/04/01/algo/tree-graph/index.html">
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
-<meta property="og:description" content="本文整理了关于二叉树的总结与经典面试题">
+<meta property="og:description" content="本文整理了关于树和图的总结与经典面试题">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-01-18T02:45:49.949Z">
+<meta property="og:updated_time" content="2021-12-22T04:55:56.796Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树经典题目整理">
-<meta name="twitter:description" content="本文整理了关于二叉树的总结与经典面试题">
+<meta name="twitter:title" content="树-图经典题目整理">
+<meta name="twitter:description" content="本文整理了关于树和图的总结与经典面试题">
 
 
 
@@ -158,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="https://jiaomawhu.github.io/2019/04/01/algo/tree/">
+  <link rel="canonical" href="https://jiaomawhu.github.io/2019/04/01/algo/tree-graph/">
 
 
 
 
 
-  <title>二叉树经典题目整理 | Jinshin's Blog</title>
+  <title>树-图经典题目整理 | Jinshin's Blog</title>
   
 
 
@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/04/01/algo/tree/">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2019/04/01/algo/tree-graph/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jinshin">
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二叉树经典题目整理</h1>
+          <h1 class="post-title" itemprop="name headline">树-图经典题目整理</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/01/algo/tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/01/algo/tree/" itemprop="commentCount"></span>
+                <a href="/2019/04/01/algo/tree-graph/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/01/algo/tree-graph/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,7 +367,7 @@
       
 
       
-        <p>本文整理了关于二叉树的总结与经典面试题<a id="more"></a></p>
+        <p>本文整理了关于树和图的总结与经典面试题<a id="more"></a></p>
 <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="二叉树的一些性质"><a href="#二叉树的一些性质" class="headerlink" title="二叉树的一些性质"></a>二叉树的一些性质</h2><ol>
 <li>非空二叉树的叶子节点个数n0等于二叉节点的个数n2加1: n0=n2+1；</li>
 <li>非空二叉树第$i$层最多有$2^{i-1}$个节点；</li>
@@ -384,7 +384,56 @@
 <h2 id="二叉树中节点个数"><a href="#二叉树中节点个数" class="headerlink" title="二叉树中节点个数"></a>二叉树中节点个数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getNodeNum</span><span class="params">(TreeNode *root)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>+getNodeNum(root-&gt;left)+getNodeNum(root-&gt;right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="二叉树中叶子节点的个数"><a href="#二叉树中叶子节点的个数" class="headerlink" title="二叉树中叶子节点的个数"></a>二叉树中叶子节点的个数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getLeafNodeNum</span><span class="params">(TreeNode *root)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(root-&gt;left!=<span class="literal">nullptr</span>||root-&gt;right!=<span class="literal">nullptr</span>) </span><br><span class="line">		<span class="keyword">return</span> getLeadNodeNum(root-&gt;left)+getLeadNodeNum(root-&gt;right);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="二叉树第k层节点的个数"><a href="#二叉树第k层节点的个数" class="headerlink" title="二叉树第k层节点的个数"></a>二叉树第k层节点的个数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getKthFloorNum</span><span class="params">(TreeNode *root, <span class="keyword">int</span> target, <span class="keyword">int</span> <span class="built_in">floor</span>)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="literal">nullptr</span>||<span class="built_in">floor</span>&gt;target) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(target==<span class="built_in">floor</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> getKthFloorNum(root-&gt;left, target, <span class="built_in">floor</span>+<span class="number">1</span>)+getKthFloorNum(root-&gt;right, target, <span class="built_in">floor</span>+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h2>
+<h2 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h2><h1 id="图算法"><a href="#图算法" class="headerlink" title="图算法"></a>图算法</h1><h2 id="存储方法"><a href="#存储方法" class="headerlink" title="存储方法"></a>存储方法</h2><p>假设m为边的数量，n为图的点数</p>
+<ul>
+<li>直接存边<ul>
+<li>查询某个边：O(m)</li>
+<li>遍历一个点的所有边: O(m)</li>
+<li>遍历整个图: O(nm)</li>
+<li>空间复杂度：O(m)</li>
+</ul>
+</li>
+<li>领接矩阵<ul>
+<li>查询某个边：O(1)</li>
+<li>遍历一个点的所有边: O(n)</li>
+<li>遍历整个图: O(n^2)</li>
+<li>空间复杂度：O(n^2)</li>
+<li>缺点是空间复杂度过大，不适用于稀疏图</li>
+</ul>
+</li>
+<li>邻接表 (动态数组或者链表)<ul>
+<li>查询某个边(u-&gt;v)：O(d(u)), 这里d(u)是u的出度<ul>
+<li>如果u的出度边已经排序好，可以用二分做到O(log(d(u)))</li>
+</ul>
+</li>
+<li>遍历一个点的所有边: O(d(u))</li>
+<li>遍历整个图: O(n+m), (BFS, DFS)</li>
+<li>空间复杂度：O(m)</li>
+</ul>
+</li>
+</ul>
+<h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><ul>
+<li>使用Depth First Search的遍历本质上是根树前序遍历的推广。</li>
+<li>初始点的选择决定了遍历的结果，如果初始点可以通向所有点，随后的遍历结果将是DFS spinning tree；如果初始点有无法到达的点，那么结果将是DFS forest。</li>
+<li>在使用邻接表的情况下，算法的复杂度是O(n+m),n是点数，m是边数，空间复杂度是O(n).</li>
+</ul>
+<h3 id="有无回路"><a href="#有无回路" class="headerlink" title="有无回路"></a>有无回路</h3><h2 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2><ul>
+<li>Breadth First Search is a graph traversal algorithm which explores the neighbor nodes first, before moving to the next level neighbors</li>
+</ul>
+<p>Their time complexity are both <code>O(|V| + |E|)</code>, where V is the set of the nodes and E is the set of edges.</p>
+<p>Code example, traverse the tree using DFS and BFS (both iterative and recursive).</p>
+<ul>
+<li>DFS (recursive, java)<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="拓扑排序-Topological-sort"><a href="#拓扑排序-Topological-sort" class="headerlink" title="拓扑排序 Topological sort"></a>拓扑排序 Topological sort</h2><p>A topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge <code>uv</code> from vertex <code>u</code> to vertex <code>v</code>, <code>u</code> comes before <code>v</code> in the ordering.</p>
+<p>Precisely, a topological sort is a graph traversal in which each node <code>v</code> is visited only after all its dependencies are visited. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a <strong>directed acyclic graph (DAG).</strong></p>
+<ul>
+<li>Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG.</li>
+<li>Kahn</li>
+<li>DFS</li>
+</ul>
+
       
     </div>
     
@@ -513,7 +562,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -526,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -566,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的一些性质"><span class="nav-number">1.1.</span> <span class="nav-text">二叉树的一些性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归遍历"><span class="nav-number">1.2.</span> <span class="nav-text">递归遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非递归遍历"><span class="nav-number">1.3.</span> <span class="nav-text">非递归遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Morris-遍历"><span class="nav-number">1.4.</span> <span class="nav-text">Morris 遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次遍历"><span class="nav-number">1.5.</span> <span class="nav-text">层次遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树中节点个数"><span class="nav-number">1.6.</span> <span class="nav-text">二叉树中节点个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树中叶子节点的个数"><span class="nav-number">1.7.</span> <span class="nav-text">二叉树中叶子节点的个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树第k层节点的个数"><span class="nav-number">1.8.</span> <span class="nav-text">二叉树第k层节点的个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的深度"><span class="nav-number">1.9.</span> <span class="nav-text">二叉树的深度</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的一些性质"><span class="nav-number">1.1.</span> <span class="nav-text">二叉树的一些性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归遍历"><span class="nav-number">1.2.</span> <span class="nav-text">递归遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非递归遍历"><span class="nav-number">1.3.</span> <span class="nav-text">非递归遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Morris-遍历"><span class="nav-number">1.4.</span> <span class="nav-text">Morris 遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次遍历"><span class="nav-number">1.5.</span> <span class="nav-text">层次遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树中节点个数"><span class="nav-number">1.6.</span> <span class="nav-text">二叉树中节点个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树中叶子节点的个数"><span class="nav-number">1.7.</span> <span class="nav-text">二叉树中叶子节点的个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树第k层节点的个数"><span class="nav-number">1.8.</span> <span class="nav-text">二叉树第k层节点的个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树的深度"><span class="nav-number">1.9.</span> <span class="nav-text">二叉树的深度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图算法"><span class="nav-number">2.</span> <span class="nav-text">图算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储方法"><span class="nav-number">2.1.</span> <span class="nav-text">存储方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS"><span class="nav-number">2.2.</span> <span class="nav-text">DFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有无回路"><span class="nav-number">2.2.1.</span> <span class="nav-text">有无回路</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFS"><span class="nav-number">2.3.</span> <span class="nav-text">BFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓扑排序-Topological-sort"><span class="nav-number">2.4.</span> <span class="nav-text">拓扑排序 Topological sort</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -736,9 +785,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://jiaomawhu.github.io/2019/04/01/algo/tree/';
-          this.page.identifier = '2019/04/01/algo/tree/';
-          this.page.title = '二叉树经典题目整理';
+          this.page.url = 'https://jiaomawhu.github.io/2019/04/01/algo/tree-graph/';
+          this.page.identifier = '2019/04/01/algo/tree-graph/';
+          this.page.title = '树-图经典题目整理';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';

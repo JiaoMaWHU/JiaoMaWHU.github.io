@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Baskerville:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Algorithms,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jinshin's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="本文参照这里简单整理了常用的数据结构实现和通用库方法。">
+<meta name="keywords" content="Algorithms">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用数据结构整理">
+<meta property="og:url" content="https://jiaomawhu.github.io/2021/12/13/algo/data-structure/index.html">
+<meta property="og:site_name" content="Jinshin&#39;s Blog">
+<meta property="og:description" content="本文参照这里简单整理了常用的数据结构实现和通用库方法。">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-12-14T04:34:57.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用数据结构整理">
+<meta name="twitter:description" content="本文参照这里简单整理了常用的数据结构实现和通用库方法。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jiaomawhu.github.io/2021/12/13/algo/data-structure/">
+
+
+
+
+
+  <title>常用数据结构整理 | Jinshin's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '129723642', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?5f5dad2fbe171a306f5c2925fa8ee9fa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jinshin's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jiaomawhu.github.io/2021/12/13/algo/data-structure/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jinshin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jinshin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常用数据结构整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-12-13T20:05:35-08:00">
+                2021-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/12/13/algo/data-structure/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/13/algo/data-structure/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文参照<a href="https://github.com/kdn251/interviews" target="_blank" rel="noopener">这里</a>简单整理了常用的数据结构实现和通用库方法。<a id="more"></a></p>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="字符串与数组（String-amp-Array）"><a href="#字符串与数组（String-amp-Array）" class="headerlink" title="字符串与数组（String &amp; Array）"></a>字符串与数组（String &amp; Array）</h2><p><strong>Permutation</strong>:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// next_permutation example</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;    // std::next_permutation</span></span></span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::next_permutation(myints, myints+<span class="number">3</span>);</span><br><span class="line"><span class="built_in">std</span>::next_permutation(v.begin(), v.end());</span><br><span class="line"><span class="comment">// return true, if the function could rearrange the object as a lexicographicaly greater permutation, otherwise false</span></span><br><span class="line"><span class="comment">// std::prev_permutation is the same as next_permutation</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="链表（Linked-List）"><a href="#链表（Linked-List）" class="headerlink" title="链表（Linked List）"></a>链表（Linked List）</h2><p>首先是<strong>单向链表</strong>，一般定义如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) :</span><br><span class="line">            val(x), next(<span class="literal">nullptr</span>) &#123;</span><br><span class="line">    &#125;<span class="comment">//列表初始化</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>一般会用到的操作有：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//新建</span></span><br><span class="line">ListNode *node = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">ListNode *node = oldNode;</span><br><span class="line"><span class="comment">//删除</span></span><br><span class="line"><span class="keyword">delete</span> node;</span><br><span class="line"><span class="comment">//指向下个链表</span></span><br><span class="line">node=node-&gt;next;</span><br><span class="line"><span class="comment">//头插法</span></span><br><span class="line">ListNode *node = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">node-&gt;next=headNode-&gt;next;</span><br><span class="line">headNode-&gt;next=node;</span><br><span class="line"><span class="comment">//尾插法</span></span><br><span class="line">ListNode *node = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">lastNode-&gt;next=node;</span><br><span class="line">lastNode=node;</span><br></pre></td></tr></table></figure></p>
+<p>然后是<strong>双向链表</strong>，由于双向链表基本操作与单向链表相似，故不列出：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode *front;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) :</span><br><span class="line">            val(x), next(<span class="literal">nullptr</span>), front(<span class="literal">nullptr</span>) &#123;</span><br><span class="line">    &#125;<span class="comment">//列表初始化</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>In STL, we generally use std::list.<br>Common operations of list are as follows.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> l;</span><br><span class="line">l.begin()</span><br><span class="line">l.end()</span><br><span class="line">l.rbegin() <span class="comment">// reverse</span></span><br><span class="line">l.rend() <span class="comment">// reverse</span></span><br><span class="line">l.front(); l.end();</span><br><span class="line">l.push_front(); l.push_back();</span><br><span class="line">l.pop_front(); l.pop_back();</span><br><span class="line">l.splice(target_list::iterator, target_list, your_iterator);</span><br><span class="line">l.erase(iterator);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>关于链表的经典问题总结在了这里： <a href="/2019/03/28/algo/linkedlist/" title="链表经典题目总结">链表经典题目总结</a>。</p>
+</blockquote>
+<h2 id="栈与队列（Stack-amp-Queue）"><a href="#栈与队列（Stack-amp-Queue）" class="headerlink" title="栈与队列（Stack &amp; Queue）"></a>栈与队列（Stack &amp; Queue）</h2><h3 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h3><p>这两种数据结构一般都是用STL的，定义如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br></pre></td></tr></table></figure></p>
+<p>常用操作如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">s.empty()<span class="comment">//如果栈为空返回true，否则返回false  </span></span><br><span class="line">s.size()<span class="comment">//返回栈中元素的个数  </span></span><br><span class="line">s.pop()<span class="comment">//删除栈顶元素但不返回其值  </span></span><br><span class="line">s.top()<span class="comment">//返回栈顶的元素，但不删除该元素  </span></span><br><span class="line">s.push(X)<span class="comment">//在栈顶压入新元素 ，参数X为要压入的元素</span></span><br><span class="line"></span><br><span class="line">q.empty()<span class="comment">// 如果队列为空返回true，否则返回false  </span></span><br><span class="line">q.size() <span class="comment">// 返回队列中元素的个数  </span></span><br><span class="line">q.pop()  <span class="comment">//删除队列首元素但不返回其值  </span></span><br><span class="line">q.front()  <span class="comment">// 返回队首元素的值，但不删除该元素  </span></span><br><span class="line">q.push(X) <span class="comment">//在队尾压入新元素 ，X为要压入的元素</span></span><br><span class="line">q.back() <span class="comment">//返回队列尾元素的值，但不删除该元素</span></span><br></pre></td></tr></table></figure></p>
+<p>Deque的常规api如下:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">q.push_back();</span><br><span class="line">q.push_front();</span><br><span class="line">q.pop_back();</span><br><span class="line">q.pop_front();</span><br><span class="line">q.front();</span><br><span class="line">q.back();</span><br></pre></td></tr></table></figure></p>
+<p>同时也整理下pair&lt;,&gt;这种用法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stack</span>&lt;pair&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line">s.push(make_pair(string1,<span class="number">1</span>));</span><br><span class="line">pair&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt; p = s.top();</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;p.first&lt;&lt;p.second;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h3 id="二叉树-Binary-Tree-："><a href="#二叉树-Binary-Tree-：" class="headerlink" title="二叉树 (Binary Tree)："></a>二叉树 (Binary Tree)：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.数组存储,n节点的左右子树为2n,2n+1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Tree[MaxSize];</span><br><span class="line"><span class="comment">//2.链表存储</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode* left;</span><br><span class="line">    TreeNode* right;</span><br><span class="line">    TreeNode(<span class="keyword">int</span> x):val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>)&#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>二叉树有很多常用的操作，比如前、中、后序遍历，层次遍历，求深度，子节点的公共祖先，由于篇幅过长，在进行了专门的总结。</p>
+<h3 id="二叉查找树-Binary-Search-Tree-BST"><a href="#二叉查找树-Binary-Search-Tree-BST" class="headerlink" title="二叉查找树 Binary Search Tree(BST)"></a>二叉查找树 Binary Search Tree(BST)</h3><ol>
+<li>For a BST node, all values in its left child tree (if has) are less than it, while values in its right child tree (if has) are bigger then it.</li>
+<li>Every node has a unique value.</li>
+</ol>
+<p>从array构建BST:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// use binary search to build the BST</span></span><br><span class="line"><span class="function">TreeNode* <span class="title">sortedArrayToBST</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> buildBST(<span class="number">0</span>, nums.size()<span class="number">-1</span>, nums);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">TreeNode* <span class="title">buildBST</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> e, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(s&gt;e)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    TreeNode* node = <span class="keyword">new</span> TreeNode(nums[(s+e)/<span class="number">2</span>]);</span><br><span class="line">    node-&gt;left = buildBST(s, (s+e)/<span class="number">2</span><span class="number">-1</span>, nums);</span><br><span class="line">    node-&gt;right = buildBST((s+e)/<span class="number">2</span>+<span class="number">1</span>, e, nums);</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>BST插入节点<br>BST删除节点</p>
+<h3 id="Tire-Tree"><a href="#Tire-Tree" class="headerlink" title="Tire Tree"></a>Tire Tree</h3><h3 id="线段树-Segment-Tree"><a href="#线段树-Segment-Tree" class="headerlink" title="线段树 Segment Tree"></a>线段树 Segment Tree</h3><h2 id="并查集-Union-Find"><a href="#并查集-Union-Find" class="headerlink" title="并查集 Union-Find"></a>并查集 Union-Find</h2><h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A function that does union of two sets of x and y </span></span><br><span class="line"><span class="comment">// (uses union by rank) </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(struct subset subsets[], <span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">int</span> xroot = find(subsets, x); </span><br><span class="line">    <span class="keyword">int</span> yroot = find(subsets, y); </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Attach smaller rank tree under root of high rank tree </span></span><br><span class="line">    <span class="comment">// (Union by Rank) </span></span><br><span class="line">    <span class="keyword">if</span> (subsets[xroot].rank &lt; subsets[yroot].rank) </span><br><span class="line">        subsets[xroot].parent = yroot; </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (subsets[xroot].rank &gt; subsets[yroot].rank) </span><br><span class="line">        subsets[yroot].parent = xroot; </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// If ranks are same, then make one as root and increment </span></span><br><span class="line">    <span class="comment">// its rank by one </span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123; </span><br><span class="line">        subsets[yroot].parent = xroot; </span><br><span class="line">        subsets[xroot].rank++; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// includes path compressing: </span></span><br><span class="line"><span class="comment">// while finding the parent of node A, mark the root as a A's direct parent</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(struct subset subsets[], <span class="keyword">int</span> i)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="comment">// find root and make root as parent of i (path compression) </span></span><br><span class="line">    <span class="keyword">if</span> (subsets[i].parent != i) </span><br><span class="line">        subsets[i].parent = find(subsets, subsets[i].parent); </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> subsets[i].parent; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="堆-Heap"><a href="#堆-Heap" class="headerlink" title="堆 Heap"></a>堆 Heap</h2><p>A Heap is a specialized tree based structure data structure that satisfies the heap property:</p>
+<p><em>if A is a parent node of B, then the key (the value) of node A is ordered with respect to the key of node B with the same ordering applying across the entire heap.</em></p>
+<p>For a <strong>max-heap</strong>, the value of a node is bigger or equal than all of its children’s values. A <strong>min-heap</strong> has the opposite rule.</p>
+<p>Time Complexity:</p>
+<ul>
+<li>Access Max / Min: O(1)</li>
+<li>Insert: O(log(n))</li>
+<li>Remove Max / Min: O(log(n))</li>
+</ul>
+<p>In C++, we use <strong>priority_queue</strong> as a heap, and common operations are as follows.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.Min Heap</span></span><br><span class="line">priority_queue &lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, greater&lt;<span class="keyword">int</span>&gt; &gt; pq;</span><br><span class="line"><span class="comment">// The expression comp(a,b), where comp is an object of this type and a and b are elements in the container, </span></span><br><span class="line"><span class="comment">// shall return true if a is considered to go before b (like a...b in vector) in the strict weak ordering the function defines.</span></span><br><span class="line"><span class="comment">// But because the priority queue outputs largest elements first, the elements that "come before" are actually output last.</span></span><br><span class="line"><span class="comment">// A easy way to remember: greater cmp -&gt; min heap</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.Max Heap</span></span><br><span class="line">priority_queue &lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; pq;</span><br><span class="line"></span><br><span class="line"><span class="comment">// common methods</span></span><br><span class="line">pq.push(x);</span><br><span class="line">pq.top(x);</span><br><span class="line">pq.pop(x);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.We can also use make_heap() function in STL to convert a range in a container to a heap.</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v1 = &#123;<span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">25</span>, <span class="number">15</span>&#125;; </span><br><span class="line">make_heap(v1.begin(), v1.end()); <span class="comment">// front() will be the max node</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. To write a customized compare function, follow this:</span></span><br><span class="line"><span class="keyword">auto</span> cmp = [](<span class="keyword">const</span>&amp; <span class="keyword">int</span> n1, <span class="keyword">const</span>&amp; <span class="keyword">int</span> n2)&#123;</span><br><span class="line">    <span class="keyword">return</span> n1&gt;n2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">priority_queue&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, <span class="keyword">int</span>, <span class="keyword">decltype</span>(cmp)&gt; v(cmp); <span class="comment">// customized min heap</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Heapify to get a min heap in java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param A: Given an integer array</span></span><br><span class="line"><span class="comment">     * @return: nothing</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">heapify</span><span class="params">(<span class="keyword">int</span>[] A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> length = A.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=length/<span class="number">2</span>; i&gt;=<span class="number">0</span>; i--) &#123;</span><br><span class="line">            heapifyHelper(A, i, length);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">heapifyHelper</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> i, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">2</span> * i + <span class="number">1</span>, r = <span class="number">2</span> * i + <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> target = -<span class="number">1</span>, min = A[i];</span><br><span class="line">        <span class="keyword">if</span> (l &lt; n &amp;&amp; A[l] &lt; min) &#123;</span><br><span class="line">            target = l;</span><br><span class="line">            min = A[l];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (r &lt; n &amp;&amp; A[r] &lt; min) &#123;</span><br><span class="line">            target = r;</span><br><span class="line">            min = A[r];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (target != -<span class="number">1</span>) &#123;</span><br><span class="line">            swap(A, target, i);</span><br><span class="line">            heapifyHelper(A, target, n);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = A[i];</span><br><span class="line">        A[i] = A[j];</span><br><span class="line">        A[j] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Hash-Table"><a href="#Hash-Table" class="headerlink" title="Hash Table"></a>Hash Table</h2><p>我们一般用<strong>Unordered_set</strong>, 来当做<strong>hash table</strong>使用。</p>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p>我们可以选择<strong>ordered_map</strong>或者<strong>unordered_set</strong>.</p>
+<ul>
+<li><strong>Ordered_map</strong>使用红黑树实现，插入和删除都是<code>O(log n)</code>.</li>
+<li><strong>Unordered_map</strong>使用hash链表实现, 插入和删除时O(K), K是hash bucket下element个数的平均值，一般视为<code>O(1)</code>.</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/01/19/cs/ostep/" rel="next" title="Notes of Operating Systems Three Easy Pieces.">
+                <i class="fa fa-chevron-left"></i> Notes of Operating Systems Three Easy Pieces.
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/12/13/algo/search/" rel="prev" title="搜索算法整理">
+                搜索算法整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jinshin</p>
+              <p class="site-description motion-element" itemprop="description">I'm lazy.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串与数组（String-amp-Array）"><span class="nav-number">1.1.</span> <span class="nav-text">字符串与数组（String &amp; Array）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链表（Linked-List）"><span class="nav-number">1.2.</span> <span class="nav-text">链表（Linked List）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈与队列（Stack-amp-Queue）"><span class="nav-number">1.3.</span> <span class="nav-text">栈与队列（Stack &amp; Queue）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C"><span class="nav-number">1.3.1.</span> <span class="nav-text">C++</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java"><span class="nav-number">1.3.2.</span> <span class="nav-text">Java</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树"><span class="nav-number">1.4.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树-Binary-Tree-："><span class="nav-number">1.4.1.</span> <span class="nav-text">二叉树 (Binary Tree)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉查找树-Binary-Search-Tree-BST"><span class="nav-number">1.4.2.</span> <span class="nav-text">二叉查找树 Binary Search Tree(BST)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tire-Tree"><span class="nav-number">1.4.3.</span> <span class="nav-text">Tire Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线段树-Segment-Tree"><span class="nav-number">1.4.4.</span> <span class="nav-text">线段树 Segment Tree</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并查集-Union-Find"><span class="nav-number">1.5.</span> <span class="nav-text">并查集 Union-Find</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Union"><span class="nav-number">1.5.1.</span> <span class="nav-text">Union</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Find"><span class="nav-number">1.5.2.</span> <span class="nav-text">Find</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆-Heap"><span class="nav-number">1.6.</span> <span class="nav-text">堆 Heap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash-Table"><span class="nav-number">1.7.</span> <span class="nav-text">Hash Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map"><span class="nav-number">1.8.</span> <span class="nav-text">Map</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinshin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://https-jiaomawhu-github-io-2.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jiaomawhu.github.io/2021/12/13/algo/data-structure/';
+          this.page.identifier = '2021/12/13/algo/data-structure/';
+          this.page.title = '常用数据结构整理';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-jiaomawhu-github-io-2.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
