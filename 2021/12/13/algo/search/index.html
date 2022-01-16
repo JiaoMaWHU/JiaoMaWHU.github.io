@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="本文总结了常用的搜索算法。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-12-14T04:15:16.330Z">
+<meta property="og:updated_time" content="2022-01-16T20:14:04.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搜索算法整理">
 <meta name="twitter:description" content="本文总结了常用的搜索算法。">
@@ -164,7 +164,7 @@
 
 
 
-  <title>搜索算法整理 | Jinshin's Blog</title>
+  <title>搜索算法整理 | Jinshin's Blog</title><meta name="robots" content="noindex">
   
 
 
@@ -370,7 +370,7 @@
         <p>本文总结了常用的搜索算法。<a id="more"></a></p>
 <h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>在这里补充下二分查找的两种写法。循环写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给定一个有序的数组，查找 value 是否在数组中，不存在返回 - 1。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left=<span class="number">0</span>, right = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">        midde=left+((right-left)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">        	right=middle<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">        	left=middle+<span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">return</span> middle;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>关于更多的二分查找的变种可以参考<a href="https://subetter.com/algorithm/binary-search.html" target="_blank" rel="noopener">这里</a>。递归写法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BinarySearch</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x&gt;y)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">int</span> middle = x + ((y-x)&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">array</span>[middle]&gt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(x,middle<span class="number">-1</span>,value);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">array</span>[middle]&lt;value)&#123;</span><br><span class="line">		<span class="keyword">return</span> BinarySearch(middle+<span class="number">1</span>,y,value);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+<!-- flag of hidden posts -->
       
     </div>
     
@@ -396,26 +396,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2021/12/13/algo/data-structure/" rel="next" title="常用数据结构整理">
-                <i class="fa fa-chevron-left"></i> 常用数据结构整理
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/12/13/algo/other/" rel="prev" title="其他算法知识点整理">
-                其他算法知识点整理 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -499,7 +479,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -572,7 +552,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

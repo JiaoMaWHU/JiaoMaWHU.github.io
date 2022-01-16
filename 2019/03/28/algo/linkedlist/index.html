@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="本文总结了关于链表的经典题目。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-12-14T04:13:49.199Z">
+<meta property="og:updated_time" content="2022-01-16T20:12:10.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链表经典题目总结">
 <meta name="twitter:description" content="本文总结了关于链表的经典题目。">
@@ -164,7 +164,7 @@
 
 
 
-  <title>链表经典题目总结 | Jinshin's Blog</title>
+  <title>链表经典题目总结 | Jinshin's Blog</title><meta name="robots" content="noindex">
   
 
 
@@ -385,15 +385,16 @@
 <h2 id="链表中环的入口节点"><a href="#链表中环的入口节点" class="headerlink" title="链表中环的入口节点"></a><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/23.cpp" target="_blank" rel="noopener">链表中环的入口节点</a></h2><ol>
 <li>用一个走两步的快指针和一个走一步的慢指针同时出发，能相遇就有环；</li>
 <li>求环的长度l；</li>
-<li>让一个指针先走l步，再和另外一个指向头的指针一起出发，相遇点就是入口节点。<br><strong>求链表的中间节点</strong>是上题的衍生。用同样的思路：用一个走两步的快指针和一个走一步的慢指针，这样，当快指针走到头过后，慢指针也就走到了中间节点。<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">ReturnMiddleNode</span><span class="params">(ListNode* pHead)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(pHead==<span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        ListNode* f=pHead;</span><br><span class="line">        <span class="keyword">while</span>(f!=<span class="literal">nullptr</span>&amp;&amp;f-&gt;next!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            f=f-&gt;next-&gt;next;</span><br><span class="line">            pHead=pHead-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
+<li>让一个指针先走l步，再和另外一个指向头的指针一起出发，相遇点就是入口节点。</li>
+<li>这个<a href="https://stackoverflow.com/a/36214925" target="_blank" rel="noopener">回答</a>很好地解释这种方法的原理，也就是著名的Floyd’s Tortoise and Hare问题</li>
 </ol>
+<p><strong>求链表的中间节点</strong>是上题的衍生。用同样的思路：用一个走两步的快指针和一个走一步的慢指针，这样，当快指针走到头过后，慢指针也就走到了中间节点。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">ReturnMiddleNode</span><span class="params">(ListNode* pHead)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(pHead==<span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">        ListNode* f=pHead;</span><br><span class="line">        <span class="keyword">while</span>(f!=<span class="literal">nullptr</span>&amp;&amp;f-&gt;next!=<span class="literal">nullptr</span>)&#123;</span><br><span class="line">            f=f-&gt;next-&gt;next;</span><br><span class="line">            pHead=pHead-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h2 id="两个链表的第一个公共子节点"><a href="#两个链表的第一个公共子节点" class="headerlink" title="两个链表的第一个公共子节点"></a><a href="https://github.com/JiaoMaWHU/jzoffer/blob/master/53.cpp" target="_blank" rel="noopener">两个链表的第一个公共子节点</a></h2><ol>
 <li>两个指针同时出发，最后相遇就有相交；</li>
 <li>相交后，计算步数差；</li>
 <li>按照步数差，让两个指针同步前进，相遇点就是第一个公共子节点。</li>
 </ol>
-
+<!-- flag of hidden posts -->
       
     </div>
     
@@ -419,26 +420,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/03/23/algo/sort/" rel="next" title="排序算法整理">
-                <i class="fa fa-chevron-left"></i> 排序算法整理
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/01/algo/tree-graph/" rel="prev" title="树-图经典题目整理">
-                树-图经典题目整理 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -522,7 +503,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -595,7 +576,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

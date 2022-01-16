@@ -2,23 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jiaomawhu.github.io/2019/03/23/algo/sort/</loc>
+    <loc>https://jiaomawhu.github.io/2022/01/16/algo/algo-ds-summary/</loc>
     
-    <lastmod>2021-12-28T02:55:20.115Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/04/01/algo/tree-graph/</loc>
-    
-    <lastmod>2021-12-22T04:55:56.796Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2021/12/13/algo/other/</loc>
-    
-    <lastmod>2021-12-14T05:11:14.664Z</lastmod>
+    <lastmod>2022-01-16T20:32:10.199Z</lastmod>
     
   </url>
   
@@ -40,27 +26,6 @@
     <loc>https://jiaomawhu.github.io/2021/01/19/cs/ostep/</loc>
     
     <lastmod>2021-12-14T04:42:17.768Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2021/12/13/algo/data-structure/</loc>
-    
-    <lastmod>2021-12-14T04:34:57.671Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2021/12/13/algo/search/</loc>
-    
-    <lastmod>2021-12-14T04:15:16.330Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2019/03/28/algo/linkedlist/</loc>
-    
-    <lastmod>2021-12-14T04:13:49.199Z</lastmod>
     
   </url>
   
@@ -145,13 +110,6 @@
     <loc>https://jiaomawhu.github.io/2019/01/08/ml/bagging/</loc>
     
     <lastmod>2021-01-18T02:46:06.736Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jiaomawhu.github.io/2018/12/18/algo/01knapsack-problem/</loc>
-    
-    <lastmod>2021-01-18T02:44:46.541Z</lastmod>
     
   </url>
   
