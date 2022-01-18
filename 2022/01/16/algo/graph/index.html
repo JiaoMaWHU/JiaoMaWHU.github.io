@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Jinshin&#39;s Blog">
 <meta property="og:description" content="本文整理了关于树和图的总结与经典面试题">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-01-16T20:12:14.004Z">
+<meta property="og:updated_time" content="2022-01-18T01:45:21.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图经典题目整理">
 <meta name="twitter:description" content="本文整理了关于树和图的总结与经典面试题">
@@ -367,7 +367,78 @@
       
 
       
-        <p>本文整理了关于树和图的总结与经典面试题<a id="more"></a></p>
+        <p>本文整理了关于树和图的总结与经典面试题 <a id="more"></a></p>
+<h2 id="存储方法"><a href="#存储方法" class="headerlink" title="存储方法"></a>存储方法</h2><p>假设m为边的数量，n为图的点数</p>
+<ul>
+<li>直接存边<ul>
+<li>查询某个边：O(m)</li>
+<li>遍历一个点的所有边: O(m)</li>
+<li>遍历整个图: O(nm)</li>
+<li>空间复杂度：O(m)</li>
+</ul>
+</li>
+<li>领接矩阵<ul>
+<li>查询某个边：O(1)</li>
+<li>遍历一个点的所有边: O(n)</li>
+<li>遍历整个图: O(n^2)</li>
+<li>空间复杂度：O(n^2)</li>
+<li>缺点是空间复杂度过大，不适用于稀疏图</li>
+</ul>
+</li>
+<li>邻接表 (动态数组或者链表)<ul>
+<li>查询某个边(u-&gt;v)：O(d(u)), 这里d(u)是u的出度<ul>
+<li>如果u的出度边已经排序好，可以用二分做到O(log(d(u)))</li>
+</ul>
+</li>
+<li>遍历一个点的所有边: O(d(u))</li>
+<li>遍历整个图: O(n+m), (BFS, DFS)</li>
+<li>空间复杂度：O(m)</li>
+</ul>
+</li>
+</ul>
+<h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><ul>
+<li>使用Depth First Search的遍历本质上是根树前序遍历的推广。</li>
+<li>初始点的选择决定了遍历的结果，如果初始点可以通向所有点，随后的遍历结果将是DFS spinning tree；如果初始点有无法到达的点，那么结果将是DFS forest。</li>
+<li>在使用邻接表的情况下，算法的复杂度是O(n+m),n是点数，m是边数，空间复杂度是O(n).</li>
+</ul>
+<h3 id="有无回路"><a href="#有无回路" class="headerlink" title="有无回路"></a>有无回路</h3><h2 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2><ul>
+<li>Breadth First Search is a graph traversal algorithm which explores the neighbor nodes first, before moving to the next level neighbors</li>
+</ul>
+<p>Their time complexity are both <code>O(|V| + |E|)</code>, where V is the set of the nodes and E is the set of edges.</p>
+<p>Code example, traverse the tree using DFS and BFS (both iterative and recursive).</p>
+<ul>
+<li>DFS (recursive, java)<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Minimum-Spanning-Tree"><a href="#Minimum-Spanning-Tree" class="headerlink" title="Minimum Spanning Tree"></a>Minimum Spanning Tree</h2><h3 id="Prim"><a href="#Prim" class="headerlink" title="Prim"></a>Prim</h3><ul>
+<li>Prim algorithm is based on the greedy idea. Every iteration it chooses an un-visited node with the lowest cost from the storage, and then it adds all of its adjacent un-visited nodes into the storage with their costs. After $n$ iterations, the MST can be achieved.</li>
+<li>Time complexity: <ul>
+<li>Note $E$ is the number of edges, and $V$ is the number of nodes in the graph.</li>
+<li>Adjacency matrix implementation: $O(V^2)$.</li>
+<li>Binary heap + adjacency list implementation: $O(E*logV)$. <ul>
+<li>Why it’s $logV$?: see this <a href="https://stackoverflow.com/questions/11802333/how-to-update-a-key-in-priority-queue-in-olog-n-time-in-dijkstras-algorithm" target="_blank" rel="noopener">post</a>. </li>
+</ul>
+</li>
+<li>Fibonacci heap: …</li>
+</ul>
+</li>
+<li>Therefore, in a dense graph, Adjacency matrix implementation is better. Otherwise, heap implementations are better.</li>
+<li><a href="https://leetcode.com/problems/connecting-cities-with-minimum-cost/" target="_blank" rel="noopener">Example problem. LC 1135</a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumCost</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span>[][] connections)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// init</span></span><br><span class="line">        <span class="keyword">int</span> visited[] = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        Map&lt;Integer, List&lt;<span class="keyword">int</span>[]&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        Queue&lt;<span class="keyword">int</span>[]&gt; q = <span class="keyword">new</span> PriorityQueue&lt;<span class="keyword">int</span>[]&gt;((a,b) -&gt; a[<span class="number">1</span>] - b[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">int</span> cost = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> numOfVisited = n;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;connections.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> p1 = connections[i][<span class="number">0</span>], p2 = connections[i][<span class="number">1</span>], v = connections[i][<span class="number">2</span>];</span><br><span class="line">            <span class="keyword">if</span>(!map.containsKey(p1)) &#123; map.put(p1, <span class="keyword">new</span> ArrayList&lt;&gt;()); &#125;</span><br><span class="line">            <span class="keyword">if</span>(!map.containsKey(p2)) &#123; map.put(p2, <span class="keyword">new</span> ArrayList&lt;&gt;()); &#125;</span><br><span class="line">            List&lt;<span class="keyword">int</span>[]&gt; l1 = map.get(p1); l1.add(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;p2, v&#125;);</span><br><span class="line">            List&lt;<span class="keyword">int</span>[]&gt; l2 = map.get(p2); l2.add(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;p1, v&#125;);            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// add initial points</span></span><br><span class="line">        <span class="keyword">int</span> initP = connections[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">        visited[initP] = <span class="number">1</span>; </span><br><span class="line">        numOfVisited--;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>[] e: map.get(initP)) &#123;</span><br><span class="line">            q.add(e);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Prim</span></span><br><span class="line">        <span class="keyword">while</span>(!q.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">int</span>[] e = q.poll();</span><br><span class="line">            <span class="keyword">int</span> toNode = e[<span class="number">0</span>], v = e[<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span>(visited[toNode]==<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            visited[toNode]=<span class="number">1</span>;</span><br><span class="line">            numOfVisited--;</span><br><span class="line">            cost+=v;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span>[] toNodeE: map.get(toNode)) &#123;</span><br><span class="line">                <span class="keyword">if</span>(visited[toNodeE[<span class="number">0</span>]]!=<span class="number">1</span>) &#123;</span><br><span class="line">                    q.add(toNodeE);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> numOfVisited==<span class="number">0</span>?cost:-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h3><ul>
+<li>Kruskal algorithm pick ups the edge with lowest cost that doesn’t include a cycle every iteration, after $n-1$ iterations, the MST can be achieved.</li>
+<li>Time complexity: $O(ElogE) = O(ElogV)$, where $E$ is the number of edges, and $V$ is the number of nodes in the graph.</li>
+<li><a href="https://leetcode.com/problems/connecting-cities-with-minimum-cost/" target="_blank" rel="noopener">Example problem. LC 1135</a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumCost</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span>[][] connections)</span> </span>&#123;</span><br><span class="line">        Arrays.sort(connections, (a, b) -&gt; a[<span class="number">2</span>] - b[<span class="number">2</span>]);</span><br><span class="line">        UF uf = <span class="keyword">new</span> UF(n+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> cost = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> count = n-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;connections.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> n1 = connections[i][<span class="number">0</span>], n2 = connections[i][<span class="number">1</span>], v = connections[i][<span class="number">2</span>];</span><br><span class="line">            <span class="keyword">if</span>(uf.union(n1, n2)) &#123;</span><br><span class="line">                cost+=v;</span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count==<span class="number">0</span>?cost:-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">UF</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] parent;</span><br><span class="line">        UF(<span class="keyword">int</span> n) &#123;</span><br><span class="line">            parent = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">                parent[i] = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(parent[i]!=i) &#123;</span><br><span class="line">                parent[i] = find(parent[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> parent[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">boolean</span> <span class="title">union</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">int</span> pi = find(i);</span><br><span class="line">            <span class="keyword">int</span> pj = find(j);</span><br><span class="line">            <span class="keyword">if</span>(pi==pj) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            parent[pi] = pj;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="拓扑排序-Topological-sort"><a href="#拓扑排序-Topological-sort" class="headerlink" title="拓扑排序 Topological sort"></a>拓扑排序 Topological sort</h2><p>A topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge <code>uv</code> from vertex <code>u</code> to vertex <code>v</code>, <code>u</code> comes before <code>v</code> in the ordering.</p>
+<p>Precisely, a topological sort is a graph traversal in which each node <code>v</code> is visited only after all its dependencies are visited. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a <strong>directed acyclic graph (DAG).</strong></p>
+<ul>
+<li>Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG.</li>
+<li>Kahn</li>
+<li>DFS</li>
+</ul>
 <!-- flag of hidden posts -->
       
     </div>
@@ -452,8 +523,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -511,6 +591,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储方法"><span class="nav-number">1.</span> <span class="nav-text">存储方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS"><span class="nav-number">2.</span> <span class="nav-text">DFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有无回路"><span class="nav-number">2.1.</span> <span class="nav-text">有无回路</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFS"><span class="nav-number">3.</span> <span class="nav-text">BFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Minimum-Spanning-Tree"><span class="nav-number">4.</span> <span class="nav-text">Minimum Spanning Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Prim"><span class="nav-number">4.1.</span> <span class="nav-text">Prim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal"><span class="nav-number">4.2.</span> <span class="nav-text">Kruskal</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓扑排序-Topological-sort"><span class="nav-number">5.</span> <span class="nav-text">拓扑排序 Topological sort</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
